@@ -11,3 +11,10 @@ C:\HARTCTR\SOURCE\CLASS\HokushoClass\obj\Debug\HokushoClass.csprojAssemblyRefere
 C:\HARTCTR\SOURCE\CLASS\HokushoClass\obj\Debug\HokushoClass.csproj.CoreCompileInputs.cache
 C:\HARTCTR\SOURCE\CLASS\HokushoClass\obj\Debug\HokushoClass.dll
 C:\HARTCTR\SOURCE\CLASS\HokushoClass\obj\Debug\HokushoClass.pdb
+D:\anysoft\ホクショー\P型AGV経路管理ソフト\HARTCTR\BIN\HokushoClass.dll
+D:\anysoft\ホクショー\P型AGV経路管理ソフト\HARTCTR\BIN\HokushoClass.pdb
+D:\anysoft\ホクショー\P型AGV経路管理ソフト\HARTCTR\BIN\HokushoClass.xml
+D:\anysoft\ホクショー\P型AGV経路管理ソフト\HARTCTR\SOURCE\CLASS\HokushoClass\obj\Debug\HokushoClass.csproj.AssemblyReference.cache
+D:\anysoft\ホクショー\P型AGV経路管理ソフト\HARTCTR\SOURCE\CLASS\HokushoClass\obj\Debug\HokushoClass.csproj.CoreCompileInputs.cache
+D:\anysoft\ホクショー\P型AGV経路管理ソフト\HARTCTR\SOURCE\CLASS\HokushoClass\obj\Debug\HokushoClass.dll
+D:\anysoft\ホクショー\P型AGV経路管理ソフト\HARTCTR\SOURCE\CLASS\HokushoClass\obj\Debug\HokushoClass.pdb

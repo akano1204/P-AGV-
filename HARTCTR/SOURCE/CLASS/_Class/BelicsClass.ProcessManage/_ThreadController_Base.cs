@@ -515,8 +515,11 @@ namespace BelicsClass.ProcessManage
 
                 BL_ThreadCollector.Remove(this);
 
-                m_Log.Dispose();
-                m_Log = null;
+                if (m_Log != null)
+                {
+                    m_Log.Dispose();
+                    m_Log = null;
+                }
             }
             catch { }
         }

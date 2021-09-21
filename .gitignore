@@ -3,3 +3,9 @@
 ################################################################################
 
 *.suo
+*.pdb
+*.cache
+/HARTCTR/SOURCE/CLASS/_Class/BelicsClass.AllInOne/obj
+/HARTCTR/SOURCE/TOOLS/LogisticAgvCommunicateTester/obj
+/HARTCTR/SOURCE/PROGRAM/obj
+/HARTCTR/BIN/LOG
