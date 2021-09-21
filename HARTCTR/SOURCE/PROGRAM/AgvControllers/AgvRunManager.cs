@@ -532,12 +532,15 @@ namespace PROGRAM
                     }
                 }
 
-                foreach (var v in controller.all_autorator)
+                if (controller.all_autorator != null)
                 {
-                    if (v.autorator_info != null && v.autorator_info.repaint)
+                    foreach (var v in controller.all_autorator)
                     {
-                        state_changed_disp = true;
-                        v.autorator_info.repaint = false;
+                        if (v.autorator_info != null && v.autorator_info.repaint)
+                        {
+                            state_changed_disp = true;
+                            v.autorator_info.repaint = false;
+                        }
                     }
                 }
 

@@ -1291,6 +1291,9 @@ namespace BelicsClass.UI
             while (false);
 
             //Application.DoEvents();
+
+            if (ActiveSubForm != null) ActiveSubForm.SubForm_Base_KeyUp(sender, e);
+
         }
 
         bool clicked = false;
@@ -1714,6 +1717,13 @@ namespace BelicsClass.UI
                     EndDebugMode();
                 }
             }
+
+            if (ActiveSubForm != null) ActiveSubForm.SubForm_Base_KeyPress(sender, e);
+        }
+
+        private void MainForm_Base_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (ActiveSubForm != null) ActiveSubForm.SubForm_Base_KeyDown(sender, e);
         }
 
         /// <summary>

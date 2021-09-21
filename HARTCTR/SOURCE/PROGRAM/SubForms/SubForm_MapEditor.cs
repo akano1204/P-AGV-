@@ -249,7 +249,7 @@ namespace PROGRAM
                     buttonRackRotatable.Checked = qr.rack_rotatable;
                     buttonRackSetable.Checked = qr.rack_setable;
                     buttonSpeedLimit.Checked = qr.speed_limit != AgvController.enSpeed.H;
-                    buttonEscapeCheck.Checked = qr.escape_to != null;
+                    //buttonEscapeCheck.Checked = qr.escape_to != null;
 
                     //{
                     //    bool found = false;
@@ -406,7 +406,7 @@ namespace PROGRAM
                     buttonLastCharge = null;
                     //buttonLastStation = null;
 
-                    buttonEscapeCheck.Checked = false;
+                    //buttonEscapeCheck.Checked = false;
                 }
             }
             else
@@ -1373,6 +1373,9 @@ namespace PROGRAM
             {
                 floor.mapeditor.MouseDown(e);
                 panelMap.Invalidate();
+
+                buttonUndo.Enabled = ToolStripMenuItemUndo.Enabled = floor.CanUndo;
+                buttonRedo.Enabled = ToolStripMenuItemRedo.Enabled = floor.CanRedo;
             }
         }
 
@@ -1383,6 +1386,9 @@ namespace PROGRAM
             {
                 floor.mapeditor.MouseUp(e);
                 panelMap.Invalidate();
+
+                buttonUndo.Enabled = ToolStripMenuItemUndo.Enabled = floor.CanUndo;
+                buttonRedo.Enabled = ToolStripMenuItemRedo.Enabled = floor.CanRedo;
             }
         }
 
@@ -1393,6 +1399,9 @@ namespace PROGRAM
             {
                 floor.mapeditor.MouseClick(e);
                 panelMap.Invalidate();
+
+                buttonUndo.Enabled = ToolStripMenuItemUndo.Enabled = floor.CanUndo;
+                buttonRedo.Enabled = ToolStripMenuItemRedo.Enabled = floor.CanRedo;
             }
         }
 
@@ -1629,35 +1638,87 @@ namespace PROGRAM
                 return;
             }
 
-            if (comboBoxStationType.SelectedItem != null) qr.station_type = (AgvControlManager.FloorQR.enStatiionType)comboBoxStationType.SelectedItem;
+            if (comboBoxStationType.SelectedItem != null)
+            {
+                qr.floor.AddUndo();
+                qr.station_type = (AgvControlManager.FloorQR.enStatiionType)comboBoxStationType.SelectedItem;
+
+                buttonUndo.Enabled = ToolStripMenuItemUndo.Enabled = qr.floor.CanUndo;
+                buttonRedo.Enabled = ToolStripMenuItemRedo.Enabled = qr.floor.CanRedo;
+            }
         }
 
         AgvControlManager.FloorQR escape_checkpoint = null;
 
-        private void buttonEscapeCheck_Click(object sender, EventArgs e)
-        {
-            AgvControlManager.FloorQR qr = panelSelectedQR.Tag as AgvControlManager.FloorQR;
-            if (qr == null) return;
+        //private void buttonEscapeCheck_Click(object sender, EventArgs e)
+        //{
+        //    AgvControlManager.FloorQR qr = panelSelectedQR.Tag as AgvControlManager.FloorQR;
+        //    if (qr == null) return;
 
-            if (buttonEscapeCheck.Checked)
-            {
-                escape_checkpoint = qr;
-                escape_checkpoint.escape_to = qr;
+        //    if (buttonEscapeCheck.Checked)
+        //    {
+        //        escape_checkpoint = qr;
+        //        escape_checkpoint.escape_to = qr;
 
-                panelMap.Cursor = Cursors.NoMove2D;
-            }
-            else
-            {
-                if (qr.escape_to != null)
-                {
-                    qr.escape_to.escape_from = null;
-                    qr.escape_to = null;
+        //        panelMap.Cursor = Cursors.NoMove2D;
+        //    }
+        //    else
+        //    {
+        //        if (qr.escape_to != null)
+        //        {
+        //            qr.escape_to.escape_from = null;
+        //            qr.escape_to = null;
                     
-                    escape_checkpoint = null;
-                }
+        //            escape_checkpoint = null;
+        //        }
+        //    }
+
+        //    panelMap.Invalidate();
+        //}
+
+        public override void SubForm_Base_KeyDown(object sender, KeyEventArgs e)
+        {
+            base.SubForm_Base_KeyDown(sender, e);
+
+            if (e.Control && e.KeyCode == Keys.Z)
+            {
+                //Undo
+                buttonUndo_Click(sender, e);
+            }
+            else if (e.Control && e.KeyCode == Keys.Y)
+            {
+                //Redo
+                buttonRedo_Click(sender, e);
             }
 
-            panelMap.Invalidate();
+        }
+
+        private void buttonUndo_Click(object sender, EventArgs e)
+        {
+            var floor = controller.SelectFloor();
+            if (floor != null)
+            {
+                floor.Undo();
+
+                panelMap.Invalidate();
+
+                buttonUndo.Enabled = ToolStripMenuItemUndo.Enabled = floor.CanUndo;
+                buttonRedo.Enabled = ToolStripMenuItemRedo.Enabled = floor.CanRedo;
+            }
+        }
+
+        private void buttonRedo_Click(object sender, EventArgs e)
+        {
+            var floor = controller.SelectFloor();
+            if (floor != null)
+            {
+                floor.Redo();
+
+                panelMap.Invalidate();
+
+                buttonUndo.Enabled = ToolStripMenuItemUndo.Enabled = floor.CanUndo;
+                buttonRedo.Enabled = ToolStripMenuItemRedo.Enabled = floor.CanRedo;
+            }
         }
     }
 }

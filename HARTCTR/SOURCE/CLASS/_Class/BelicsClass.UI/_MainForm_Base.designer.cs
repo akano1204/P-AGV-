@@ -97,6 +97,7 @@
             this.buttonFunction01.Size = new System.Drawing.Size(76, 40);
             this.buttonFunction01.TabIndex = 2;
             this.buttonFunction01.TabStop = false;
+            this.buttonFunction01.Tag = false;
             this.buttonFunction01.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonFunction01.UseVisualStyleBackColor = false;
             // 
@@ -122,6 +123,7 @@
             this.buttonFunction02.Size = new System.Drawing.Size(76, 40);
             this.buttonFunction02.TabIndex = 3;
             this.buttonFunction02.TabStop = false;
+            this.buttonFunction02.Tag = false;
             this.buttonFunction02.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonFunction02.UseVisualStyleBackColor = false;
             // 
@@ -147,6 +149,7 @@
             this.buttonFunction03.Size = new System.Drawing.Size(76, 40);
             this.buttonFunction03.TabIndex = 4;
             this.buttonFunction03.TabStop = false;
+            this.buttonFunction03.Tag = false;
             this.buttonFunction03.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonFunction03.UseVisualStyleBackColor = false;
             // 
@@ -172,6 +175,7 @@
             this.buttonFunction04.Size = new System.Drawing.Size(76, 40);
             this.buttonFunction04.TabIndex = 5;
             this.buttonFunction04.TabStop = false;
+            this.buttonFunction04.Tag = false;
             this.buttonFunction04.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonFunction04.UseVisualStyleBackColor = false;
             // 
@@ -197,6 +201,7 @@
             this.buttonFunction05.Size = new System.Drawing.Size(76, 40);
             this.buttonFunction05.TabIndex = 6;
             this.buttonFunction05.TabStop = false;
+            this.buttonFunction05.Tag = false;
             this.buttonFunction05.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonFunction05.UseVisualStyleBackColor = false;
             // 
@@ -222,6 +227,7 @@
             this.buttonFunction06.Size = new System.Drawing.Size(76, 40);
             this.buttonFunction06.TabIndex = 7;
             this.buttonFunction06.TabStop = false;
+            this.buttonFunction06.Tag = false;
             this.buttonFunction06.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonFunction06.UseVisualStyleBackColor = false;
             // 
@@ -247,6 +253,7 @@
             this.buttonFunction07.Size = new System.Drawing.Size(76, 40);
             this.buttonFunction07.TabIndex = 8;
             this.buttonFunction07.TabStop = false;
+            this.buttonFunction07.Tag = false;
             this.buttonFunction07.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonFunction07.UseVisualStyleBackColor = false;
             // 
@@ -272,6 +279,7 @@
             this.buttonFunction08.Size = new System.Drawing.Size(76, 40);
             this.buttonFunction08.TabIndex = 9;
             this.buttonFunction08.TabStop = false;
+            this.buttonFunction08.Tag = false;
             this.buttonFunction08.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonFunction08.UseVisualStyleBackColor = false;
             // 
@@ -297,6 +305,7 @@
             this.buttonFunction09.Size = new System.Drawing.Size(76, 40);
             this.buttonFunction09.TabIndex = 10;
             this.buttonFunction09.TabStop = false;
+            this.buttonFunction09.Tag = false;
             this.buttonFunction09.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonFunction09.UseVisualStyleBackColor = false;
             // 
@@ -322,6 +331,7 @@
             this.buttonFunction10.Size = new System.Drawing.Size(76, 40);
             this.buttonFunction10.TabIndex = 11;
             this.buttonFunction10.TabStop = false;
+            this.buttonFunction10.Tag = false;
             this.buttonFunction10.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonFunction10.UseVisualStyleBackColor = false;
             // 
@@ -347,6 +357,7 @@
             this.buttonFunction11.Size = new System.Drawing.Size(76, 40);
             this.buttonFunction11.TabIndex = 12;
             this.buttonFunction11.TabStop = false;
+            this.buttonFunction11.Tag = false;
             this.buttonFunction11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonFunction11.UseVisualStyleBackColor = false;
             // 
@@ -372,6 +383,7 @@
             this.buttonFunction12.Size = new System.Drawing.Size(76, 40);
             this.buttonFunction12.TabIndex = 13;
             this.buttonFunction12.TabStop = false;
+            this.buttonFunction12.Tag = false;
             this.buttonFunction12.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonFunction12.UseVisualStyleBackColor = false;
             // 
@@ -397,6 +409,7 @@
             this.buttonFunction00.Size = new System.Drawing.Size(76, 40);
             this.buttonFunction00.TabIndex = 3;
             this.buttonFunction00.TabStop = false;
+            this.buttonFunction00.Tag = false;
             this.buttonFunction00.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.buttonFunction00.UseVisualStyleBackColor = false;
             // 
@@ -490,6 +503,7 @@
             this.flatButtonMinimum.Size = new System.Drawing.Size(50, 40);
             this.flatButtonMinimum.TabIndex = 16;
             this.flatButtonMinimum.TabStop = false;
+            this.flatButtonMinimum.Tag = false;
             this.flatButtonMinimum.Text = "＿";
             this.flatButtonMinimum.UseVisualStyleBackColor = false;
             this.flatButtonMinimum.Visible = false;
@@ -518,6 +532,7 @@
             this.flatButtonExit.Size = new System.Drawing.Size(90, 40);
             this.flatButtonExit.TabIndex = 17;
             this.flatButtonExit.TabStop = false;
+            this.flatButtonExit.Tag = false;
             this.flatButtonExit.Text = "終了";
             this.flatButtonExit.UseVisualStyleBackColor = false;
             this.flatButtonExit.Visible = false;
@@ -546,6 +561,7 @@
             this.flatButtonSeparate.Size = new System.Drawing.Size(28, 40);
             this.flatButtonSeparate.TabIndex = 16;
             this.flatButtonSeparate.TabStop = false;
+            this.flatButtonSeparate.Tag = false;
             this.flatButtonSeparate.Text = "▷";
             this.flatButtonSeparate.UseVisualStyleBackColor = false;
             this.flatButtonSeparate.Visible = false;
@@ -589,6 +605,7 @@
             this.Deactivate += new System.EventHandler(this.MainForm_Base_Deactivate);
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_Base_FormClosing);
             this.Load += new System.EventHandler(this.MainForm_Base_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.MainForm_Base_KeyDown);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.MainForm_Base_KeyPress);
             this.KeyUp += new System.Windows.Forms.KeyEventHandler(this.MainForm_KeyUp);
             this.Resize += new System.EventHandler(this.MainForm_Base_Resize);

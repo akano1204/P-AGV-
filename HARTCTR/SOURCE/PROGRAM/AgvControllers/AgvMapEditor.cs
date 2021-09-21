@@ -705,10 +705,17 @@ namespace PROGRAM
                                         //    valid = false;
                                         //}
 
-                                        if (valid) selected_qr.AddNextWay(qr, controller.route_type);
+                                        if (valid)
+                                        {
+                                            floor.AddUndo();
+
+                                            selected_qr.AddNextWay(qr, controller.route_type);
+                                        }
                                     }
                                     else if (e.Button == MouseButtons.Right)
                                     {
+                                        floor.AddUndo();
+
                                         selected_qr.RemoveNextWay(qr);
                                     }
                                 }
@@ -726,6 +733,8 @@ namespace PROGRAM
                                         break;
                                     }
                                 }
+
+                                if (0 < exist_ways.Count) floor.AddUndo();
 
                                 foreach (var r in exist_ways)
                                 {
@@ -747,6 +756,8 @@ namespace PROGRAM
                                 {
                                     new_qr.on_agv.SetLocation("", new_qr.Location);
                                 }
+
+                                floor.AddUndo();
 
                                 AddQR(new_qr);
                                 new_qr.Select(true);
@@ -816,6 +827,8 @@ namespace PROGRAM
                             {
                                 if (e.Button == MouseButtons.Left)
                                 {
+                                    floor.AddUndo();
+
                                     new_qr.Location = floor.controller.mousePoint;
 
                                     AddQR(new_qr);
@@ -836,7 +849,12 @@ namespace PROGRAM
                                 else if (e.Button == MouseButtons.Right)
                                 {
                                     exist_qr = HitTest(floor.controller.mousePoint);
-                                    if (exist_qr != null) RemoveQR(exist_qr);
+                                    if (exist_qr != null)
+                                    {
+                                        floor.AddUndo();
+
+                                        RemoveQR(exist_qr);
+                                    }
                                 }
                             }
                             //else

@@ -45,7 +45,7 @@ namespace PROGRAM
 
         #region フロア内位置情報クラス
 
-        public class FloorQR : BL_ObjectSync
+        public class FloorQR
         {
             #region 方向
 
@@ -94,9 +94,48 @@ namespace PROGRAM
 
             #region フィールド
 
-            [BL_ObjectSync]
+            public int _x = 0;
+            public int _y = 0;
+            public int radius = 60;
+            public int autorator_radius = 240;
+            public RectangleF rect = new RectangleF();
+            public bool selected = false;
+            public Dictionary<FloorQR, double> next_way = new Dictionary<FloorQR, double>();
+            public Dictionary<FloorQR, RouteType> next_way_type = new Dictionary<FloorQR, RouteType>();
+            public List<FloorQR> prev_way = new List<FloorQR>();
+            private bool _rack_rotatable = false;
+            public string autorator_id = "          ";
+            public enDirection direction_station = enDirection.NONE;
+            public string station_id = "          ";
+            public enStatiionType station_type = enStatiionType.STATION;
+            public enDirection direction_charge = enDirection.NONE;
+            public bool charge_back = false;
+            public bool rack_setable = false;
+            public enSpeed speed_limit = enSpeed.H;
+
+
+
+
+
+
             private Rack _rack = null;
-            
+            public AgvMapEditor mapeditor = null;
+            public FloorMap floor = null;
+            public AutoratorController autorator_info = null;
+            public FloorAGV on_agv_ = null;
+            public string autoratorIN_trigger = "";
+            public string autoratorOUT_trigger = "";
+            public bool station_complete_trigger = false;
+            public bool charge_complete_trigger = false;
+            public List<FloorQR> floorwarp_qr = new List<FloorQR>();
+            public FloorQR escape_to = null;
+            public FloorQR escape_from = null;
+            public SynchronizedList<FloorAGV> lock_agv = new SynchronizedList<FloorAGV>();
+            public ReserveQR reserve_agv = null;
+
+
+
+
             public Rack rack
             {
                 get
@@ -119,17 +158,6 @@ namespace PROGRAM
                     }
                 }
             }
-
-            //private BL_QREncode qr = new BL_QREncode();
-
-            public AgvMapEditor mapeditor = null;
-            public FloorMap floor = null;
-
-            [BL_ObjectSync]
-            public int _x = 0;
-
-            [BL_ObjectSync]
-            public int _y = 0;
 
             public Point point
             {
@@ -155,22 +183,6 @@ namespace PROGRAM
                     Location = point;
                 }
             }
-            public int radius = 60;
-            public int autorator_radius = 240;
-
-            public RectangleF rect = new RectangleF();
-            public bool selected = false;
-
-            public Dictionary<FloorQR, double> next_way = new Dictionary<FloorQR, double>();
-            
-            /// <summary>通路タイプ</summary>
-            public Dictionary<FloorQR, RouteType> next_way_type = new Dictionary<FloorQR, RouteType>();
-
-            public List<FloorQR> prev_way = new List<FloorQR>();
-
-
-            [BL_ObjectSync]
-            private bool _rack_rotatable = false;
 
             public bool rack_rotatable
             {
@@ -198,14 +210,6 @@ namespace PROGRAM
                 }
             }
 
-            //public List<FloorQR> rack_rotate_conflict_qr = new List<FloorQR>();
-
-            [BL_ObjectSync]
-            public string autorator_id = "          ";
-
-            //public string autorator_plc_ip = "";
-            //public int autorator_plc_port = 0;
-            
             public bool autorator_online
             {
                 get
@@ -219,22 +223,8 @@ namespace PROGRAM
                 }
             }
 
-            public AutoratorController autorator_info = null;
-
-
-            public enDirection direction_station = enDirection.NONE;
-            [BL_ObjectSync]
-            public string station_id = "          ";
-
-            //public string station_ip = "";
-            //public int station_port = 0;
-            public enStatiionType station_type = enStatiionType.STATION;
-
-            [BL_ObjectSync]
-            public enDirection direction_charge = enDirection.NONE;
-            public bool charge_back = false;
-
             public List<FloorAGV> on_agvs = new List<FloorAGV>();
+
             public bool PlaceAgv(FloorAGV agv)
             {
                 bool ret = false;
@@ -308,130 +298,6 @@ namespace PROGRAM
 
                 return otheragv;
             }
-
-            public FloorAGV on_agv_ = null;
-
-            //public FloorAGV __on_agv
-            //{
-            //    get
-            //    {
-            //        lock (this)
-            //        {
-            //            return on_agv_;
-            //        }
-            //    }
-
-            //    set
-            //    {
-            //        lock (this)
-            //        {
-            //            var on_agv_pre = on_agv_;
-
-            //            if (on_agv_pre != null)
-            //            {
-            //                foreach (var v in on_agv_pre.on_qr_list)
-            //                {
-            //                    v.on_agv_ = null;
-            //                }
-            //                on_agv_pre.on_qr_list.Clear();
-            //            }
-
-            //            if (on_agv_pre != value && value != null)
-            //            {
-            //                on_agv_ = value;
-            //                if (!on_agv_.on_qr_list.Contains(this)) on_agv_.on_qr_list.Add(this);
-
-            //                if (on_agv_ != null)
-            //                {
-            //                    foreach (var v in conflict_qr(value))
-            //                    {
-            //                        if (!on_agv_.on_qr_list.Contains(v)) on_agv_.on_qr_list.Add(v);
-            //                        v.on_agv_ = on_agv_;
-            //                    }
-            //                }
-
-            //                mapeditor.redraw_agvshadow = true;
-            //                if (floor.controller.EventPaint != null) floor.controller.EventPaint();
-            //            }
-            //        }
-            //    }
-            //}
-
-            //public FloorAGV lock_agv_ = null;
-            //public FloorAGV lock_agv
-            //{
-            //    get
-            //    {
-            //        lock (this)
-            //        {
-            //            return lock_agv_;
-            //        }
-            //    }
-
-            //    set
-            //    {
-            //        lock (this)
-            //        {
-            //            if (value == null)
-            //            {
-            //                if (rack_rotatable)
-            //                {
-            //                    foreach (var v in rack_rotate_conflict)
-            //                    {
-            //                        if (v.lock_agv == on_agv_) v.lock_agv = value;
-            //                    }
-            //                }
-            //            }
-            //            else
-            //            {
-            //                if (rack_rotatable && rack != null)
-            //                {
-            //                    foreach (var v in rack_rotate_conflict)
-            //                    {
-            //                        if (v.lock_agv == null)
-            //                        {
-            //                            v.lock_agv = value;
-            //                        }
-            //                        else if (v.lock_agv != value)
-            //                        {
-
-            //                        }
-            //                    }
-            //                }
-
-            //                if (lock_agv_ != null && lock_agv != value)
-            //                {
-
-            //                }
-            //            }
-
-            //            lock_agv_ = value;
-            //        }
-            //        mapeditor.redraw_agvshadow = true;
-            //        if (floor.controller.EventPaint != null) floor.controller.EventPaint();
-            //    }
-            //}
-
-            public string autoratorIN_trigger = "";
-            public string autoratorOUT_trigger = "";
-            public bool station_complete_trigger = false;
-            public bool charge_complete_trigger = false;
-            //public bool autoratorHalfOpen = true;
-
-            public List<FloorQR> floorwarp_qr = new List<FloorQR>();
-
-            [BL_ObjectSync]
-            public bool rack_setable = false;
-
-            [BL_ObjectSync]
-            public enSpeed speed_limit = enSpeed.H;
-
-            public FloorQR escape_to = null;
-            public FloorQR escape_from = null;
-            
-            public SynchronizedList<FloorAGV> lock_agv = new SynchronizedList<FloorAGV>();
-            public ReserveQR reserve_agv = null;
-
 
             public CheckConditions GetCP
             {

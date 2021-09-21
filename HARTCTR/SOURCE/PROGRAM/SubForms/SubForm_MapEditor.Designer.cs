@@ -38,11 +38,12 @@
             this.columnHeader2 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.panelSelectedQR = new BelicsClass.UI.Controls.BL_DoubleBufferPanel();
-            this.buttonEscapeCheck = new BelicsClass.UI.Controls.BL_FlatButton();
+            this.buttonRedo = new BelicsClass.UI.Controls.BL_FlatButton();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
             this.buttonAutoLator = new BelicsClass.UI.Controls.BL_FlatButton();
             this.textBoxAutolatorID = new System.Windows.Forms.TextBox();
             this.label11 = new System.Windows.Forms.Label();
+            this.buttonUndo = new BelicsClass.UI.Controls.BL_FlatButton();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.textBoxRackNo = new System.Windows.Forms.TextBox();
             this.textBoxRackFaceNo = new System.Windows.Forms.TextBox();
@@ -104,6 +105,9 @@
             this.textBoxCurY = new System.Windows.Forms.TextBox();
             this.panelMap = new BelicsClass.UI.Controls.BL_DoubleBufferPanel();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.ToolStripMenuItemUndo = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItemRedo = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.制限無しToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.長手方向ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.短手方向ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -133,7 +137,6 @@
             this.buttonSpeedLimit = new BelicsClass.UI.Controls.BL_FlatButton();
             this.buttonRackSetable = new BelicsClass.UI.Controls.BL_FlatButton();
             this.buttonRackRotatable = new BelicsClass.UI.Controls.BL_FlatButton();
-            this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -165,9 +168,11 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.buttonRedo);
             this.splitContainer1.Panel1.Controls.Add(this.buttonFloorDel);
             this.splitContainer1.Panel1.Controls.Add(this.buttonFloorAdd);
             this.splitContainer1.Panel1.Controls.Add(this.checkBoxFA);
+            this.splitContainer1.Panel1.Controls.Add(this.buttonUndo);
             this.splitContainer1.Panel1.Controls.Add(this.listviewFloor);
             this.splitContainer1.Panel1.Controls.Add(this.panelSelectedQR);
             this.splitContainer1.Panel1.Controls.Add(this.textBoxFloorCode);
@@ -296,7 +301,6 @@
             this.panelSelectedQR.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.panelSelectedQR.BackColor = System.Drawing.Color.Silver;
-            this.panelSelectedQR.Controls.Add(this.buttonEscapeCheck);
             this.panelSelectedQR.Controls.Add(this.groupBox4);
             this.panelSelectedQR.Controls.Add(this.groupBox3);
             this.panelSelectedQR.Controls.Add(this.groupBox2);
@@ -304,33 +308,35 @@
             this.panelSelectedQR.Enabled = false;
             this.panelSelectedQR.Location = new System.Drawing.Point(-1, 153);
             this.panelSelectedQR.Name = "panelSelectedQR";
-            this.panelSelectedQR.Size = new System.Drawing.Size(161, 532);
+            this.panelSelectedQR.Size = new System.Drawing.Size(161, 503);
             this.panelSelectedQR.TabIndex = 0;
             // 
-            // buttonEscapeCheck
+            // buttonRedo
             // 
-            this.buttonEscapeCheck.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.buttonEscapeCheck.BackColorNormal = System.Drawing.Color.RoyalBlue;
-            this.buttonEscapeCheck.BackColorOFF = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.buttonEscapeCheck.BackColorON = System.Drawing.Color.Lime;
-            this.buttonEscapeCheck.Checked = false;
-            this.buttonEscapeCheck.CheckMode = true;
-            this.buttonEscapeCheck.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.buttonEscapeCheck.FlatAppearance.BorderColor = System.Drawing.Color.Black;
-            this.buttonEscapeCheck.FlatAppearance.BorderSize = 2;
-            this.buttonEscapeCheck.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonEscapeCheck.ForeColor = System.Drawing.Color.White;
-            this.buttonEscapeCheck.ForeColorNormal = System.Drawing.Color.White;
-            this.buttonEscapeCheck.ForeColorOFF = System.Drawing.Color.White;
-            this.buttonEscapeCheck.ForeColorON = System.Drawing.Color.Black;
-            this.buttonEscapeCheck.Location = new System.Drawing.Point(5, 500);
-            this.buttonEscapeCheck.Name = "buttonEscapeCheck";
-            this.buttonEscapeCheck.Size = new System.Drawing.Size(152, 31);
-            this.buttonEscapeCheck.TabIndex = 7;
-            this.buttonEscapeCheck.Tag = false;
-            this.buttonEscapeCheck.Text = "退避チェックポイント";
-            this.buttonEscapeCheck.UseVisualStyleBackColor = false;
-            this.buttonEscapeCheck.Click += new System.EventHandler(this.buttonEscapeCheck_Click);
+            this.buttonRedo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonRedo.BackColor = System.Drawing.Color.RoyalBlue;
+            this.buttonRedo.BackColorNormal = System.Drawing.Color.RoyalBlue;
+            this.buttonRedo.BackColorOFF = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonRedo.BackColorON = System.Drawing.Color.Lime;
+            this.buttonRedo.Checked = false;
+            this.buttonRedo.CheckMode = false;
+            this.buttonRedo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonRedo.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonRedo.FlatAppearance.BorderSize = 2;
+            this.buttonRedo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonRedo.ForeColor = System.Drawing.Color.White;
+            this.buttonRedo.ForeColorNormal = System.Drawing.Color.White;
+            this.buttonRedo.ForeColorOFF = System.Drawing.Color.White;
+            this.buttonRedo.ForeColorON = System.Drawing.Color.Black;
+            this.buttonRedo.Location = new System.Drawing.Point(78, 653);
+            this.buttonRedo.Name = "buttonRedo";
+            this.buttonRedo.Size = new System.Drawing.Size(82, 31);
+            this.buttonRedo.TabIndex = 8;
+            this.buttonRedo.Tag = false;
+            this.buttonRedo.Text = "やり直し";
+            this.buttonRedo.UseVisualStyleBackColor = false;
+            this.buttonRedo.Click += new System.EventHandler(this.buttonRedo_Click);
             // 
             // groupBox4
             // 
@@ -392,6 +398,33 @@
             this.label11.Size = new System.Drawing.Size(48, 18);
             this.label11.TabIndex = 3;
             this.label11.Text = "AT No";
+            // 
+            // buttonUndo
+            // 
+            this.buttonUndo.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonUndo.BackColor = System.Drawing.Color.RoyalBlue;
+            this.buttonUndo.BackColorNormal = System.Drawing.Color.RoyalBlue;
+            this.buttonUndo.BackColorOFF = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.buttonUndo.BackColorON = System.Drawing.Color.Lime;
+            this.buttonUndo.Checked = false;
+            this.buttonUndo.CheckMode = false;
+            this.buttonUndo.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.buttonUndo.FlatAppearance.BorderColor = System.Drawing.Color.Black;
+            this.buttonUndo.FlatAppearance.BorderSize = 2;
+            this.buttonUndo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonUndo.ForeColor = System.Drawing.Color.White;
+            this.buttonUndo.ForeColorNormal = System.Drawing.Color.White;
+            this.buttonUndo.ForeColorOFF = System.Drawing.Color.White;
+            this.buttonUndo.ForeColorON = System.Drawing.Color.Black;
+            this.buttonUndo.Location = new System.Drawing.Point(-1, 653);
+            this.buttonUndo.Name = "buttonUndo";
+            this.buttonUndo.Size = new System.Drawing.Size(82, 31);
+            this.buttonUndo.TabIndex = 8;
+            this.buttonUndo.Tag = false;
+            this.buttonUndo.Text = "元に戻す";
+            this.buttonUndo.UseVisualStyleBackColor = false;
+            this.buttonUndo.Click += new System.EventHandler(this.buttonUndo_Click);
             // 
             // groupBox3
             // 
@@ -1552,6 +1585,8 @@
             // contextMenuStrip1
             // 
             this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.ToolStripMenuItemUndo,
+            this.ToolStripMenuItemRedo,
             this.toolStripSeparator1,
             this.制限無しToolStripMenuItem,
             this.長手方向ToolStripMenuItem,
@@ -1559,34 +1594,53 @@
             this.toolStripMenuItem1,
             this.背景画像ToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(137, 104);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(137, 148);
             this.contextMenuStrip1.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenuStrip1_Opening);
+            // 
+            // ToolStripMenuItemUndo
+            // 
+            this.ToolStripMenuItemUndo.Enabled = false;
+            this.ToolStripMenuItemUndo.Name = "ToolStripMenuItemUndo";
+            this.ToolStripMenuItemUndo.Size = new System.Drawing.Size(136, 22);
+            this.ToolStripMenuItemUndo.Text = "元に戻す(&Z)";
+            // 
+            // ToolStripMenuItemRedo
+            // 
+            this.ToolStripMenuItemRedo.Enabled = false;
+            this.ToolStripMenuItemRedo.Name = "ToolStripMenuItemRedo";
+            this.ToolStripMenuItemRedo.Size = new System.Drawing.Size(136, 22);
+            this.ToolStripMenuItemRedo.Text = "やり直し(&Y)";
+            // 
+            // toolStripSeparator1
+            // 
+            this.toolStripSeparator1.Name = "toolStripSeparator1";
+            this.toolStripSeparator1.Size = new System.Drawing.Size(133, 6);
             // 
             // 制限無しToolStripMenuItem
             // 
             this.制限無しToolStripMenuItem.Name = "制限無しToolStripMenuItem";
-            this.制限無しToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.制限無しToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.制限無しToolStripMenuItem.Text = "制限無し(&A)";
             this.制限無しToolStripMenuItem.Click += new System.EventHandler(this.RouteTypeToolStripMenuItem_Click);
             // 
             // 長手方向ToolStripMenuItem
             // 
             this.長手方向ToolStripMenuItem.Name = "長手方向ToolStripMenuItem";
-            this.長手方向ToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.長手方向ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.長手方向ToolStripMenuItem.Text = "長手方向(&L)";
             this.長手方向ToolStripMenuItem.Click += new System.EventHandler(this.RouteTypeToolStripMenuItem_Click);
             // 
             // 短手方向ToolStripMenuItem
             // 
             this.短手方向ToolStripMenuItem.Name = "短手方向ToolStripMenuItem";
-            this.短手方向ToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.短手方向ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.短手方向ToolStripMenuItem.Text = "短手方向(&S)";
             this.短手方向ToolStripMenuItem.Click += new System.EventHandler(this.RouteTypeToolStripMenuItem_Click);
             // 
             // toolStripMenuItem1
             // 
             this.toolStripMenuItem1.Name = "toolStripMenuItem1";
-            this.toolStripMenuItem1.Size = new System.Drawing.Size(138, 6);
+            this.toolStripMenuItem1.Size = new System.Drawing.Size(133, 6);
             // 
             // 背景画像ToolStripMenuItem
             // 
@@ -1596,7 +1650,7 @@
             this.削除ToolStripMenuItem});
             this.背景画像ToolStripMenuItem.Enabled = false;
             this.背景画像ToolStripMenuItem.Name = "背景画像ToolStripMenuItem";
-            this.背景画像ToolStripMenuItem.Size = new System.Drawing.Size(141, 22);
+            this.背景画像ToolStripMenuItem.Size = new System.Drawing.Size(136, 22);
             this.背景画像ToolStripMenuItem.Text = "背景画像";
             // 
             // 読込ToolStripMenuItem
@@ -2045,11 +2099,6 @@
             this.buttonRackRotatable.UseVisualStyleBackColor = false;
             this.buttonRackRotatable.Visible = false;
             // 
-            // toolStripSeparator1
-            // 
-            this.toolStripSeparator1.Name = "toolStripSeparator1";
-            this.toolStripSeparator1.Size = new System.Drawing.Size(138, 6);
-            // 
             // SubForm_MapEditor
             // 
             this._TitleString = "マップ設定";
@@ -2197,7 +2246,10 @@
 		private System.Windows.Forms.CheckBox checkBoxRetendAspect;
 		private BelicsClass.UI.Controls.BL_FlatButton buttonSetCoordinate;
         private BelicsClass.UI.Controls.BL_FlatButton buttonQREditable;
-        private BelicsClass.UI.Controls.BL_FlatButton buttonEscapeCheck;
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemRedo;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItemUndo;
+        private BelicsClass.UI.Controls.BL_FlatButton buttonRedo;
+        private BelicsClass.UI.Controls.BL_FlatButton buttonUndo;
     }
 }

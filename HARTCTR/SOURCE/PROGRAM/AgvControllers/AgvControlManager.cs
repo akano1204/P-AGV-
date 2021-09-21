@@ -9,10 +9,12 @@ using System.Drawing.Drawing2D;
 using System.Drawing.Text;
 using System.Windows.Forms;
 using System.IO;
+using System.Xml.Serialization;
 
 using BelicsClass.Common;
 using BelicsClass.UI.Controls;
 using BelicsClass.File;
+using BelicsClass.ObjectSync;
 
 using AgvController;
 

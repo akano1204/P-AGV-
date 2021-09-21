@@ -352,7 +352,7 @@ namespace BelicsClass.UI
 		}
 
 		/// <summary></summary>
-		protected virtual void SubForm_Base_KeyDown(object sender, KeyEventArgs e)
+		public virtual void SubForm_Base_KeyDown(object sender, KeyEventArgs e)
 		{
 			if (!((e.Modifiers & Keys.Shift) == Keys.Shift))
 			{
@@ -413,7 +413,7 @@ namespace BelicsClass.UI
 		}
 
 		/// <summary></summary>
-		protected virtual void SubForm_Base_KeyPress(object sender, KeyPressEventArgs e)
+		public virtual void SubForm_Base_KeyPress(object sender, KeyPressEventArgs e)
 		{
 			if (m_Mainform != null)
 			{
@@ -455,7 +455,7 @@ namespace BelicsClass.UI
 		/// </summary>
 		/// <param name="sender"></param>
 		/// <param name="e"></param>
-		virtual protected void SubForm_Base_KeyUp(object sender, KeyEventArgs e)
+		virtual public void SubForm_Base_KeyUp(object sender, KeyEventArgs e)
 		{
 			if (m_Functions != null)
 			{
