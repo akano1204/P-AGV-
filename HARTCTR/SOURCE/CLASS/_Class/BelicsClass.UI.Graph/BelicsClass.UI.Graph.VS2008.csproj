@@ -1,0 +1,96 @@
+﻿<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{E1B23111-238D-4C66-9508-C385EACF00F1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BelicsClass.UI.Graph</RootNamespace>
+    <AssemblyName>BelicsClass.UI.Graph</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <DocumentationFile>..\Assemblies\BelicsClass.UI.Graph.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="_Chart.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_Chart.Designer.cs">
+      <DependentUpon>_Chart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Graph.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_Graph.Designer.cs">
+      <DependentUpon>_Graph.cs</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="_Chart.resx">
+      <DependentUpon>_Chart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_Graph.resx">
+      <DependentUpon>_Graph.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BelicsClass.Common\BelicsClass.Common.VS2008.csproj">
+      <Project>{04ba2e75-dd6b-4f2a-8aeb-6821a4fe6d27}</Project>
+      <Name>BelicsClass.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BelicsClass.ObjectSync\BelicsClass.ObjectSync.VS2008.csproj">
+      <Project>{e0264257-d31f-4a9e-823f-14250643097d}</Project>
+      <Name>BelicsClass.ObjectSync</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BelicsClass.UI.Controls\BelicsClass.UI.Controls.VS2008.csproj">
+      <Project>{91A39B53-89CC-442E-B250-FF4F9A5D0E23}</Project>
+      <Name>BelicsClass.UI.Controls.VS2008</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

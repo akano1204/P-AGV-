@@ -1,0 +1,121 @@
+﻿<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{91A39B53-89CC-442E-B250-FF4F9A5D0E23}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BelicsClass.UI.Controls</RootNamespace>
+    <AssemblyName>BelicsClass.UI.Controls</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <DocumentationFile>..\Assemblies\BelicsClass.UI.Controls.XML</DocumentationFile>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Windows.Forms.DataVisualization, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Assemblies.NET3.5\System.Windows.Forms.DataVisualization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization.Design, Version=3.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Assemblies.NET3.5\System.Windows.Forms.DataVisualization.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="_TransparentEllipse.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_TransparentEllipse.Designer.cs">
+      <DependentUpon>_TransparentEllipse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_CornerLabel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_CornerLabel.Designer.cs">
+      <DependentUpon>_CornerLabel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_DataGridViewProgressBarColumn.cs" />
+    <Compile Include="_DoubleBufferDataGridView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_DoubleBufferListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_DoubleBufferPanel.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_FlatButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_JAN13Code.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_QRCode.cs" />
+    <Compile Include="_RoundButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="_RoundButton.Designer.cs">
+      <DependentUpon>_RoundButton.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_StripeListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="_VirtualListView.cs">
+      <SubType>Component</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="_TransparentEllipse.resx">
+      <DependentUpon>_TransparentEllipse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_RoundButton.resx">
+      <DependentUpon>_RoundButton.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BelicsClass.Common\BelicsClass.Common.VS2008.csproj">
+      <Project>{04BA2E75-DD6B-4F2A-8AEB-6821A4FE6D27}</Project>
+      <Name>BelicsClass.Common.VS2008</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

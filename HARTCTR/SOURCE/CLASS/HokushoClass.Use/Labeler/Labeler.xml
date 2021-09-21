@@ -1,0 +1,2695 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Labeler</name>
+    </assembly>
+    <members>
+        <member name="T:HokushoClass.Use.Labeler.EPSON">
+            <summary>
+            ラベラークラス（エプソン用）
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.EPSON.Commands">
+            <summary>
+            コマンド編集クラス
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON.Open(System.String,System.Int32)">
+            <summary>
+            デバイスをオープンします。
+            </summary>
+            <param name="ip_address">オープンするネットワークデバイスのＩＰアドレス。</param>
+            <param name="port">オープンするソケットのポート№。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON.Open(System.String)">
+            <summary>
+            デバイスをオープンします。
+            </summary>
+            <param name="ip_address">オープンするネットワークデバイスのＩＰアドレス。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON.Close">
+            <summary>
+            デバイスをクローズします。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON.SendBytes(System.Byte[])">
+            <summary>
+            デバイスにバイト配列のデータを送信します。
+            </summary>
+            <param name="data">送信するデータが格納されているバイト配列。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON.ReceiveBytes(System.Int32@)">
+            <summary>
+            デバイスからバイト配列でデータを受信します。
+            </summary>
+            <param name="bytes_size">受信したバイト数。未受信のときは、-1。</param>
+            <returns>受信したバイト配列</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON.SendBytesDirect(System.Byte[])">
+            <summary>
+            デバイスにバイト配列のデータをそのまま送信します。
+            </summary>
+            <param name="data">送信するデータが格納されているバイト配列。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON.ReceiveBytesDirect">
+            <summary>
+            デバイスからバイト配列でデータをそのまま受信します。
+            </summary>
+            <returns>受信したバイト配列</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON.PrintOut(System.Byte[])">
+            <summary>
+            デバイスに編集データを送信します。
+            </summary>
+            <param name="data">送信するデータが格納されているバイト配列。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON.PrintOut(HokushoClass.Use.Labeler.EPSON_Commands)">
+            <summary>
+            デバイスに編集データを送信します。
+            </summary>
+            <param name="commands">編集済みのラベラーコマンド編集クラス</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON.PrintOut">
+            <summary>
+            デバイスに編集データを送信します。
+            </summary>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON.PrintOutReceive(System.Int32,System.Boolean@)">
+            <summary>
+            デバイスから編集データの印字完了を受信します。
+            </summary>
+            <param name="timeOut">タイムアウト値</param>
+            <param name="error">異常（true:あり,false:なし）</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON.PrintOutReceive(System.Int32)">
+            <summary>
+            デバイスから編集データの印字完了を受信します。
+            </summary>
+            <param name="timeOut">タイムアウト値</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON.StopASB">
+            <summary>
+            デバイスにASB無効を送信します。
+            </summary>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON.BufferClear(System.Int32)">
+            <summary>
+            デバイスのバッファをクリアします。
+            </summary>
+            <param name="timeOut">タイムアウト値。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON.Status(System.String@,System.String@,System.Int32)">
+            <summary>
+            デバイスの状態を取得します。
+            </summary>
+            <param name="statusCode">ステータスコードが格納されている文字列。</param>
+            <param name="statusMessage">ステータス内容が格納されている文字列。</param>
+            <param name="timeOut">タイムアウト値。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON.Status1Send(System.Int32)">
+            <summary>
+            デバイスに状態要求1を送信します。
+            </summary>
+            <param name="timeOut">タイムアウト値。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON.Status1Send">
+            <summary>
+            デバイスに状態要求1を送信します。
+            </summary>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON.Status1Receive(System.String@,System.String@)">
+            <summary>
+            デバイスから状態要求1の返答を受信します。
+            </summary>
+            <param name="statusCode">ステータスコードが格納されている文字列。</param>
+            <param name="statusMessage">ステータス内容が格納されている文字列。</param>
+            <returns>true:受信完了,false:受信待ち</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON.Status2Send(System.Int32)">
+            <summary>
+            デバイスに状態要求2を送信します。
+            </summary>
+            <param name="timeOut">タイムアウト値。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON.Status2Send">
+            <summary>
+            デバイスに状態要求2を送信します。
+            </summary>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON.Status2Receive(System.String@,System.String@)">
+            <summary>
+            デバイスから状態要求2の返答を受信します。
+            </summary>
+            <param name="statusCode">ステータスコードが格納されている文字列。</param>
+            <param name="statusMessage">ステータス内容が格納されている文字列。</param>
+            <returns>true:受信完了,false:受信待ち</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON.Status3Send(System.Int32)">
+            <summary>
+            デバイスに状態要求3を送信します。
+            </summary>
+            <param name="timeOut">タイムアウト値。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON.Status3Send">
+            <summary>
+            デバイスに状態要求3を送信します。
+            </summary>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON.Status3Receive(System.String@,System.String@)">
+            <summary>
+            デバイスから状態要求3の返答を受信します。
+            </summary>
+            <param name="statusCode">ステータスコードが格納されている文字列。</param>
+            <param name="statusMessage">ステータス内容が格納されている文字列。</param>
+            <returns>true:受信完了,false:受信待ち</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON.Status4Send(System.Int32)">
+            <summary>
+            デバイスに状態要求4を送信します。
+            </summary>
+            <param name="timeOut">タイムアウト値。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON.Status4Send">
+            <summary>
+            デバイスに状態要求4を送信します。
+            </summary>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON.Status4Receive(System.String@,System.String@)">
+            <summary>
+            デバイスから状態要求4の返答を受信します。
+            </summary>
+            <param name="statusCode">ステータスコードが格納されている文字列。</param>
+            <param name="statusMessage">ステータス内容が格納されている文字列。</param>
+            <returns>true:受信完了,false:受信待ち</returns>
+        </member>
+        <member name="P:HokushoClass.Use.Labeler.EPSON.ErrorCode">
+            <summary>
+            異常コードを取得します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Use.Labeler.EPSON.ErrorMessage">
+            <summary>
+            異常内容を取得します。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON.errors">
+            <summary>
+            異常の設定
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON.errors(System.Int32,System.String)">
+            <summary>
+            異常の設定
+            </summary>
+            <param name="error_code">異常コード</param>
+            <param name="comment">異常内容</param>
+        </member>
+        <member name="T:HokushoClass.Use.Labeler.EPSON_Commands">
+            <summary>
+            ラベラーコマンド編集クラス（エプソン用）
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Use.Labeler.EPSON_Commands.Model">
+            <summary>
+            機種名
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.EPSON_Commands.Model.TM_T88IV">
+            <summary>
+            TM-T88IV
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Use.Labeler.EPSON_Commands.BarcodeType">
+            <summary>
+            バーコード体系
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.EPSON_Commands.BarcodeType.UPCA">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.EPSON_Commands.BarcodeType.UPCE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.EPSON_Commands.BarcodeType.JAN13">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.EPSON_Commands.BarcodeType.JAN8">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.EPSON_Commands.BarcodeType.CODE39">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.EPSON_Commands.BarcodeType.ITF">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.EPSON_Commands.BarcodeType.CODABAR">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.EPSON_Commands.BarcodeType.CODE93">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.EPSON_Commands.BarcodeType.CODE128">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Use.Labeler.EPSON_Commands.AlignType">
+            <summary>
+            揃え
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.EPSON_Commands.AlignType.Left">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.EPSON_Commands.AlignType.Center">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.EPSON_Commands.AlignType.Right">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON_Commands.#ctor">
+            <summary>
+            ラベラーコマンド編集クラス
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON_Commands.#ctor(HokushoClass.Use.Labeler.EPSON_Commands.Model)">
+            <summary>
+            ラベラーコマンド編集クラス
+            </summary>
+            <param name="modelType">機種を指定します。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON_Commands.Start">
+            <summary>
+            編集の開始を宣言します。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON_Commands.End">
+            <summary>
+            編集の終了を宣言します。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON_Commands.Initialize">
+            <summary>
+            プリンターの初期化
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON_Commands.LineFeed">
+            <summary>
+            改行
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON_Commands.LineFeed(System.Int32)">
+            <summary>
+            行紙送り
+            </summary>
+            <param name="count">行数（0～255）</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON_Commands.DotFeed(System.Int32)">
+            <summary>
+            ドット紙送り
+            </summary>
+            <param name="dot">ドット（0～255）</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON_Commands.LineSpacing(System.Int32)">
+            <summary>
+            改行量の設定
+            </summary>
+            <param name="dot">ドット（0～255）</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON_Commands.LineSpacing">
+            <summary>
+            初期改行量の設定
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON_Commands.Align(HokushoClass.Use.Labeler.EPSON_Commands.AlignType)">
+            <summary>
+            位置揃えの設定
+            </summary>
+            <param name="alignType">揃え</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON_Commands.LeftMargin(System.Int32)">
+            <summary>
+            左マージンの設定
+            </summary>
+            <param name="dot">ドット（0～65535）</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON_Commands.LeftMargin">
+            <summary>
+            左マージンの設定解除
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON_Commands.CodeTable(System.Int32)">
+            <summary>
+            文字コードテーブルの選択
+            </summary>
+            <param name="codeTable">文字コードテーブル（0-8,16-19,254,255）</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON_Commands.Font(System.Char)">
+            <summary>
+            文字フォントの選択
+            </summary>
+            <param name="type">フォントタイプ（A,B,C）</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON_Commands.Size(System.Int32,System.Int32)">
+            <summary>
+            文字サイズの指定
+            </summary>
+            <param name="width">横倍率（1～8）</param>
+            <param name="height">縦倍率（1～8）</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON_Commands.Size">
+            <summary>
+            文字サイズの指定解除
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON_Commands.Smoothing(System.Boolean)">
+            <summary>
+            拡大文字のスムージング指定・解除
+            </summary>
+            <param name="flag">true:指定, false:解除</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON_Commands.UnderLine(System.Int32)">
+            <summary>
+            アンダーラインの指定・解除
+            </summary>
+            <param name="type">0:解除,1:1ドット,2:2ドット</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON_Commands.UnderLine">
+            <summary>
+            アンダーラインの解除
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON_Commands.Emphasize(System.Boolean)">
+            <summary>
+            強調印字の指定・解除
+            </summary>
+            <param name="flag">true:指定, false:解除</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON_Commands.Reverse(System.Boolean)">
+            <summary>
+            白黒反転印字の指定・解除
+            </summary>
+            <param name="flag">true:指定, false:解除</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON_Commands.KanjiCode(System.Int32)">
+            <summary>
+            漢字コード体系の選択
+            </summary>
+            <param name="code">0:ＪＩＳ,1:シフトＪＩＳ</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON_Commands.KanjiSize(System.Int32,System.Int32)">
+            <summary>
+            漢字サイズの指定
+            </summary>
+            <param name="width">横倍率（1～2）</param>
+            <param name="height">縦倍率（1～2）</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON_Commands.Line(System.Int32,System.Int32)">
+            <summary>
+            ラインの指定
+            </summary>
+            <param name="dot">長さ（1～2047：ドット単位）</param>
+            <param name="type">タイプ（1:細線,2:太線,3:点線）</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON_Commands.Barcode(HokushoClass.Use.Labeler.EPSON_Commands.BarcodeType,System.Int32,System.Int32,System.Byte[],System.Int32,System.Char)">
+            <summary>
+            バーコードの印字
+            </summary>
+            <param name="barcodeType">バーコード体系</param>
+            <param name="narrowBar">ナローバー幅（2～6：ドット単位）</param>
+            <param name="barHeight">バーコードの高さ（1～255：ドット単位）</param>
+            <param name="code">バーコードデータのバイト配列</param>
+            <param name="hriPostion">HRI 文字の印字位置（0:なし,1:バーコード上,2:バーコード下,3:両方）</param>
+            <param name="hriFont">HRI 文字のフォント（A,B）</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON_Commands.Barcode(HokushoClass.Use.Labeler.EPSON_Commands.BarcodeType,System.Int32,System.Int32,System.String,System.Int32,System.Char)">
+            <summary>
+            バーコードの印字
+            </summary>
+            <param name="barcodeType">バーコード体系</param>
+            <param name="narrowBar">ナローバー幅（2～6：ドット単位）</param>
+            <param name="barHeight">バーコードの高さ（1～255：ドット単位）</param>
+            <param name="code">バーコードデータの文字列</param>
+            <param name="hriPostion">HRI 文字の印字位置（0:なし,1:バーコード上,2:バーコード下,3:両方）</param>
+            <param name="hriFont">HRI 文字のフォント（A,B）</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON_Commands.Barcode(HokushoClass.Use.Labeler.EPSON_Commands.BarcodeType,System.Int32,System.Int32,System.Byte[],System.Boolean)">
+            <summary>
+            バーコードの印字
+            </summary>
+            <param name="barcodeType">バーコード体系</param>
+            <param name="narrowBar">ナローバー幅（2～6：ドット単位）</param>
+            <param name="barHeight">バーコードの高さ（1～255：ドット単位）</param>
+            <param name="code">バーコードデータのバイト配列</param>
+            <param name="hriFlag">HRI 文字の有無（true:あり,false:なし）</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON_Commands.Barcode(HokushoClass.Use.Labeler.EPSON_Commands.BarcodeType,System.Int32,System.Int32,System.String,System.Boolean)">
+            <summary>
+            バーコードの印字
+            </summary>
+            <param name="barcodeType">バーコード体系</param>
+            <param name="narrowBar">ナローバー幅（2～6：ドット単位）</param>
+            <param name="barHeight">バーコードの高さ（1～255：ドット単位）</param>
+            <param name="code">バーコードデータの文字列</param>
+            <param name="hriFlag">HRI 文字の有無（true:あり,false:なし）</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON_Commands.CompactCode128(System.String)">
+            <summary>
+            CODE128の自動圧縮
+            </summary>
+            <param name="data">バーコードの文字列</param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON_Commands.Cut(System.Boolean,System.Int32)">
+            <summary>
+            用紙のカット
+            </summary>
+            <param name="mode">カット動作（true:フル,false:パーシャル）</param>
+            <param name="pitch">カット位置までの送りピッチ（0～255）</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON_Commands.Cut(System.Boolean)">
+            <summary>
+            用紙のカット
+            </summary>
+            <param name="mode">カット動作（true:フル,false:パーシャル）</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON_Commands.Cut">
+            <summary>
+            用紙のカット
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON_Commands.Data(System.String)">
+             <summary>
+            データの指定
+             </summary>
+             <param name="data">データが格納されている文字列</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON_Commands.Data(System.Byte[])">
+             <summary>
+            データの指定
+             </summary>
+             <param name="data">データが格納されているバイト配列</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON_Commands.MmToDot(System.Int32)">
+            <summary>
+            ミリメートルをドットに変換
+            </summary>
+            <param name="millimeter">変換するミリメートル</param>
+            <returns>ドット数</returns>
+        </member>
+        <member name="P:HokushoClass.Use.Labeler.EPSON_Commands.BytesData">
+            <summary>
+            編集データを取得します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Use.Labeler.EPSON_Commands.BytesDataCount">
+            <summary>
+            編集データのバイト数を取得します。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.EPSON_Commands.append(System.Byte[])">
+            <summary>
+            データの追加(オーバーフロー回避)
+            </summary>
+            <param name="data">追加するバイト配列</param>
+        </member>
+        <member name="T:HokushoClass.Use.Labeler.NOZAKI">
+            <summary>
+            ラベラークラス（野崎印刷用）
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI.Commands">
+            <summary>
+            コマンド編集クラス
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.NOZAKI.Open(System.Int32,HokushoClass.Rs232c.H_Rs232c.BaudRate)">
+            <summary>
+            デバイスをオープンします。
+            </summary>
+            <param name="port">オープンするシリアルデバイスのポート№。</param>
+            <param name="baudRate">オープンするデバイスのボーレート。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.NOZAKI.Open(System.Int32)">
+            <summary>
+            デバイスをオープンします。
+            </summary>
+            <param name="port">オープンするシリアルデバイスのポート№。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.NOZAKI.Open(System.Int32,System.Int32)">
+            <summary>
+            デバイスをオープンします。
+            </summary>
+            <param name="port">オープンするシリアルデバイスのポート№。</param>
+            <param name="baudRate">オープンするシリアルデバイスのボーレート。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.NOZAKI.Open(System.String,System.Int32)">
+            <summary>
+            デバイスをオープンします。
+            </summary>
+            <param name="ip_address">オープンするネットワークデバイスのＩＰアドレス。</param>
+            <param name="port">オープンするソケットのポート№。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.NOZAKI.Open(System.String)">
+            <summary>
+            デバイスをオープンします。
+            </summary>
+            <param name="ip_address">オープンするネットワークデバイスのＩＰアドレス。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.NOZAKI.Close">
+            <summary>
+            デバイスをクローズします。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.NOZAKI.SendBytes(System.Byte[])">
+            <summary>
+            デバイスにバイト配列のデータを送信します。
+            </summary>
+            <param name="data">送信するデータが格納されているバイト配列。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.NOZAKI.ReceiveBytes(System.Int32@)">
+            <summary>
+            デバイスからバイト配列でデータを受信します。
+            </summary>
+            <param name="bytes_size">受信したバイト数。未受信のときは、-1。</param>
+            <returns>受信したバイト配列</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.NOZAKI.SendBytesDirect(System.Byte[])">
+            <summary>
+            デバイスにバイト配列のデータをそのまま送信します。
+            </summary>
+            <param name="data">送信するデータが格納されているバイト配列。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.NOZAKI.ReceiveBytesDirect">
+            <summary>
+            デバイスからバイト配列でデータをそのまま受信します。
+            </summary>
+            <returns>受信したバイト配列</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.NOZAKI.PrintOut(System.Byte[])">
+            <summary>
+            デバイスに編集データを送信します。
+            </summary>
+            <param name="data">送信するデータが格納されているバイト配列。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.NOZAKI.PrintOut(HokushoClass.Use.Labeler.NOZAKI_Commands)">
+            <summary>
+            デバイスに編集データを送信します。
+            </summary>
+            <param name="commands">編集済みのラベラーコマンド編集クラス</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.NOZAKI.PrintOut">
+            <summary>
+            デバイスに編集データを送信します。
+            </summary>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.NOZAKI.ResetSend(System.Int32)">
+            <summary>
+            デバイスにリセット要求を送信します。
+            </summary>
+            <param name="timeOut">タイムアウト値。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.NOZAKI.ResetSend">
+            <summary>
+            デバイスにリセット要求を送信します。
+            </summary>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.NOZAKI.StatusSend(System.Int32)">
+            <summary>
+            デバイスに状態要求を送信します。
+            </summary>
+            <param name="timeOut">タイムアウト値。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.NOZAKI.StatusSend">
+            <summary>
+            デバイスに状態要求を送信します。
+            </summary>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.NOZAKI.StatusReceive(System.String@,System.String@)">
+            <summary>
+            デバイスから状態要求の返答を受信します。
+            </summary>
+            <param name="statusCode">ステータスコードが格納されている文字列。</param>
+            <param name="statusMessage">ステータス内容が格納されている文字列。</param>
+            <returns>true:受信完了,false:受信待ち</returns>
+        </member>
+        <member name="P:HokushoClass.Use.Labeler.NOZAKI.ErrorCode">
+            <summary>
+            異常コードを取得します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Use.Labeler.NOZAKI.ErrorMessage">
+            <summary>
+            異常内容を取得します。
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Use.Labeler.NOZAKI_Commands">
+            <summary>
+            ラベラーコマンド編集クラス（野崎印刷用）
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Use.Labeler.NOZAKI_Commands.Model">
+            <summary>
+            機種名
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.Model.FAD400">
+            <summary>
+            FAD-400
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.Model.FA400">
+            <summary>
+            FA-400
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Use.Labeler.NOZAKI_Commands.Turn">
+            <summary>
+            回転指定
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.Turn._0">
+            <summary>
+            回転しない
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.Turn._90">
+            <summary>
+            90ﾟ右回転
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.Turn._180">
+            <summary>
+            180ﾟ右回転
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.Turn._270">
+            <summary>
+            270ﾟ右回転
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Use.Labeler.NOZAKI_Commands.FontPitch">
+            <summary>
+            フォントピッチ
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontPitch._8">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontPitch._9">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontPitch._10">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontPitch._11">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontPitch._12">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontPitch._13">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontPitch._14">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontPitch._15">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontPitch._16">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontPitch._17">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontPitch._18">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontPitch._19">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontPitch._20">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontPitch._21">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontPitch._22">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontPitch._23">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontPitch._24">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontPitch._26">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontPitch._28">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontPitch._30">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontPitch._32">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontPitch._34">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontPitch._36">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontPitch._38">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontPitch._40">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontPitch._42">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontPitch._48">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontPitch._56">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontPitch._64">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontPitch._72">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontPitch._80">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontPitch._88">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontPitch._96">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontPitch._104">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontPitch._112">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontPitch._120">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Use.Labeler.NOZAKI_Commands.FontTypeA">
+            <summary>
+            フォントタイプＡ
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontTypeA.L">
+            <summary>
+            ＬＬ文字
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontTypeA.H">
+            <summary>
+            Ｌ文字
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontTypeA.M">
+            <summary>
+            ＯＣＲＢ
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontTypeA.N">
+            <summary>
+            ＯＣＲＡ
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontTypeA.S">
+            <summary>
+            Ｓ文字
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontTypeA.Q">
+            <summary>
+            ＳＳ文字
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontTypeA.K">
+            <summary>
+            Ｋ漢字
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Use.Labeler.NOZAKI_Commands.FontTypeK">
+            <summary>
+            フォントタイプＫ
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontTypeK.I">
+            <summary>
+            ＪＩＳ漢字（１６×１６ドット）
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontTypeK.J">
+            <summary>
+            ＪＩＳ漢字（２４×２４ドット）
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.FontTypeK.O">
+            <summary>
+            ＪＩＳ漢字（３２×３２ドット）
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Use.Labeler.NOZAKI_Commands.BarcodeType">
+            <summary>
+            バーコード種
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.BarcodeType.CODE39">
+            <summary>
+            CODE39
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.BarcodeType.ITF">
+            <summary>
+            インターリーブド2of5
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.BarcodeType.UPC_A">
+            <summary>
+            UPC-A
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.BarcodeType.JAN8">
+            <summary>
+            JAN8/EAN8
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.BarcodeType.JAN13">
+            <summary>
+            JAN13/EAN13
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.BarcodeType.NW7">
+            <summary>
+            NW7
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.BarcodeType.Matrix2of5">
+            <summary>
+            Matrix2of5
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.NOZAKI_Commands.BarcodeType.CODE128">
+            <summary>
+            CODE128
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.NOZAKI_Commands.#ctor">
+            <summary>
+            ラベラーコマンド編集クラス
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.NOZAKI_Commands.#ctor(HokushoClass.Use.Labeler.NOZAKI_Commands.Model)">
+            <summary>
+            ラベラーコマンド編集クラス
+            </summary>
+            <param name="modelType">機種を指定します。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.NOZAKI_Commands.Start">
+            <summary>
+            編集の開始を宣言します。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.NOZAKI_Commands.Start(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            編集の開始を宣言します。
+            </summary>
+            <param name="xOffset">X座標のオフセットを0.1mm単位で指定。</param>
+            <param name="yOffset">Y座標のオフセットを0.1mm単位で指定。</param>
+            <param name="dark">印字濃度を指定。(1～10)</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.NOZAKI_Commands.End(System.Int32,System.Int32)">
+            <summary>
+            編集の終了を宣言します。
+            </summary>
+            <param name="copies">発行枚数を指定。(1～9999)</param>
+            <param name="cut">カット間隔を指定。(0～100)</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.NOZAKI_Commands.End(System.Boolean)">
+            <summary>
+            編集の終了を宣言します。
+            </summary>
+            <param name="cut">カットする場合は true。それ以外の場合は false。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.NOZAKI_Commands.End">
+            <summary>
+            編集の終了を宣言します。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.NOZAKI_Commands.Clear">
+            <summary>
+            すでに受信しているデータを全てクリアします。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.NOZAKI_Commands.Frame(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            直線や四角形を印字します。
+            </summary>
+            <param name="x1">罫線の始点X座標を0.1mm単位で指定。</param>
+            <param name="y1">罫線の始点Y座標を0.1mm単位で指定。</param>
+            <param name="x2">罫線の終点X座標を0.1mm単位で指定。</param>
+            <param name="y2">罫線の終点Y座標を0.1mm単位で指定。</param>
+            <param name="width">罫線の幅を0.1mm単位で指定。(1～99)</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.NOZAKI_Commands.TextA(System.Int32,System.Int32,System.Int32,HokushoClass.Use.Labeler.NOZAKI_Commands.FontTypeA,System.Int32,System.Int32,HokushoClass.Use.Labeler.NOZAKI_Commands.FontPitch,System.String,HokushoClass.Use.Labeler.NOZAKI_Commands.Turn,System.String)">
+            <summary>
+            印字する文字の種類や座標、印字方向、横縦倍率などを設定します。(ANK)
+            </summary>
+            <param name="fieldNo">フィールド№。</param>
+            <param name="x">文字の基点X座標を0.1mm単位で指定。</param>
+            <param name="y">文字の基点Y座標を0.1mm単位で指定。</param>
+            <param name="font">フォントの種類を指定。</param>
+            <param name="xSize">文字の横倍率を指定。(1～9)</param>
+            <param name="ySize">文字の縦倍率を指定。(1～9)</param>
+            <param name="fontPitch">文字間のピッチをドット単位で指定。</param>
+            <param name="textData">データが格納されている文字列。</param>
+            <param name="turn">回転方向を指定。</param>
+            <param name="option">拡張パラメータが格納されている文字列。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.NOZAKI_Commands.TextA(System.Int32,System.Int32,System.Int32,HokushoClass.Use.Labeler.NOZAKI_Commands.FontTypeA,System.Int32,System.Int32,HokushoClass.Use.Labeler.NOZAKI_Commands.FontPitch,System.String)">
+            <summary>
+            印字する文字の種類や座標、印字方向、横縦倍率などを設定します。(ANK)
+            </summary>
+            <param name="fieldNo">フィールド№。</param>
+            <param name="x">文字の基点X座標を0.1mm単位で指定。</param>
+            <param name="y">文字の基点Y座標を0.1mm単位で指定。</param>
+            <param name="font">フォントの種類を指定。</param>
+            <param name="xSize">文字の横倍率を指定。(1～9)</param>
+            <param name="ySize">文字の縦倍率を指定。(1～9)</param>
+            <param name="fontPitch">文字間のピッチをドット単位で指定。</param>
+            <param name="textData">データが格納されている文字列。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.NOZAKI_Commands.TextK(System.Int32,System.Int32,System.Int32,HokushoClass.Use.Labeler.NOZAKI_Commands.FontTypeK,System.Int32,System.Int32,HokushoClass.Use.Labeler.NOZAKI_Commands.FontPitch,System.String,HokushoClass.Use.Labeler.NOZAKI_Commands.Turn,System.String)">
+            <summary>
+            印字する文字の種類や座標、印字方向、横縦倍率などを設定します。(漢字)
+            </summary>
+            <param name="fieldNo">フィールド№。</param>
+            <param name="x">文字の基点X座標を0.1mm単位で指定。</param>
+            <param name="y">文字の基点Y座標を0.1mm単位で指定。</param>
+            <param name="font">フォントの種類を指定。</param>
+            <param name="xSize">文字の横倍率を指定。(1～9)</param>
+            <param name="ySize">文字の縦倍率を指定。(1～9)</param>
+            <param name="fontPitch">文字間のピッチをドット単位で指定。</param>
+            <param name="textData">データが格納されている文字列。</param>
+            <param name="turn">回転方向を指定。</param>
+            <param name="option">拡張パラメータが格納されている文字列。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.NOZAKI_Commands.TextK(System.Int32,System.Int32,System.Int32,HokushoClass.Use.Labeler.NOZAKI_Commands.FontTypeK,System.Int32,System.Int32,HokushoClass.Use.Labeler.NOZAKI_Commands.FontPitch,System.String)">
+            <summary>
+            印字する文字の種類や座標、印字方向、横縦倍率などを設定します。(漢字)
+            </summary>
+            <param name="fieldNo">フィールド№。</param>
+            <param name="x">文字の基点X座標を0.1mm単位で指定。</param>
+            <param name="y">文字の基点Y座標を0.1mm単位で指定。</param>
+            <param name="font">フォントの種類を指定。</param>
+            <param name="xSize">文字の横倍率を指定。(1～9)</param>
+            <param name="ySize">文字の縦倍率を指定。(1～9)</param>
+            <param name="fontPitch">文字間のピッチをドット単位で指定。</param>
+            <param name="textData">データが格納されている文字列。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.NOZAKI_Commands.Barcode(System.Int32,System.Int32,System.Int32,HokushoClass.Use.Labeler.NOZAKI_Commands.BarcodeType,System.Int32,System.Int32,System.String,System.Boolean,HokushoClass.Use.Labeler.NOZAKI_Commands.Turn,System.String)">
+            <summary>
+            印字するバーコードの種類や座標、印字方向、横倍率などを設定します。
+            </summary>
+            <param name="fieldNo">フィールド№。</param>
+            <param name="x">バーコードの基点X座標を0.1mm単位で指定。</param>
+            <param name="y">バーコードの基点Y座標を0.1mm単位で指定。</param>
+            <param name="barcodeType">バーコードの種類を指定。</param>
+            <param name="width">横倍率を指定。(1～9)</param>
+            <param name="height">バーコード高を0.1mm単位で指定。(1～2700)</param>
+            <param name="barcodeData">バーコードデータが格納されている文字列。</param>
+            <param name="subscript">添え字を付加する場合は true。それ以外の場合は false。</param>
+            <param name="turn">回転方向を指定。</param>
+            <param name="option">拡張パラメータが格納されている文字列。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.NOZAKI_Commands.Barcode(System.Int32,System.Int32,System.Int32,HokushoClass.Use.Labeler.NOZAKI_Commands.BarcodeType,System.Int32,System.Int32,System.String,System.Boolean)">
+            <summary>
+            印字するバーコードの種類や座標、印字方向、横倍率などを設定します。
+            </summary>
+            <param name="fieldNo">フィールド№。</param>
+            <param name="x">バーコードの基点X座標を0.1mm単位で指定。</param>
+            <param name="y">バーコードの基点Y座標を0.1mm単位で指定。</param>
+            <param name="barcodeType">バーコードの種類を指定。</param>
+            <param name="width">横倍率を指定。(1～9)</param>
+            <param name="height">バーコード高を0.1mm単位で指定。(1～2700)</param>
+            <param name="barcodeData">バーコードデータが格納されている文字列。</param>
+            <param name="subscript">添え字を付加する場合は true。それ以外の場合は false。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.NOZAKI_Commands.Barcode(System.Int32,System.Int32,System.Int32,HokushoClass.Use.Labeler.NOZAKI_Commands.BarcodeType,System.Int32,System.Int32,System.String,HokushoClass.Use.Labeler.NOZAKI_Commands.Turn)">
+            <summary>
+            印字するバーコードの種類や座標、印字方向、横倍率などを設定します。
+            </summary>
+            <param name="fieldNo">フィールド№。</param>
+            <param name="x">バーコードの基点X座標を0.1mm単位で指定。</param>
+            <param name="y">バーコードの基点Y座標を0.1mm単位で指定。</param>
+            <param name="barcodeType">バーコードの種類を指定。</param>
+            <param name="width">横倍率を指定。(1～9)</param>
+            <param name="height">バーコード高を0.1mm単位で指定。(1～2700)</param>
+            <param name="barcodeData">バーコードデータが格納されている文字列。</param>
+            <param name="turn">回転方向を指定。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.NOZAKI_Commands.Barcode(System.Int32,System.Int32,System.Int32,HokushoClass.Use.Labeler.NOZAKI_Commands.BarcodeType,System.Int32,System.Int32,System.String)">
+            <summary>
+            印字するバーコードの種類や座標、印字方向、横倍率などを設定します。
+            </summary>
+            <param name="fieldNo">フィールド№。</param>
+            <param name="x">バーコードの基点X座標を0.1mm単位で指定。</param>
+            <param name="y">バーコードの基点Y座標を0.1mm単位で指定。</param>
+            <param name="barcodeType">バーコードの種類を指定。</param>
+            <param name="width">横倍率を指定。(1～9)</param>
+            <param name="height">バーコード高を0.1mm単位で指定。(1～2700)</param>
+            <param name="barcodeData">バーコードデータが格納されている文字列。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.NOZAKI_Commands.BarcodeParameter1(System.Int32)">
+            <summary>
+            バーコードのドットサイズを変更する設定を取得します。（JAN/EAN,UPC-A,CODE128）
+            </summary>
+            <param name="width">細バーサイズを0.1mm単位で指定。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.NOZAKI_Commands.BarcodeParameter2(System.Int32,System.Int32)">
+            <summary>
+            バーコードのドットサイズを変更する設定を取得します。（JAN/EAN,UPC-A,CODE128以外）
+            </summary>
+            <param name="width1">細バーサイズを0.1mm単位で指定。</param>
+            <param name="width2">太バーサイズを0.1mm単位で指定。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.NOZAKI_Commands.NumberingParameter(System.Int32)">
+            <summary>
+            ナンバリングの設定を取得します。
+            </summary>
+            <param name="counter">増減値を指定。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.NOZAKI_Commands.Reverse(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            文字を黒白反転して印字します。
+            </summary>
+            <param name="x1">反転の始点X座標を0.1mm単位で指定。</param>
+            <param name="y1">反転の始点Y座標を0.1mm単位で指定。</param>
+            <param name="x2">反転の終点X座標を0.1mm単位で指定。</param>
+            <param name="y2">反転の終点Y座標を0.1mm単位で指定。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.NOZAKI_Commands.Format(System.String)">
+             <summary>
+            コマンドを直接指定します。
+             </summary>
+             <param name="command">コマンドが格納されている文字列。</param>
+        </member>
+        <member name="P:HokushoClass.Use.Labeler.NOZAKI_Commands.BytesData">
+            <summary>
+            編集データを取得します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Use.Labeler.NOZAKI_Commands.BytesDataCount">
+            <summary>
+            編集データのバイト数を取得します。
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Use.Labeler.SATO">
+            <summary>
+            ラベラークラス（サトー用）
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Use.Labeler.SATO.AckType">
+            <summary>
+            ACKタイプ
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.SATO.AckType.NONE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.SATO.AckType.ACK">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.SATO.AckType.NAK">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.SATO.Commands">
+            <summary>
+            コマンド編集クラス
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.SATO.Open(System.Int32,HokushoClass.Rs232c.H_Rs232c.BaudRate)">
+            <summary>
+            デバイスをオープンします。
+            </summary>
+            <param name="port">オープンするシリアルデバイスのポート№。</param>
+            <param name="baudRate">オープンするデバイスのボーレート。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.SATO.Open(System.Int32)">
+            <summary>
+            デバイスをオープンします。
+            </summary>
+            <param name="port">オープンするシリアルデバイスのポート№。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.SATO.Open(System.Int32,System.Int32)">
+            <summary>
+            デバイスをオープンします。
+            </summary>
+            <param name="port">オープンするシリアルデバイスのポート№。</param>
+            <param name="baudRate">オープンするシリアルデバイスのボーレート。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.SATO.Open(System.String)">
+            <summary>
+            デバイスをオープンします。
+            </summary>
+            <param name="ip_address">オープンするネットワークデバイスのＩＰアドレス。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.SATO.Close">
+            <summary>
+            デバイスをクローズします。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.SATO.SendBytes(System.Byte[])">
+            <summary>
+            デバイスにバイト配列のデータを送信します。
+            </summary>
+            <param name="data">送信するデータが格納されているバイト配列。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.SATO.ReceiveBytes(System.Int32@)">
+            <summary>
+            デバイスからバイト配列でデータを受信します。
+            </summary>
+            <param name="bytes_size">受信したバイト数。未受信のときは、-1。</param>
+            <returns>受信したバイト配列</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.SATO.SendBytesDirect(System.Byte[])">
+            <summary>
+            デバイスにバイト配列のデータをそのまま送信します。
+            </summary>
+            <param name="data">送信するデータが格納されているバイト配列。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.SATO.ReceiveBytesDirect">
+            <summary>
+            デバイスからバイト配列でデータをそのまま受信します。
+            </summary>
+            <returns>受信したバイト配列</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.SATO.PrintOut(System.Byte[])">
+            <summary>
+            デバイスに編集データを送信します。
+            </summary>
+            <param name="data">送信するデータが格納されているバイト配列。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.SATO.PrintOut(HokushoClass.Use.Labeler.SATO_Commands)">
+            <summary>
+            デバイスに編集データを送信します。
+            </summary>
+            <param name="commands">編集済みのラベラーコマンド編集クラス</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.SATO.PrintOut">
+            <summary>
+            デバイスに編集データを送信します。
+            </summary>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.SATO.Receive">
+            <summary>
+            デバイスから返答を受信します。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.SATO.StatusSend(System.Int32)">
+            <summary>
+            デバイスに状態要求を送信します。
+            </summary>
+            <param name="timeOut">タイムアウト値。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.SATO.StatusSend">
+            <summary>
+            デバイスに状態要求を送信します。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.SATO.StatusReceive(System.String@,System.String@)">
+            <summary>
+            デバイスから状態要求の返答を受信します。
+            </summary>
+            <param name="statusCode">ステータスコードが格納されている文字列。</param>
+            <param name="statusMessage">ステータス内容が格納されている文字列。</param>
+            <returns>true:受信完了,false:受信待ち</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.SATO.StatusReceive(System.String@,System.String@,System.Int32@)">
+            <summary>
+            デバイスから状態要求の返答を受信します。
+            </summary>
+            <param name="statusCode">ステータスコードが格納されている文字列。</param>
+            <param name="statusMessage">ステータス内容が格納されている文字列。</param>
+            <param name="statusCounter">ステータス内のカウンター値。(ステータスL:貼付完了枚数、ステータス3:残り印字枚数)</param>
+            <returns>true:受信完了,false:受信待ち</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.SATO.CancelSend">
+            <summary>
+            デバイスにキャンセル指定を送信します。
+            </summary>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.SATO.CancelReceive">
+            <summary>
+            デバイスからキャンセル指定の返答を受信します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Use.Labeler.SATO.ErrorCode">
+            <summary>
+            異常コードを取得します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Use.Labeler.SATO.ErrorMessage">
+            <summary>
+            異常内容を取得します。
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Use.Labeler.SATO_Commands">
+            <summary>
+            ラベラーコマンド編集クラス（サトー用）
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Use.Labeler.SATO_Commands.Model">
+            <summary>
+            機種名
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.SATO_Commands.Model.MR400e">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.SATO_Commands.Model.MR410e">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.SATO_Commands.Model.MT400e">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.SATO_Commands.Model.MT410e">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.SATO_Commands.Model.SR408">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.SATO_Commands.Model.SR412">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.SATO_Commands.Model.SR424">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.SATO_Commands.Model.LespritT8">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.SATO_Commands.Model.LespritT12">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.SATO_Commands.#ctor">
+            <summary>
+            ラベラーコマンド編集クラス
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.SATO_Commands.#ctor(HokushoClass.Use.Labeler.SATO_Commands.Model)">
+            <summary>
+            ラベラーコマンド編集クラス
+            </summary>
+            <param name="modelType">サトーの機種を指定します。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.SATO_Commands.Start">
+            <summary>
+            編集の開始を宣言します。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.SATO_Commands.End">
+            <summary>
+            編集の終了を宣言します。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.SATO_Commands.LabelSize(System.Int32,System.Int32)">
+            <summary>
+            用紙サイズを指定します。
+            </summary>
+            <param name="x">用紙の幅をmm単位で指定。</param>
+            <param name="y">用紙の長さをmm単位で指定。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.SATO_Commands.Offset(System.Int32,System.Int32)">
+            <summary>
+            基点補正を指定します。
+            </summary>
+            <param name="x">横方向の補正値をmm単位で指定。</param>
+            <param name="y">縦方向の補正値をmm単位で指定。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.SATO_Commands.Pos(System.Int32,System.Int32)">
+            <summary>
+            印字位置を指定します。
+            </summary>
+            <param name="x">横方向の座標をmm単位で指定。</param>
+            <param name="y">縦方向の座標をmm単位で指定。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.SATO_Commands.Pos(System.Int32,System.Int32,System.Boolean,System.Boolean)">
+            <summary>
+            印字位置を指定します。
+            </summary>
+            <param name="x">横方向の座標をmm単位で指定。</param>
+            <param name="y">縦方向の座標をmm単位で指定。</param>
+            <param name="x_half">横方向の座標に0.5mm加算する場合は true。それ以外の場合は false。</param>
+            <param name="y_half">縦方向の座標に0.5mm加算する場合は true。それ以外の場合は false。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.SATO_Commands.Line(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            罫線、枠線印字を指定します。
+            </summary>
+            <param name="x">横方向の線の終了座標をmm単位で指定。</param>
+            <param name="y">縦方向の線の終了座標をmm単位で指定。</param>
+            <param name="dot">線の幅をドット単位で指定。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.SATO_Commands.Line(System.Int32,System.Int32,System.Boolean,System.Boolean,System.Int32)">
+            <summary>
+            罫線、枠線印字を指定します。
+            </summary>
+            <param name="x">横方向の線の終了座標をmm単位で指定。</param>
+            <param name="y">縦方向の線の終了座標をmm単位で指定。</param>
+            <param name="x_half">横方向の座標に0.5mm加算する場合は true。それ以外の場合は false。</param>
+            <param name="y_half">縦方向の座標に0.5mm加算する場合は true。それ以外の場合は false。</param>
+            <param name="dot">線の幅をドット単位で指定。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.SATO_Commands.FontSize(System.Int32,System.Int32)">
+            <summary>
+            フォントサイズを指定します。
+            </summary>
+            <param name="x">横方向の倍率を指定。</param>
+            <param name="y">縦方向の倍率で指定。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.SATO_Commands.FormatData(System.String,System.String)">
+            <summary>
+            データを指定します。
+            </summary>
+            <param name="command">コマンド部のデータが格納されている文字列。</param>
+            <param name="format">フォーマット部のデータが格納されている文字列。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.SATO_Commands.FormatData(System.String,System.Byte[])">
+            <summary>
+            データを指定します。(byte版)
+            </summary>
+            <param name="command">コマンド部のデータが格納されている文字列。</param>
+            <param name="format">フォーマット部のデータが格納されている文字列。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.SATO_Commands.MmToDot(System.Int32)">
+            <summary>
+            ミリメートルをドットに変換
+            </summary>
+            <param name="millimeter">変換するミリメートル</param>
+            <returns>ドット数</returns>
+        </member>
+        <member name="P:HokushoClass.Use.Labeler.SATO_Commands.BytesData">
+            <summary>
+            編集データを取得します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Use.Labeler.SATO_Commands.BytesDataCount">
+            <summary>
+            編集データのバイト数を取得します。
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Use.Labeler.TEC">
+            <summary>
+            ラベラークラス（東芝テック用）
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC.Commands">
+            <summary>
+            コマンド編集クラス
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC.Open(System.Int32,HokushoClass.Rs232c.H_Rs232c.BaudRate)">
+            <summary>
+            デバイスをオープンします。
+            </summary>
+            <param name="port">オープンするシリアルデバイスのポート№。</param>
+            <param name="baudRate">オープンするデバイスのボーレート。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC.Open(System.Int32)">
+            <summary>
+            デバイスをオープンします。
+            </summary>
+            <param name="port">オープンするシリアルデバイスのポート№。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC.Open(System.Int32,System.Int32)">
+            <summary>
+            デバイスをオープンします。
+            </summary>
+            <param name="port">オープンするシリアルデバイスのポート№。</param>
+            <param name="baudRate">オープンするシリアルデバイスのボーレート。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC.Open(System.String,System.Int32)">
+            <summary>
+            デバイスをオープンします。
+            </summary>
+            <param name="ip_address">オープンするネットワークデバイスのＩＰアドレス。</param>
+            <param name="port">オープンするソケットのポート№。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC.Open(System.String)">
+            <summary>
+            デバイスをオープンします。
+            </summary>
+            <param name="ip_address">オープンするネットワークデバイスのＩＰアドレス。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC.Close">
+            <summary>
+            デバイスをクローズします。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC.SendBytes(System.Byte[])">
+            <summary>
+            デバイスにバイト配列のデータを送信します。
+            </summary>
+            <param name="data">送信するデータが格納されているバイト配列。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC.ReceiveBytes(System.Int32@)">
+            <summary>
+            デバイスからバイト配列でデータを受信します。
+            </summary>
+            <param name="bytes_size">受信したバイト数。未受信のときは、-1。</param>
+            <returns>受信したバイト配列</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC.SendBytesDirect(System.Byte[])">
+            <summary>
+            デバイスにバイト配列のデータをそのまま送信します。
+            </summary>
+            <param name="data">送信するデータが格納されているバイト配列。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC.ReceiveBytesDirect">
+            <summary>
+            デバイスからバイト配列でデータをそのまま受信します。
+            </summary>
+            <returns>受信したバイト配列</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC.PrintOut(System.Byte[])">
+            <summary>
+            デバイスに編集データを送信します。
+            </summary>
+            <param name="data">送信するデータが格納されているバイト配列。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC.PrintOut(HokushoClass.Use.Labeler.TEC_Commands)">
+            <summary>
+            デバイスに編集データを送信します。
+            </summary>
+            <param name="commands">編集済みのラベラーコマンド編集クラス</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC.PrintOut">
+            <summary>
+            デバイスに編集データを送信します。
+            </summary>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC.ResetSend(System.Int32)">
+            <summary>
+            デバイスにリセット要求を送信します。
+            </summary>
+            <param name="timeOut">タイムアウト値。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC.ResetSend">
+            <summary>
+            デバイスにリセット要求を送信します。
+            </summary>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC.StatusSend(System.Int32)">
+            <summary>
+            デバイスに状態要求を送信します。
+            </summary>
+            <param name="timeOut">タイムアウト値。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC.StatusSend">
+            <summary>
+            デバイスに状態要求を送信します。
+            </summary>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC.StatusReceive(System.String@,System.String@)">
+            <summary>
+            デバイスから状態要求の返答を受信します。
+            </summary>
+            <param name="statusCode">ステータスコードが格納されている文字列。</param>
+            <param name="statusMessage">ステータス内容が格納されている文字列。</param>
+            <returns>true:受信完了,false:受信待ち</returns>
+        </member>
+        <member name="P:HokushoClass.Use.Labeler.TEC.ErrorCode">
+            <summary>
+            異常コードを取得します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Use.Labeler.TEC.ErrorMessage">
+            <summary>
+            異常内容を取得します。
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Use.Labeler.TEC_Commands">
+            <summary>
+            ラベラーコマンド編集クラス（東芝テック用）
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Use.Labeler.TEC_Commands.Model">
+            <summary>
+            機種名
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.Model.B_SA4T">
+            <summary>
+            B-SA4T
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Use.Labeler.TEC_Commands.Sensor">
+            <summary>
+            センサー
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.Sensor.None">
+            <summary>
+            センサーなし
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.Sensor.Reflect">
+            <summary>
+            反射センサー
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.Sensor.Transmit">
+            <summary>
+            透過センサー
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Use.Labeler.TEC_Commands.Label">
+            <summary>
+            ラベル
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.Label.ThermalPaper">
+            <summary>
+            感熱紙
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.Label.HeatTranscription">
+            <summary>
+            熱転写
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Use.Labeler.TEC_Commands.PrintMode">
+            <summary>
+            発行モード
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.PrintMode.C">
+            <summary>
+            連続印刷
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.PrintMode.D">
+            <summary>
+            剥離発行
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.PrintMode.E">
+            <summary>
+            剥離発行(センサー無視)
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Use.Labeler.TEC_Commands.Direction">
+            <summary>
+            印字方向
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.Direction.Standard">
+            <summary>
+            頭出し印字
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.Direction.Back">
+            <summary>
+            尻出し印字
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Use.Labeler.TEC_Commands.Turn">
+            <summary>
+            回転指定
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.Turn._0">
+            <summary>
+            回転しない
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.Turn._90">
+            <summary>
+            90ﾟ右回転
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.Turn._180">
+            <summary>
+            180ﾟ右回転
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.Turn._270">
+            <summary>
+            270ﾟ右回転
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Use.Labeler.TEC_Commands.BitmapFonts">
+            <summary>
+            ビットマップフォント
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.BitmapFonts.A">
+            <summary>
+            タイムスローマン(中)
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.BitmapFonts.B">
+            <summary>
+            タイムスローマン(中)
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.BitmapFonts.C">
+            <summary>
+            タイムスローマン(肉太)
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.BitmapFonts.D">
+            <summary>
+            タイムスローマン(肉太)
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.BitmapFonts.E">
+            <summary>
+            タイムスローマン(肉太)
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.BitmapFonts.F">
+            <summary>
+            タイムスローマン(斜体)
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.BitmapFonts.G">
+            <summary>
+            ヘルベチカ(中)
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.BitmapFonts.H">
+            <summary>
+            ヘルベチカ(中)
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.BitmapFonts.I">
+            <summary>
+            ヘルベチカ(中)
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.BitmapFonts.J">
+            <summary>
+            ヘルベチカ(肉太)
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.BitmapFonts.K">
+            <summary>
+            ヘルベチカ(肉太)
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.BitmapFonts.L">
+            <summary>
+            ヘルベチカ(斜体)
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.BitmapFonts.M">
+            <summary>
+            プレゼンテーション(肉太)
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.BitmapFonts.N">
+            <summary>
+            レターゴシック(中)
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.BitmapFonts.O">
+            <summary>
+            プレステージエリート(中)
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.BitmapFonts.P">
+            <summary>
+            プレステージエリート(肉太)
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.BitmapFonts.Q">
+            <summary>
+            クーリエ(中)
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.BitmapFonts.R">
+            <summary>
+            クーリエ(肉太)
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.BitmapFonts.S">
+            <summary>
+            OCR-A
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.BitmapFonts.T">
+            <summary>
+            OCR-B
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.BitmapFonts.U">
+            <summary>
+            漢字(16x16) 角ゴシック体
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.BitmapFonts.V">
+            <summary>
+            漢字(24x24) 角ゴシック体
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.BitmapFonts.W">
+            <summary>
+            漢字(32x32) 角ゴシック体
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.BitmapFonts.X">
+            <summary>
+            漢字(48x48) 角ゴシック体
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.BitmapFonts.q">
+            <summary>
+            ゴシック725ブラック
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.BitmapFonts.v">
+            <summary>
+            漢字(24x24) 明朝体
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.BitmapFonts.w">
+            <summary>
+            漢字(32x32) 明朝体
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Use.Labeler.TEC_Commands.OutlineFonts">
+            <summary>
+            アウトラインフォント
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.OutlineFonts.A">
+            <summary>
+            TEC FONT1(ヘルべチカ[肉太])
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.OutlineFonts.B">
+            <summary>
+            TEC FONT1(ヘルべチカ[肉太]プロポーショナル)
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.OutlineFonts.E">
+            <summary>
+            価格フォント1
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.OutlineFonts.F">
+            <summary>
+            価格フォント2
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.OutlineFonts.G">
+            <summary>
+            価格フォント3
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.OutlineFonts.H">
+            <summary>
+            DUTCH801ボールド(タイムスローマン プロポーショナル)
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.OutlineFonts.I">
+            <summary>
+            BRUSH738レギュラー(ポップ プロポーショナル)
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.OutlineFonts.J">
+            <summary>
+            GOTHIC725ブラック(プロポーショナル)
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Use.Labeler.TEC_Commands.BarcodeType1">
+            <summary>
+            バーコード種(JAN,UPC,CODE93,CODE128)
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.BarcodeType1.JAN8">
+            <summary>
+            JAN8/EAN8
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.BarcodeType1.JAN13">
+            <summary>
+            JAN13/EAN13
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.BarcodeType1.UPC_E">
+            <summary>
+            UPC-E
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.BarcodeType1.UPC_A">
+            <summary>
+            UPC-A
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.BarcodeType1.CODE128">
+            <summary>
+            CODE128
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.BarcodeType1.CODE93">
+            <summary>
+            CODE93
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Use.Labeler.TEC_Commands.BarcodeType2">
+            <summary>
+            バーコード種(ITF,CODE39,NW7)
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.BarcodeType2.ITF">
+            <summary>
+            インターリーブド2of5
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.BarcodeType2.CODE39">
+            <summary>
+            CODE39(スタンダード)
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.BarcodeType2.NW7">
+            <summary>
+            NW7
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.TEC_Commands.BarcodeType2.CODE39_FULL">
+            <summary>
+            CODE39(フルアスキー)
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC_Commands.#ctor">
+            <summary>
+            ラベラーコマンド編集クラス
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC_Commands.#ctor(HokushoClass.Use.Labeler.TEC_Commands.Model,HokushoClass.Use.Labeler.TEC_Commands.Sensor,HokushoClass.Use.Labeler.TEC_Commands.Label)">
+            <summary>
+            ラベラーコマンド編集クラス
+            </summary>
+            <param name="modelType">機種を指定します。</param>
+            <param name="sensorType">センサー種別を指定します。</param>
+            <param name="labelType">ラベル種別を指定します。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC_Commands.Start">
+            <summary>
+            編集の開始を宣言します。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC_Commands.Start(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            編集の開始を宣言します。
+            </summary>
+            <param name="width">用紙の幅を0.1mm単位で指定。</param>
+            <param name="length">用紙の長さを0.1mm単位で指定。</param>
+            <param name="gap">用紙の隙間を0.1mm単位で指定。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC_Commands.End(HokushoClass.Use.Labeler.TEC_Commands.Direction,System.Int32,System.Int32,System.Int32,HokushoClass.Use.Labeler.TEC_Commands.PrintMode)">
+            <summary>
+            編集の終了を宣言します。
+            </summary>
+            <param name="direction">印字方向を指定。</param>
+            <param name="speed">印字スピードを指定。(2,4,6)</param>
+            <param name="copies">発行枚数を指定。(1～9999)</param>
+            <param name="cut">カット間隔を指定。(0～100)</param>
+            <param name="printMode">発行モードを指定。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC_Commands.End(HokushoClass.Use.Labeler.TEC_Commands.Direction,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            編集の終了を宣言します。
+            </summary>
+            <param name="direction">印字方向を指定。</param>
+            <param name="speed">印字スピードを指定。(2,4,6)</param>
+            <param name="copies">発行枚数を指定。(1～9999)</param>
+            <param name="cut">カット間隔を指定。(0～100)</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC_Commands.End(System.Boolean)">
+            <summary>
+            編集の終了を宣言します。
+            </summary>
+            <param name="cut">カットする場合は true。それ以外の場合は false。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC_Commands.End">
+            <summary>
+            編集の終了を宣言します。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC_Commands.LabelSize(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            用紙サイズを指定します。
+            </summary>
+            <param name="width">用紙の幅を0.1mm単位で指定。</param>
+            <param name="length">用紙の長さを0.1mm単位で指定。</param>
+            <param name="gap">用紙の隙間を0.1mm単位で指定。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC_Commands.Clear">
+            <summary>
+            イメージバッファをクリアします。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC_Commands.Line(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            罫線を指定します。
+            </summary>
+            <param name="x1">罫線の始点X座標を0.1mm単位で指定。</param>
+            <param name="y1">罫線の始点Y座標を0.1mm単位で指定。</param>
+            <param name="x2">罫線の終点X座標を0.1mm単位で指定。</param>
+            <param name="y2">罫線の終点Y座標を0.1mm単位で指定。</param>
+            <param name="width">罫線の幅を0.1mm単位で指定。(1～9)</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC_Commands.Frame(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            枠線を指定します。
+            </summary>
+            <param name="x1">枠線の始点X座標を0.1mm単位で指定。</param>
+            <param name="y1">枠線の始点Y座標を0.1mm単位で指定。</param>
+            <param name="x2">枠線の終点X座標を0.1mm単位で指定。</param>
+            <param name="y2">枠線の終点Y座標を0.1mm単位で指定。</param>
+            <param name="width">枠線の幅を0.1mm単位で指定。(1～9)</param>
+            <param name="round">角丸め半径を0.1mm単位で指定。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC_Commands.Frame(System.Int32,System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            枠線を指定します。
+            </summary>
+            <param name="x1">枠線の始点X座標を0.1mm単位で指定。</param>
+            <param name="y1">枠線の始点Y座標を0.1mm単位で指定。</param>
+            <param name="x2">枠線の終点X座標を0.1mm単位で指定。</param>
+            <param name="y2">枠線の終点Y座標を0.1mm単位で指定。</param>
+            <param name="width">枠線の幅を0.1mm単位で指定。(1～9)</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC_Commands.Text1(System.Int32,System.Int32,HokushoClass.Use.Labeler.TEC_Commands.BitmapFonts,System.Int32,System.Int32,System.Int32,System.String,HokushoClass.Use.Labeler.TEC_Commands.Turn,System.String)">
+            <summary>
+            文字（ビットマップフォント）を指定します。
+            </summary>
+            <param name="x">文字の基点X座標を0.1mm単位で指定。</param>
+            <param name="y">文字の基点Y座標を0.1mm単位で指定。</param>
+            <param name="font">フォントの種類を指定。</param>
+            <param name="xSize">文字の横倍率を指定。(1～9)</param>
+            <param name="ySize">文字の縦倍率を指定。(1～9)</param>
+            <param name="fontPitch">文字間のピッチをドット単位で指定。(-99～99)</param>
+            <param name="textData">データが格納されている文字列。</param>
+            <param name="turn">回転方向を指定。</param>
+            <param name="fontOption">文字飾りを指定。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC_Commands.Text1(System.Int32,System.Int32,HokushoClass.Use.Labeler.TEC_Commands.BitmapFonts,System.Int32,System.Int32,System.String,HokushoClass.Use.Labeler.TEC_Commands.Turn)">
+            <summary>
+            文字（ビットマップフォント）を指定します。
+            </summary>
+            <param name="x">文字の基点X座標を0.1mm単位で指定。</param>
+            <param name="y">文字の基点Y座標を0.1mm単位で指定。</param>
+            <param name="font">フォントの種類を指定。</param>
+            <param name="xSize">文字の横倍率を指定。(1～9)</param>
+            <param name="ySize">文字の縦倍率を指定。(1～9)</param>
+            <param name="textData">データが格納されている文字列。</param>
+            <param name="turn">回転方向を指定。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC_Commands.Text1(System.Int32,System.Int32,HokushoClass.Use.Labeler.TEC_Commands.BitmapFonts,System.Int32,System.Int32,System.String)">
+            <summary>
+            文字（ビットマップフォント）を指定します。
+            </summary>
+            <param name="x">文字の基点X座標を0.1mm単位で指定。</param>
+            <param name="y">文字の基点Y座標を0.1mm単位で指定。</param>
+            <param name="font">フォントの種類を指定。</param>
+            <param name="xSize">文字の横倍率を指定。(1～9)</param>
+            <param name="ySize">文字の縦倍率を指定。(1～9)</param>
+            <param name="textData">データが格納されている文字列。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC_Commands.Text2(System.Int32,System.Int32,HokushoClass.Use.Labeler.TEC_Commands.OutlineFonts,System.Int32,System.Int32,System.Int32,System.String,HokushoClass.Use.Labeler.TEC_Commands.Turn,System.String)">
+            <summary>
+            文字（アウトラインフォント）を指定します。
+            </summary>
+            <param name="x">文字の基点X座標を0.1mm単位で指定。</param>
+            <param name="y">文字の基点Y座標を0.1mm単位で指定。</param>
+            <param name="font">フォントの種類を指定。</param>
+            <param name="width">文字幅を0.1mm単位で指定。(20～850)</param>
+            <param name="height">文字高を0.1mm単位で指定。(20～850)</param>
+            <param name="fontPitch">文字間のピッチをドット単位で指定。(-512～512)</param>
+            <param name="textData">データが格納されている文字列。</param>
+            <param name="turn">回転方向を指定。</param>
+            <param name="fontOption">文字飾りを指定。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC_Commands.Text2(System.Int32,System.Int32,HokushoClass.Use.Labeler.TEC_Commands.OutlineFonts,System.Int32,System.Int32,System.String,HokushoClass.Use.Labeler.TEC_Commands.Turn)">
+            <summary>
+            文字（アウトラインフォント）を指定します。
+            </summary>
+            <param name="x">文字の基点X座標を0.1mm単位で指定。</param>
+            <param name="y">文字の基点Y座標を0.1mm単位で指定。</param>
+            <param name="width">文字幅を0.1mm単位で指定。(20～850)</param>
+            <param name="height">文字高を0.1mm単位で指定。(20～850)</param>
+            <param name="font">フォントの種類を指定。</param>
+            <param name="textData">データが格納されている文字列。</param>
+            <param name="turn">回転方向を指定。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC_Commands.Text2(System.Int32,System.Int32,HokushoClass.Use.Labeler.TEC_Commands.OutlineFonts,System.Int32,System.Int32,System.String)">
+            <summary>
+            文字（アウトラインフォント）を指定します。
+            </summary>
+            <param name="x">文字の基点X座標を0.1mm単位で指定。</param>
+            <param name="y">文字の基点Y座標を0.1mm単位で指定。</param>
+            <param name="width">文字幅を0.1mm単位で指定。(20～850)</param>
+            <param name="height">文字高を0.1mm単位で指定。(20～850)</param>
+            <param name="font">フォントの種類を指定。</param>
+            <param name="textData">データが格納されている文字列。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC_Commands.Barcode1(System.Int32,System.Int32,HokushoClass.Use.Labeler.TEC_Commands.BarcodeType1,System.Boolean,System.Int32,System.Int32,System.String,System.Boolean,HokushoClass.Use.Labeler.TEC_Commands.Turn)">
+            <summary>
+            バーコード（JAN,UPC,CODE93,CODE128）を指定します。
+            </summary>
+            <param name="x">バーコードの基点X座標を0.1mm単位で指定。</param>
+            <param name="y">バーコードの基点Y座標を0.1mm単位で指定。</param>
+            <param name="barcodeType">バーコードの種類を指定。</param>
+            <param name="checkdigit">チェックディジットを付加する場合は true。それ以外の場合は false。</param>
+            <param name="width">モジュール幅をドット単位で指定。(1～15)</param>
+            <param name="height">バーコード高を0.1mm単位で指定。(0～1000)</param>
+            <param name="barcodeData">バーコードデータが格納されている文字列。</param>
+            <param name="subscript">添え字を付加する場合は true。それ以外の場合は false。</param>
+            <param name="turn">回転方向を指定。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC_Commands.Barcode1(System.Int32,System.Int32,HokushoClass.Use.Labeler.TEC_Commands.BarcodeType1,System.Int32,System.Int32,System.String,System.Boolean)">
+            <summary>
+            バーコード（JAN,UPC,CODE93,CODE128）を指定します。
+            </summary>
+            <param name="x">バーコードの基点X座標を0.1mm単位で指定。</param>
+            <param name="y">バーコードの基点Y座標を0.1mm単位で指定。</param>
+            <param name="barcodeType">バーコードの種類を指定。</param>
+            <param name="width">モジュール幅をドット単位で指定。(1～15)</param>
+            <param name="height">バーコード高を0.1mm単位で指定。(0～1000)</param>
+            <param name="barcodeData">バーコードデータが格納されている文字列。</param>
+            <param name="subscript">添え字を付加する場合は true。それ以外の場合は false。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC_Commands.Barcode1(System.Int32,System.Int32,HokushoClass.Use.Labeler.TEC_Commands.BarcodeType1,System.Int32,System.Int32,System.String,HokushoClass.Use.Labeler.TEC_Commands.Turn)">
+            <summary>
+            バーコード（JAN,UPC,CODE93,CODE128）を指定します。
+            </summary>
+            <param name="x">バーコードの基点X座標を0.1mm単位で指定。</param>
+            <param name="y">バーコードの基点Y座標を0.1mm単位で指定。</param>
+            <param name="barcodeType">バーコードの種類を指定。</param>
+            <param name="width">モジュール幅をドット単位で指定。(1～15)</param>
+            <param name="height">バーコード高を0.1mm単位で指定。(0～1000)</param>
+            <param name="barcodeData">バーコードデータが格納されている文字列。</param>
+            <param name="turn">回転方向を指定。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC_Commands.Barcode1(System.Int32,System.Int32,HokushoClass.Use.Labeler.TEC_Commands.BarcodeType1,System.Int32,System.Int32,System.String)">
+            <summary>
+            バーコード（JAN,UPC,CODE93,CODE128）を指定します。
+            </summary>
+            <param name="x">バーコードの基点X座標を0.1mm単位で指定。</param>
+            <param name="y">バーコードの基点Y座標を0.1mm単位で指定。</param>
+            <param name="barcodeType">バーコードの種類を指定。</param>
+            <param name="width">モジュール幅をドット単位で指定。(1～15)</param>
+            <param name="height">バーコード高を0.1mm単位で指定。(0～1000)</param>
+            <param name="barcodeData">バーコードデータが格納されている文字列。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC_Commands.Barcode2(System.Int32,System.Int32,HokushoClass.Use.Labeler.TEC_Commands.BarcodeType2,System.Boolean,System.Int32,System.Int32,System.Int32,System.String,System.Boolean,HokushoClass.Use.Labeler.TEC_Commands.Turn)">
+            <summary>
+            バーコード（ITF,CODE39,NW7）を指定します。
+            </summary>
+            <param name="x">バーコードの基点X座標を0.1mm単位で指定。</param>
+            <param name="y">バーコードの基点Y座標を0.1mm単位で指定。</param>
+            <param name="barcodeType">バーコードの種類を指定。</param>
+            <param name="checkdigit">チェックディジットを付加する場合は true。それ以外の場合は false。</param>
+            <param name="narrowBar">細バー幅をドット単位で指定。(1～99)</param>
+            <param name="wideBar">太バー幅をドット単位で指定。(1～99)</param>
+            <param name="height">バーコード高を0.1mm単位で指定。(0～1000)</param>
+            <param name="barcodeData">バーコードデータが格納されている文字列。</param>
+            <param name="subscript">添え字を付加する場合は true。それ以外の場合は false。</param>
+            <param name="turn">回転方向を指定。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC_Commands.Barcode2(System.Int32,System.Int32,HokushoClass.Use.Labeler.TEC_Commands.BarcodeType2,System.Int32,System.Int32,System.Int32,System.String,System.Boolean)">
+            <summary>
+            バーコード（ITF,CODE39,NW7）を指定します。
+            </summary>
+            <param name="x">バーコードの基点X座標を0.1mm単位で指定。</param>
+            <param name="y">バーコードの基点Y座標を0.1mm単位で指定。</param>
+            <param name="barcodeType">バーコードの種類を指定。</param>
+            <param name="narrowBar">細バー幅をドット単位で指定。(1～99)</param>
+            <param name="wideBar">太バー幅をドット単位で指定。(1～99)</param>
+            <param name="height">バーコード高を0.1mm単位で指定。(0～1000)</param>
+            <param name="barcodeData">バーコードデータが格納されている文字列。</param>
+            <param name="subscript">添え字を付加する場合は true。それ以外の場合は false。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC_Commands.Barcode2(System.Int32,System.Int32,HokushoClass.Use.Labeler.TEC_Commands.BarcodeType2,System.Int32,System.Int32,System.Int32,System.String,HokushoClass.Use.Labeler.TEC_Commands.Turn)">
+            <summary>
+            バーコード（ITF,CODE39,NW7）を指定します。
+            </summary>
+            <param name="x">バーコードの基点X座標を0.1mm単位で指定。</param>
+            <param name="y">バーコードの基点Y座標を0.1mm単位で指定。</param>
+            <param name="barcodeType">バーコードの種類を指定。</param>
+            <param name="narrowBar">細バー幅をドット単位で指定。(1～99)</param>
+            <param name="wideBar">太バー幅をドット単位で指定。(1～99)</param>
+            <param name="height">バーコード高を0.1mm単位で指定。(0～1000)</param>
+            <param name="barcodeData">バーコードデータが格納されている文字列。</param>
+            <param name="turn">回転方向を指定。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC_Commands.Barcode2(System.Int32,System.Int32,HokushoClass.Use.Labeler.TEC_Commands.BarcodeType2,System.Int32,System.Int32,System.Int32,System.String)">
+            <summary>
+            バーコード（ITF,CODE39,NW7）を指定します。
+            </summary>
+            <param name="x">バーコードの基点X座標を0.1mm単位で指定。</param>
+            <param name="y">バーコードの基点Y座標を0.1mm単位で指定。</param>
+            <param name="barcodeType">バーコードの種類を指定。</param>
+            <param name="narrowBar">細バー幅をドット単位で指定。(1～99)</param>
+            <param name="wideBar">太バー幅をドット単位で指定。(1～99)</param>
+            <param name="height">バーコード高を0.1mm単位で指定。(0～1000)</param>
+            <param name="barcodeData">バーコードデータが格納されている文字列。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC_Commands.Format(System.String)">
+             <summary>
+            コマンドを直接指定します。
+             </summary>
+             <param name="command">コマンドが格納されている文字列。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC_Commands.Reverse(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            白黒反転を指定します。
+            </summary>
+            <param name="x1">白黒反転の始点X座標を0.1mm単位で指定。</param>
+            <param name="y1">白黒反転の始点Y座標を0.1mm単位で指定。</param>
+            <param name="x2">白黒反転の終点X座標を0.1mm単位で指定。</param>
+            <param name="y2">白黒反転の終点Y座標を0.1mm単位で指定。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.TEC_Commands.Eject">
+            <summary>
+            排出します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Use.Labeler.TEC_Commands.BytesData">
+            <summary>
+            編集データを取得します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Use.Labeler.TEC_Commands.BytesDataCount">
+            <summary>
+            編集データのバイト数を取得します。
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Use.Labeler.ZEBRA">
+            <summary>
+            ラベラークラス（ゼブラ用）
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.ZEBRA.Commands">
+            <summary>
+            コマンド編集クラス
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.ZEBRA.Open(System.Int32,HokushoClass.Rs232c.H_Rs232c.BaudRate)">
+            <summary>
+            デバイスをオープンします。
+            </summary>
+            <param name="port">オープンするシリアルデバイスのポート№。</param>
+            <param name="baudRate">オープンするデバイスのボーレート。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.ZEBRA.Open(System.Int32,System.Int32)">
+            <summary>
+            デバイスをオープンします。
+            </summary>
+            <param name="port">オープンするシリアルデバイスのポート№。</param>
+            <param name="baudRate">オープンするシリアルデバイスのボーレート。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.ZEBRA.Open(System.Int32)">
+            <summary>
+            デバイスをオープンします。
+            </summary>
+            <param name="port">オープンするシリアルデバイスのポート№。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.ZEBRA.Close">
+            <summary>
+            デバイスをクローズします。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.ZEBRA.SendBytes(System.Byte[])">
+            <summary>
+            デバイスにバイト配列のデータを送信します。
+            </summary>
+            <param name="data">送信するデータが格納されているバイト配列。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.ZEBRA.ReceiveBytes(System.Int32@)">
+            <summary>
+            デバイスからバイト配列でデータを受信します。
+            </summary>
+            <param name="bytes_size">受信したバイト数。未受信のときは、-1。</param>
+            <returns>受信したバイト配列</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.ZEBRA.SendBytesDirect(System.Byte[])">
+            <summary>
+            デバイスにバイト配列のデータをそのまま送信します。
+            </summary>
+            <param name="data">送信するデータが格納されているバイト配列。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.ZEBRA.ReceiveBytesDirect">
+            <summary>
+            デバイスからバイト配列でデータをそのまま受信します。
+            </summary>
+            <returns>受信したバイト配列</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.ZEBRA.PrintOut(System.Byte[])">
+            <summary>
+            デバイスに編集データを送信します。
+            </summary>
+            <param name="data">送信するデータが格納されているバイト配列。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.ZEBRA.PrintOut(HokushoClass.Use.Labeler.ZEBRA_Commands)">
+            <summary>
+            デバイスに編集データを送信します。
+            </summary>
+            <param name="commands">編集済みのラベラーコマンド編集クラス</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.ZEBRA.PrintOut">
+            <summary>
+            デバイスに編集データを送信します。
+            </summary>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.ZEBRA.StatusSend(System.Int32)">
+            <summary>
+            デバイスに状態要求を送信します。
+            </summary>
+            <param name="timeOut">タイムアウト値。</param>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.ZEBRA.StatusSend">
+            <summary>
+            デバイスに状態要求を送信します。
+            </summary>
+            <returns>true:正常,false:異常</returns>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.ZEBRA.StatusReceive(System.String@,System.String@)">
+            <summary>
+            デバイスから状態要求の返答を受信します。
+            </summary>
+            <param name="statusCode">ステータスコードが格納されている文字列。</param>
+            <param name="statusMessage">ステータス内容が格納されている文字列。</param>
+            <returns>true:受信完了,false:受信待ち</returns>
+        </member>
+        <member name="P:HokushoClass.Use.Labeler.ZEBRA.ErrorCode">
+            <summary>
+            異常コードを取得します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Use.Labeler.ZEBRA.ErrorMessage">
+            <summary>
+            異常内容を取得します。
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Use.Labeler.ZEBRA_Commands">
+            <summary>
+            ラベラーコマンド編集クラス（ゼブラ用）
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Use.Labeler.ZEBRA_Commands.Model">
+            <summary>
+            機種名
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.ZEBRA_Commands.Model._600bpi">
+            <summary>
+            解像度 600bpi
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.ZEBRA_Commands.Model._300bpi">
+            <summary>
+            解像度 300bpi
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Use.Labeler.ZEBRA_Commands.Model._203bpi">
+            <summary>
+            解像度 203bpi
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.ZEBRA_Commands.#ctor">
+            <summary>
+            ラベラーコマンド編集クラス
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.ZEBRA_Commands.#ctor(HokushoClass.Use.Labeler.ZEBRA_Commands.Model)">
+            <summary>
+            ラベラーコマンド編集クラス
+            </summary>
+            <param name="modelType">ゼブラの機種を指定します。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.ZEBRA_Commands.Start">
+            <summary>
+            編集の開始を宣言します。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.ZEBRA_Commands.End">
+            <summary>
+            編集の終了を宣言します。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.ZEBRA_Commands.Offset(System.Int32,System.Int32)">
+            <summary>
+            基点補正を指定します。
+            </summary>
+            <param name="x">横方向の補正値をmm単位で指定。</param>
+            <param name="y">縦方向の補正値をmm単位で指定。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.ZEBRA_Commands.Pos(System.Int32,System.Int32)">
+            <summary>
+            印字位置を指定します。
+            </summary>
+            <param name="x">横方向の座標をmm単位で指定。</param>
+            <param name="y">縦方向の座標をmm単位で指定。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.ZEBRA_Commands.Pos(System.Int32,System.Int32,System.Boolean,System.Boolean)">
+            <summary>
+            印字位置を指定します。
+            </summary>
+            <param name="x">横方向の座標をmm単位で指定。</param>
+            <param name="y">縦方向の座標をmm単位で指定。</param>
+            <param name="x_half">横方向の座標に0.5mm加算する場合は true。それ以外の場合は false。</param>
+            <param name="y_half">縦方向の座標に0.5mm加算する場合は true。それ以外の場合は false。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.ZEBRA_Commands.Line(System.Int32,System.Int32,System.Int32)">
+            <summary>
+            罫線、枠線印字を指定します。
+            </summary>
+            <param name="x">横方向の線の終了座標をmm単位で指定。</param>
+            <param name="y">縦方向の線の終了座標をmm単位で指定。</param>
+            <param name="dot">線の幅をドット単位で指定。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.ZEBRA_Commands.Line(System.Int32,System.Int32,System.Boolean,System.Boolean,System.Int32)">
+            <summary>
+            罫線、枠線印字を指定します。
+            </summary>
+            <param name="x">横方向の線の終了座標をmm単位で指定。</param>
+            <param name="y">縦方向の線の終了座標をmm単位で指定。</param>
+            <param name="x_half">横方向の座標に0.5mm加算する場合は true。それ以外の場合は false。</param>
+            <param name="y_half">縦方向の座標に0.5mm加算する場合は true。それ以外の場合は false。</param>
+            <param name="dot">線の幅をドット単位で指定。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.ZEBRA_Commands.DefaultFont(System.String,System.Int32,System.Int32)">
+            <summary>
+            デフォルトフォントを指定します。
+            </summary>
+            <param name="type">フォントのタイプを指定。(A～Z,0～9)</param>
+            <param name="height">フォントの高さを指定。</param>
+            <param name="width">フォントの幅を指定。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.ZEBRA_Commands.DefaultFont(System.String,System.Int32)">
+            <summary>
+            デフォルトフォントを指定します。
+            </summary>
+            <param name="type">フォントのタイプを指定。(A～Z,0～9)</param>
+            <param name="height">フォントの高さを指定。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.ZEBRA_Commands.Font(System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            フォントを指定します。
+            </summary>
+            <param name="type">フォントのタイプと向きを指定。(A～Z,0～9) + (N=標準,R=90ﾟ,I=180ﾟ,B=270ﾟ) ※時計方向</param>
+            <param name="height">フォントの高さを指定。</param>
+            <param name="width">フォントの幅を指定。</param>
+            <param name="font_name">フォント名を指定。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.ZEBRA_Commands.Font(System.String,System.Int32,System.Int32)">
+            <summary>
+            フォントを指定します。
+            </summary>
+            <param name="type">フォントのタイプと向きを指定。(A～Z,0～9) + (N=標準,R=90ﾟ,I=180ﾟ,B=270ﾟ) ※時計方向</param>
+            <param name="height">フォントの高さを指定。</param>
+            <param name="width">フォントの幅を指定。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.ZEBRA_Commands.Font(System.String,System.Int32)">
+            <summary>
+            フォントを指定します。
+            </summary>
+            <param name="type">フォントのタイプと向きを指定。(A～Z,0～9) + (N=標準,R=90ﾟ,I=180ﾟ,B=270ﾟ) ※時計方向</param>
+            <param name="height">フォントのフォントの高さを指定。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.ZEBRA_Commands.TextA(System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            英数字を指定します。(フォント指定あり)
+            </summary>
+            <param name="type">フォントのタイプと向きを指定。(A～Z,0～9) + (N=標準,R=90ﾟ,I=180ﾟ,B=270ﾟ) ※時計方向</param>
+            <param name="height">フォントの高さを指定。</param>
+            <param name="width">フォントの幅を指定。</param>
+            <param name="text_data">英数字が格納されている文字列。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.ZEBRA_Commands.TextA(System.String,System.Int32,System.String)">
+            <summary>
+            英数字を指定します。(フォント指定あり)
+            </summary>
+            <param name="type">フォントのタイプと向きを指定。(A～Z,0～9) + (N=標準,R=90ﾟ,I=180ﾟ,B=270ﾟ) ※時計方向</param>
+            <param name="height">フォントの高さを指定。</param>
+            <param name="text_data">英数字が格納されている文字列。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.ZEBRA_Commands.TextA(System.String)">
+            <summary>
+            英数字を指定します。
+            </summary>
+            <param name="text_data">英数字が格納されている文字列。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.ZEBRA_Commands.TextB(System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            漢字を指定します。(フォント指定あり)
+            </summary>
+            <param name="type">フォントのタイプと向きを指定。(A～Z,0～9) + (N=標準,R=90ﾟ,I=180ﾟ,B=270ﾟ) ※時計方向</param>
+            <param name="height">フォントの高さを指定。</param>
+            <param name="width">フォントの幅を指定。</param>
+            <param name="text_data">漢字が格納されている文字列。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.ZEBRA_Commands.TextB(System.String)">
+            <summary>
+            漢字を指定します。
+            </summary>
+            <param name="text_data">漢字が格納されている文字列。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.ZEBRA_Commands.TextC(System.String,System.Int32,System.Int32,System.String)">
+            <summary>
+            漢字を指定します。(フォント指定あり)
+            </summary>
+            <param name="type">フォントのタイプと向きを指定。(A～Z,0～9) + (N=標準,R=90ﾟ,I=180ﾟ,B=270ﾟ) ※時計方向</param>
+            <param name="height">フォントの高さを指定。</param>
+            <param name="width">フォントの幅を指定。</param>
+            <param name="text_data">漢字が格納されている文字列。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.ZEBRA_Commands.TextC(System.String)">
+            <summary>
+            漢字を指定します。
+            </summary>
+            <param name="text_data">漢字が格納されている文字列。</param>
+        </member>
+        <member name="M:HokushoClass.Use.Labeler.ZEBRA_Commands.FormatData(System.String,System.String)">
+            <summary>
+            データを指定します。
+            </summary>
+            <param name="command">コマンド部のデータが格納されている文字列。</param>
+            <param name="format">フォーマット部のデータが格納されている文字列。</param>
+        </member>
+        <member name="P:HokushoClass.Use.Labeler.ZEBRA_Commands.BytesData">
+            <summary>
+            編集データを取得します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Use.Labeler.ZEBRA_Commands.BytesDataCount">
+            <summary>
+            編集データのバイト数を取得します。
+            </summary>
+        </member>
+    </members>
+</doc>

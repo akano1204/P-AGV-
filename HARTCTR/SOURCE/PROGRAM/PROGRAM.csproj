@@ -1,0 +1,425 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5A0E4E29-C9E2-4E26-9658-D682B014F5F3}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PROGRAM</RootNamespace>
+    <AssemblyName>PROGRAM</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\BIN\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AgvControllers\AgvTracker.cs" />
+    <Compile Include="AgvControllers\Autorator.cs" />
+    <Compile Include="AgvControllers\RackMaster.cs" />
+    <Compile Include="AgvDatabase.cs" />
+    <Compile Include="AgvRunner\AgvModeCommander.cs" />
+    <Compile Include="AgvControllers\AgvConditioner.cs" />
+    <Compile Include="AgvControllers\AgvMapEditor.cs" />
+    <Compile Include="AgvControllers\AgvControlManager.cs" />
+    <Compile Include="AgvRunner\AgvAutoCommander.cs" />
+    <Compile Include="AgvControllers\AgvRouteManager.cs" />
+    <Compile Include="AgvControllers\AgvRunManager.cs" />
+    <Compile Include="AgvRunner\AgvRouteCommanderFA.cs" />
+    <Compile Include="AgvRunner\AgvRunner.cs" />
+    <Compile Include="AgvControllers\FloorAGV.cs" />
+    <Compile Include="AgvControllers\FloorMap.cs" />
+    <Compile Include="AgvControllers\FloorQR.cs" />
+    <Compile Include="AgvControllers\Rack.cs" />
+    <Compile Include="AgvControllers\RouteCondition.cs" />
+    <Compile Include="MainFormDialog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainFormDialog.Designer.cs">
+      <DependentUpon>MainFormDialog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\Form_Error.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\Form_Error.Designer.cs">
+      <DependentUpon>Form_Error.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\SubForm_AgvStateMonitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\SubForm_AgvStateMonitor.Designer.cs">
+      <DependentUpon>SubForm_AgvStateMonitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\SubForm_AgvHistory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\SubForm_AgvHistory.Designer.cs">
+      <DependentUpon>SubForm_AgvHistory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\SubForm_AutoratorSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\SubForm_AutoratorSetting.Designer.cs">
+      <DependentUpon>SubForm_AutoratorSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\SubForm_RackSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\SubForm_RackSetting.Designer.cs">
+      <DependentUpon>SubForm_RackSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\SubForm_BatteryChargeSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\SubForm_BatteryChargeSetting.Designer.cs">
+      <DependentUpon>SubForm_BatteryChargeSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\SubForm_SetCoordinate.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\SubForm_SetCoordinate.Designer.cs">
+      <DependentUpon>SubForm_SetCoordinate.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\SubForm_Test.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\SubForm_Test.Designer.cs">
+      <DependentUpon>SubForm_Test.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\SubForm_AgvAbility.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\SubForm_AgvAbility.Designer.cs">
+      <DependentUpon>SubForm_AgvAbility.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\SubForm_AgvMonitor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\SubForm_AgvMonitor.Designer.cs">
+      <DependentUpon>SubForm_AgvMonitor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\SubForm_Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\SubForm_Menu.Designer.cs">
+      <DependentUpon>SubForm_Menu.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SubForms\SubForm_AutoCommander.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\SubForm_AutoCommander.Designer.cs">
+      <DependentUpon>SubForm_AutoCommander.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\SubForm_ModeCommander.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\SubForm_ModeCommander.Designer.cs">
+      <DependentUpon>SubForm_ModeCommander.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\SubForm_OperationSimulator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\SubForm_OperationSimulator.Designer.cs">
+      <DependentUpon>SubForm_OperationSimulator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\SubForm_ModeSelecter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\SubForm_ModeSelecter.Designer.cs">
+      <DependentUpon>SubForm_ModeSelecter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\SubForm_ModeSimulator.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\SubForm_ModeSimulator.Designer.cs">
+      <DependentUpon>SubForm_ModeSimulator.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\SubForm_ModeConditioner.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\SubForm_ModeConditioner.Designer.cs">
+      <DependentUpon>SubForm_ModeConditioner.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\SubForm_OperationSelecter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\SubForm_OperationSelecter.Designer.cs">
+      <DependentUpon>SubForm_OperationSelecter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\SubForm_AgvCommunicationSetting.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\SubForm_AgvCommunicationSetting.Designer.cs">
+      <DependentUpon>SubForm_AgvCommunicationSetting.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\SubForm_MapEditor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\SubForm_MapEditor.Designer.cs">
+      <DependentUpon>SubForm_MapEditor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="SubForms\SubForm_QRPrinter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SubForms\SubForm_QRPrinter.Designer.cs">
+      <DependentUpon>SubForm_QRPrinter.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="MainFormDialog.resx">
+      <DependentUpon>MainFormDialog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\Form_Error.resx">
+      <DependentUpon>Form_Error.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\SubForm_AgvStateMonitor.resx">
+      <DependentUpon>SubForm_AgvStateMonitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\SubForm_AgvHistory.resx">
+      <DependentUpon>SubForm_AgvHistory.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\SubForm_AutoratorSetting.resx">
+      <DependentUpon>SubForm_AutoratorSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\SubForm_RackSetting.resx">
+      <DependentUpon>SubForm_RackSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\SubForm_BatteryChargeSetting.resx">
+      <DependentUpon>SubForm_BatteryChargeSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\SubForm_SetCoordinate.resx">
+      <DependentUpon>SubForm_SetCoordinate.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\SubForm_Test.resx">
+      <DependentUpon>SubForm_Test.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\SubForm_AgvAbility.resx">
+      <DependentUpon>SubForm_AgvAbility.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\SubForm_AgvMonitor.resx">
+      <DependentUpon>SubForm_AgvMonitor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\SubForm_Menu.resx">
+      <DependentUpon>SubForm_Menu.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="SubForms\SubForm_AutoCommander.resx">
+      <DependentUpon>SubForm_AutoCommander.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\SubForm_ModeCommander.resx">
+      <DependentUpon>SubForm_ModeCommander.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\SubForm_OperationSimulator.resx">
+      <DependentUpon>SubForm_OperationSimulator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\SubForm_ModeSelecter.resx">
+      <DependentUpon>SubForm_ModeSelecter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\SubForm_ModeSimulator.resx">
+      <DependentUpon>SubForm_ModeSimulator.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\SubForm_ModeConditioner.resx">
+      <DependentUpon>SubForm_ModeConditioner.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\SubForm_A1100.resx">
+      <DependentUpon>SubForm_OperationSelecter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\SubForm_AgvCommunicationSetting.resx">
+      <DependentUpon>SubForm_AgvCommunicationSetting.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\SubForm_MapEditor.resx">
+      <DependentUpon>SubForm_MapEditor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="SubForms\SubForm_QRPrinter.resx">
+      <DependentUpon>SubForm_QRPrinter.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\DataSources\SubForm_SetCoordinate.datasource" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\HART500.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CLASS\AgvController\AgvController.csproj">
+      <Project>{900b2558-b536-47cd-8df7-dcafec95c768}</Project>
+      <Name>AgvController</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CLASS\HokushoClass.Use\Labeler\Labeler.csproj">
+      <Project>{332e0c7d-f41a-4394-86d1-2fae77582f33}</Project>
+      <Name>Labeler</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\CLASS\_Class\BelicsClass.AllInOneCompact\BelicsClass.AllInOneCompact.VS2017.csproj">
+      <Project>{94dc20c2-2c81-4ace-9a0e-dd0a12982005}</Project>
+      <Name>BelicsClass.AllInOneCompact.VS2017</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\Cursor\R_B.png" />
+    <Content Include="Resources\Cursor\R_BL.png" />
+    <Content Include="Resources\Cursor\R_BR.png" />
+    <Content Include="Resources\Cursor\R_L.png" />
+    <Content Include="Resources\Cursor\R_R.png" />
+    <Content Include="Resources\Cursor\R_T.png" />
+    <Content Include="Resources\Cursor\R_TL.png" />
+    <Content Include="Resources\Cursor\R_TR.png" />
+    <Content Include="Resources\Cursor\S_DL.png" />
+    <Content Include="Resources\Cursor\S_DR.png" />
+    <Content Include="Resources\Cursor\S_L.png" />
+    <Content Include="Resources\Cursor\S_V.png" />
+    <Content Include="Resources\Cursor\TRANSLATE.png" />
+    <Content Include="SQL\ProcCreation\AGV_ERR_HISTORY_INSERT.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\ProcCreation\AGV_ERR_HISTORY_UPDATE.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\ProcCreation\AUTORATOR_STATE_UPDATE.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\ProcCreation\STATION_INFO_UPDATE.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\ProcCreation\AGV_ERR_NAME_INSERT.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\ProcCreation\AGV_ERR_NAME_TRUNCATE.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\ProcCreation\AGV_ORDER_INSERT.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\ProcCreation\AGV_ORDER_UPDATE.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\ProcCreation\AGV_ORDER_UPDATE_FINISH.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\ProcCreation\AGV_STATE_UPDATE.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\ProcCreation\AGV_SYS_ORDER_INSERT.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\ProcCreation\AGV_SYS_ORDER_UPDATE.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\ProcCreation\AGV_WORK_DAY_UPDATE.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\ProcCreation\AGV_WORK_HISTORY_INSERT.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\ProcCreation\AGV_WORK_HISTORY_UPDATE.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\ProcCreation\AGV_WORK_TOTAL_UPDATE.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\TableCreation\AGV_ERR_HISTORY_CREATE.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\TableCreation\AGV_ERR_NAME_CREATE.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\TableCreation\AUTORATOR_STATE_CREATE.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\TableCreation\STATION_INFO_CREATE.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\TableCreation\AGV_ORDER_CREATE.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\TableCreation\AGV_STATE_CREATE.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\TableCreation\AGV_SYS_ORDER_CREATE.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\TableCreation\AGV_WORK_DAY_CREATE.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\TableCreation\AGV_WORK_HISTORY_CREATE.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\TableCreation\AGV_WORK_TOTAL_CREATE.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\ViewCreation\AGV_ERR_VIEW_CREATE.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="SQL\ViewCreation\AGV_WORK_VIEW_CREATE.sql">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

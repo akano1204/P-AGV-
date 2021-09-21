@@ -1,0 +1,311 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.28803.156
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BelicsClass.AllInOne.VS2017", "BelicsClass.AllInOne\BelicsClass.AllInOne.VS2017.csproj", "{0339D967-CAAC-4220-80A3-94DB8D555553}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "_Class", "_Class", "{C30CCC7B-54B3-4E20-9C00-C9DD8082A6FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BelicsClass.Common.VS2017", "BelicsClass.Common\BelicsClass.Common.VS2017.csproj", "{2E237C4D-7AFD-417C-8F85-4E8879985FB6}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BelicsClass.ConsoleTools.VS2017", "BelicsClass.ConsoleTools\BelicsClass.ConsoleTools.VS2017.csproj", "{CA813F6C-8F55-45FE-BA5B-6023F488FDEA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BelicsClass.Database.VS2017", "BelicsClass.Database.Base\BelicsClass.Database.VS2017.csproj", "{E14E4AEC-4ECE-4C9C-8268-052F04A223E8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BelicsClass.Database.ExcelOle.VS2017", "BelicsClass.Database.ExcelOle\BelicsClass.Database.ExcelOle.VS2017.csproj", "{F61D05D7-53EF-4307-8AEB-BC5C797FBE71}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BelicsClass.Database.MSAccess.VS2017", "BelicsClass.Database.MSAccess\BelicsClass.Database.MSAccess.VS2017.csproj", "{24AFFD33-55AA-4516-8015-A1437720CD59}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BelicsClass.Database.OleDB.VS2017", "BelicsClass.Database.OleDB\BelicsClass.Database.OleDB.VS2017.csproj", "{554D036C-5CFE-4AEB-ABD3-B34BBA4CCF7A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BelicsClass.Database.Oracle.VS2017", "BelicsClass.Database.Oracle\BelicsClass.Database.Oracle.VS2017.csproj", "{FA888A12-23C9-4D70-BB15-8341CF72DBF2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BelicsClass.Database.SQLServer.VS2017", "BelicsClass.Database.SQLServer\BelicsClass.Database.SQLServer.VS2017.csproj", "{B7DD30B3-7B06-4F66-9E46-E1E73D7AE3D4}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BelicsClass.File.VS2017", "BelicsClass.File\BelicsClass.File.VS2017.csproj", "{9B32BDFD-AE87-4CE5-875F-3CC7AED4CF72}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BelicsClass.GPIB.CONTEC.VS2017", "BelicsClass.GPIB.CONTEC\BelicsClass.GPIB.CONTEC.VS2017.csproj", "{DEDB0C16-9A97-4B52-B7BF-94E7FFB02B3D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BelicsClass.Network.VS2017", "BelicsClass.Network\BelicsClass.Network.VS2017.csproj", "{30A95A70-E8F9-4FEB-B381-0D47D5DA67CB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BelicsClass.ObjectSync.VS2017", "BelicsClass.ObjectSync\BelicsClass.ObjectSync.VS2017.csproj", "{03C72EFD-971F-479D-A074-7FA859F2D261}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BelicsClass.PCI.INTERFACE.VS2017", "BelicsClass.PCI.INTERFACE\BelicsClass.PCI.INTERFACE.VS2017.csproj", "{255B7102-A55A-4B44-A147-706A8C2EE350}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BelicsClass.PLC.Accesser.VS2017", "BelicsClass.PLC.Accesser\BelicsClass.PLC.Accesser.VS2017.csproj", "{213B8835-B708-4780-8366-BDFB014E34A0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BelicsClass.PLC.VS2017", "BelicsClass.PLC.Base\BelicsClass.PLC.VS2017.csproj", "{3A33E259-86AB-4F8F-A5C8-AEA924B5EB68}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BelicsClass.PLC.MELSEC.VS2017", "BelicsClass.PLC.MELSEC\BelicsClass.PLC.MELSEC.VS2017.csproj", "{EF7F73C7-B076-4599-942D-FCB07C45B957}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BelicsClass.PLC.OMRON.VS2017", "BelicsClass.PLC.OMRON\BelicsClass.PLC.OMRON.VS2017.csproj", "{0693E6FE-0150-4784-AD5F-A7AC5F34F049}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BelicsClass.ProcessManage.VS2017", "BelicsClass.ProcessManage\BelicsClass.ProcessManage.VS2017.csproj", "{3B792FEE-8EBB-424B-8075-19E9D07F1C11}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BelicsClass.RFID.KEYENCE.VS2017", "BelicsClass.RFID.KEYENCE\BelicsClass.RFID.KEYENCE.VS2017.csproj", "{BDB581B0-5B07-4094-83DE-58C021A612D3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BelicsClass.Rs232c.VS2017", "BelicsClass.Rs232c\BelicsClass.Rs232c.VS2017.csproj", "{E0589273-1635-4B4C-A27F-A407944282F8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BelicsClass.UI.VS2017", "BelicsClass.UI\BelicsClass.UI.VS2017.csproj", "{72715663-96B4-4229-B0DB-03393D156757}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BelicsClass.UI.Controls.VS2017", "BelicsClass.UI.Controls\BelicsClass.UI.Controls.VS2017.csproj", "{AE09B45F-62C3-4B13-8691-D3F5DB276856}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BelicsClass.UI.Graph.VS2017", "BelicsClass.UI.Graph\BelicsClass.UI.Graph.VS2017.csproj", "{3564F3E6-D4C3-462A-A48D-F85B0708DBE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BelicsClass.AllInOneCompact.VS2017", "BelicsClass.AllInOneCompact\BelicsClass.AllInOneCompact.VS2017.csproj", "{94DC20C2-2C81-4ACE-9A0E-DD0A12982005}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BelicsClass.UI.Report.VS2017", "BelicsClass.UI.Report\BelicsClass.UI.Report.VS2017.csproj", "{74DECDF8-984C-44B3-8D4E-2CA699F3BD18}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0339D967-CAAC-4220-80A3-94DB8D555553}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0339D967-CAAC-4220-80A3-94DB8D555553}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0339D967-CAAC-4220-80A3-94DB8D555553}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0339D967-CAAC-4220-80A3-94DB8D555553}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2E237C4D-7AFD-417C-8F85-4E8879985FB6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2E237C4D-7AFD-417C-8F85-4E8879985FB6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2E237C4D-7AFD-417C-8F85-4E8879985FB6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2E237C4D-7AFD-417C-8F85-4E8879985FB6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA813F6C-8F55-45FE-BA5B-6023F488FDEA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA813F6C-8F55-45FE-BA5B-6023F488FDEA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA813F6C-8F55-45FE-BA5B-6023F488FDEA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA813F6C-8F55-45FE-BA5B-6023F488FDEA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E14E4AEC-4ECE-4C9C-8268-052F04A223E8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E14E4AEC-4ECE-4C9C-8268-052F04A223E8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E14E4AEC-4ECE-4C9C-8268-052F04A223E8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E14E4AEC-4ECE-4C9C-8268-052F04A223E8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F61D05D7-53EF-4307-8AEB-BC5C797FBE71}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F61D05D7-53EF-4307-8AEB-BC5C797FBE71}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F61D05D7-53EF-4307-8AEB-BC5C797FBE71}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F61D05D7-53EF-4307-8AEB-BC5C797FBE71}.Release|Any CPU.Build.0 = Release|Any CPU
+		{24AFFD33-55AA-4516-8015-A1437720CD59}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{24AFFD33-55AA-4516-8015-A1437720CD59}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{24AFFD33-55AA-4516-8015-A1437720CD59}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{24AFFD33-55AA-4516-8015-A1437720CD59}.Release|Any CPU.Build.0 = Release|Any CPU
+		{554D036C-5CFE-4AEB-ABD3-B34BBA4CCF7A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{554D036C-5CFE-4AEB-ABD3-B34BBA4CCF7A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{554D036C-5CFE-4AEB-ABD3-B34BBA4CCF7A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{554D036C-5CFE-4AEB-ABD3-B34BBA4CCF7A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA888A12-23C9-4D70-BB15-8341CF72DBF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA888A12-23C9-4D70-BB15-8341CF72DBF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA888A12-23C9-4D70-BB15-8341CF72DBF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA888A12-23C9-4D70-BB15-8341CF72DBF2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7DD30B3-7B06-4F66-9E46-E1E73D7AE3D4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7DD30B3-7B06-4F66-9E46-E1E73D7AE3D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7DD30B3-7B06-4F66-9E46-E1E73D7AE3D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7DD30B3-7B06-4F66-9E46-E1E73D7AE3D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9B32BDFD-AE87-4CE5-875F-3CC7AED4CF72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9B32BDFD-AE87-4CE5-875F-3CC7AED4CF72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9B32BDFD-AE87-4CE5-875F-3CC7AED4CF72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9B32BDFD-AE87-4CE5-875F-3CC7AED4CF72}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DEDB0C16-9A97-4B52-B7BF-94E7FFB02B3D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DEDB0C16-9A97-4B52-B7BF-94E7FFB02B3D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DEDB0C16-9A97-4B52-B7BF-94E7FFB02B3D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DEDB0C16-9A97-4B52-B7BF-94E7FFB02B3D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{30A95A70-E8F9-4FEB-B381-0D47D5DA67CB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{30A95A70-E8F9-4FEB-B381-0D47D5DA67CB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{30A95A70-E8F9-4FEB-B381-0D47D5DA67CB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{30A95A70-E8F9-4FEB-B381-0D47D5DA67CB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{03C72EFD-971F-479D-A074-7FA859F2D261}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{03C72EFD-971F-479D-A074-7FA859F2D261}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{03C72EFD-971F-479D-A074-7FA859F2D261}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{03C72EFD-971F-479D-A074-7FA859F2D261}.Release|Any CPU.Build.0 = Release|Any CPU
+		{255B7102-A55A-4B44-A147-706A8C2EE350}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{255B7102-A55A-4B44-A147-706A8C2EE350}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{255B7102-A55A-4B44-A147-706A8C2EE350}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{255B7102-A55A-4B44-A147-706A8C2EE350}.Release|Any CPU.Build.0 = Release|Any CPU
+		{213B8835-B708-4780-8366-BDFB014E34A0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{213B8835-B708-4780-8366-BDFB014E34A0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{213B8835-B708-4780-8366-BDFB014E34A0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{213B8835-B708-4780-8366-BDFB014E34A0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A33E259-86AB-4F8F-A5C8-AEA924B5EB68}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A33E259-86AB-4F8F-A5C8-AEA924B5EB68}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A33E259-86AB-4F8F-A5C8-AEA924B5EB68}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A33E259-86AB-4F8F-A5C8-AEA924B5EB68}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF7F73C7-B076-4599-942D-FCB07C45B957}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF7F73C7-B076-4599-942D-FCB07C45B957}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF7F73C7-B076-4599-942D-FCB07C45B957}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF7F73C7-B076-4599-942D-FCB07C45B957}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0693E6FE-0150-4784-AD5F-A7AC5F34F049}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0693E6FE-0150-4784-AD5F-A7AC5F34F049}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0693E6FE-0150-4784-AD5F-A7AC5F34F049}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0693E6FE-0150-4784-AD5F-A7AC5F34F049}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3B792FEE-8EBB-424B-8075-19E9D07F1C11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3B792FEE-8EBB-424B-8075-19E9D07F1C11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3B792FEE-8EBB-424B-8075-19E9D07F1C11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3B792FEE-8EBB-424B-8075-19E9D07F1C11}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BDB581B0-5B07-4094-83DE-58C021A612D3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BDB581B0-5B07-4094-83DE-58C021A612D3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BDB581B0-5B07-4094-83DE-58C021A612D3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BDB581B0-5B07-4094-83DE-58C021A612D3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0589273-1635-4B4C-A27F-A407944282F8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0589273-1635-4B4C-A27F-A407944282F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0589273-1635-4B4C-A27F-A407944282F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0589273-1635-4B4C-A27F-A407944282F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{72715663-96B4-4229-B0DB-03393D156757}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{72715663-96B4-4229-B0DB-03393D156757}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{72715663-96B4-4229-B0DB-03393D156757}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{72715663-96B4-4229-B0DB-03393D156757}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE09B45F-62C3-4B13-8691-D3F5DB276856}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE09B45F-62C3-4B13-8691-D3F5DB276856}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE09B45F-62C3-4B13-8691-D3F5DB276856}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE09B45F-62C3-4B13-8691-D3F5DB276856}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3564F3E6-D4C3-462A-A48D-F85B0708DBE8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3564F3E6-D4C3-462A-A48D-F85B0708DBE8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3564F3E6-D4C3-462A-A48D-F85B0708DBE8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3564F3E6-D4C3-462A-A48D-F85B0708DBE8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94DC20C2-2C81-4ACE-9A0E-DD0A12982005}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94DC20C2-2C81-4ACE-9A0E-DD0A12982005}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94DC20C2-2C81-4ACE-9A0E-DD0A12982005}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94DC20C2-2C81-4ACE-9A0E-DD0A12982005}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74DECDF8-984C-44B3-8D4E-2CA699F3BD18}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74DECDF8-984C-44B3-8D4E-2CA699F3BD18}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74DECDF8-984C-44B3-8D4E-2CA699F3BD18}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74DECDF8-984C-44B3-8D4E-2CA699F3BD18}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{2E237C4D-7AFD-417C-8F85-4E8879985FB6} = {C30CCC7B-54B3-4E20-9C00-C9DD8082A6FC}
+		{CA813F6C-8F55-45FE-BA5B-6023F488FDEA} = {C30CCC7B-54B3-4E20-9C00-C9DD8082A6FC}
+		{E14E4AEC-4ECE-4C9C-8268-052F04A223E8} = {C30CCC7B-54B3-4E20-9C00-C9DD8082A6FC}
+		{F61D05D7-53EF-4307-8AEB-BC5C797FBE71} = {C30CCC7B-54B3-4E20-9C00-C9DD8082A6FC}
+		{24AFFD33-55AA-4516-8015-A1437720CD59} = {C30CCC7B-54B3-4E20-9C00-C9DD8082A6FC}
+		{554D036C-5CFE-4AEB-ABD3-B34BBA4CCF7A} = {C30CCC7B-54B3-4E20-9C00-C9DD8082A6FC}
+		{FA888A12-23C9-4D70-BB15-8341CF72DBF2} = {C30CCC7B-54B3-4E20-9C00-C9DD8082A6FC}
+		{B7DD30B3-7B06-4F66-9E46-E1E73D7AE3D4} = {C30CCC7B-54B3-4E20-9C00-C9DD8082A6FC}
+		{9B32BDFD-AE87-4CE5-875F-3CC7AED4CF72} = {C30CCC7B-54B3-4E20-9C00-C9DD8082A6FC}
+		{DEDB0C16-9A97-4B52-B7BF-94E7FFB02B3D} = {C30CCC7B-54B3-4E20-9C00-C9DD8082A6FC}
+		{30A95A70-E8F9-4FEB-B381-0D47D5DA67CB} = {C30CCC7B-54B3-4E20-9C00-C9DD8082A6FC}
+		{03C72EFD-971F-479D-A074-7FA859F2D261} = {C30CCC7B-54B3-4E20-9C00-C9DD8082A6FC}
+		{255B7102-A55A-4B44-A147-706A8C2EE350} = {C30CCC7B-54B3-4E20-9C00-C9DD8082A6FC}
+		{213B8835-B708-4780-8366-BDFB014E34A0} = {C30CCC7B-54B3-4E20-9C00-C9DD8082A6FC}
+		{3A33E259-86AB-4F8F-A5C8-AEA924B5EB68} = {C30CCC7B-54B3-4E20-9C00-C9DD8082A6FC}
+		{EF7F73C7-B076-4599-942D-FCB07C45B957} = {C30CCC7B-54B3-4E20-9C00-C9DD8082A6FC}
+		{0693E6FE-0150-4784-AD5F-A7AC5F34F049} = {C30CCC7B-54B3-4E20-9C00-C9DD8082A6FC}
+		{3B792FEE-8EBB-424B-8075-19E9D07F1C11} = {C30CCC7B-54B3-4E20-9C00-C9DD8082A6FC}
+		{BDB581B0-5B07-4094-83DE-58C021A612D3} = {C30CCC7B-54B3-4E20-9C00-C9DD8082A6FC}
+		{E0589273-1635-4B4C-A27F-A407944282F8} = {C30CCC7B-54B3-4E20-9C00-C9DD8082A6FC}
+		{72715663-96B4-4229-B0DB-03393D156757} = {C30CCC7B-54B3-4E20-9C00-C9DD8082A6FC}
+		{AE09B45F-62C3-4B13-8691-D3F5DB276856} = {C30CCC7B-54B3-4E20-9C00-C9DD8082A6FC}
+		{3564F3E6-D4C3-462A-A48D-F85B0708DBE8} = {C30CCC7B-54B3-4E20-9C00-C9DD8082A6FC}
+		{74DECDF8-984C-44B3-8D4E-2CA699F3BD18} = {C30CCC7B-54B3-4E20-9C00-C9DD8082A6FC}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {9EEA03E6-03B2-44BF-B83E-D33D04ED39C1}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 27
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://bltfs:8080/tfs/fa2
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = BelicsClass.AllInOne\\BelicsClass.AllInOne.VS2017.csproj
+		SccProjectName1 = BelicsClass.AllInOne
+		SccLocalPath1 = BelicsClass.AllInOne
+		SccProjectUniqueName2 = BelicsClass.AllInOneCompact\\BelicsClass.AllInOneCompact.VS2017.csproj
+		SccProjectName2 = BelicsClass.AllInOneCompact
+		SccLocalPath2 = BelicsClass.AllInOneCompact
+		SccProjectUniqueName3 = BelicsClass.Common\\BelicsClass.Common.VS2017.csproj
+		SccProjectTopLevelParentUniqueName3 = BelicsClass.VS2017.sln
+		SccProjectName3 = BelicsClass.Common
+		SccLocalPath3 = BelicsClass.Common
+		SccProjectUniqueName4 = BelicsClass.ConsoleTools\\BelicsClass.ConsoleTools.VS2017.csproj
+		SccProjectTopLevelParentUniqueName4 = BelicsClass.VS2017.sln
+		SccProjectName4 = BelicsClass.ConsoleTools
+		SccLocalPath4 = BelicsClass.ConsoleTools
+		SccProjectUniqueName5 = BelicsClass.Database.Base\\BelicsClass.Database.VS2017.csproj
+		SccProjectTopLevelParentUniqueName5 = BelicsClass.VS2017.sln
+		SccProjectName5 = BelicsClass.Database.Base
+		SccLocalPath5 = BelicsClass.Database.Base
+		SccProjectUniqueName6 = BelicsClass.Database.ExcelOle\\BelicsClass.Database.ExcelOle.VS2017.csproj
+		SccProjectTopLevelParentUniqueName6 = BelicsClass.VS2017.sln
+		SccProjectName6 = BelicsClass.Database.ExcelOle
+		SccLocalPath6 = BelicsClass.Database.ExcelOle
+		SccProjectUniqueName7 = BelicsClass.Database.MSAccess\\BelicsClass.Database.MSAccess.VS2017.csproj
+		SccProjectTopLevelParentUniqueName7 = BelicsClass.VS2017.sln
+		SccProjectName7 = BelicsClass.Database.MSAccess
+		SccLocalPath7 = BelicsClass.Database.MSAccess
+		SccProjectUniqueName8 = BelicsClass.Database.OleDB\\BelicsClass.Database.OleDB.VS2017.csproj
+		SccProjectTopLevelParentUniqueName8 = BelicsClass.VS2017.sln
+		SccProjectName8 = BelicsClass.Database.OleDB
+		SccLocalPath8 = BelicsClass.Database.OleDB
+		SccProjectUniqueName9 = BelicsClass.Database.Oracle\\BelicsClass.Database.Oracle.VS2017.csproj
+		SccProjectTopLevelParentUniqueName9 = BelicsClass.VS2017.sln
+		SccProjectName9 = BelicsClass.Database.Oracle
+		SccLocalPath9 = BelicsClass.Database.Oracle
+		SccProjectUniqueName10 = BelicsClass.Database.SQLServer\\BelicsClass.Database.SQLServer.VS2017.csproj
+		SccProjectTopLevelParentUniqueName10 = BelicsClass.VS2017.sln
+		SccProjectName10 = BelicsClass.Database.SQLServer
+		SccLocalPath10 = BelicsClass.Database.SQLServer
+		SccProjectUniqueName11 = BelicsClass.File\\BelicsClass.File.VS2017.csproj
+		SccProjectTopLevelParentUniqueName11 = BelicsClass.VS2017.sln
+		SccProjectName11 = BelicsClass.File
+		SccLocalPath11 = BelicsClass.File
+		SccProjectUniqueName12 = BelicsClass.GPIB.CONTEC\\BelicsClass.GPIB.CONTEC.VS2017.csproj
+		SccProjectTopLevelParentUniqueName12 = BelicsClass.VS2017.sln
+		SccProjectName12 = BelicsClass.GPIB.CONTEC
+		SccLocalPath12 = BelicsClass.GPIB.CONTEC
+		SccProjectUniqueName13 = BelicsClass.Network\\BelicsClass.Network.VS2017.csproj
+		SccProjectTopLevelParentUniqueName13 = BelicsClass.VS2017.sln
+		SccProjectName13 = BelicsClass.Network
+		SccLocalPath13 = BelicsClass.Network
+		SccProjectUniqueName14 = BelicsClass.ObjectSync\\BelicsClass.ObjectSync.VS2017.csproj
+		SccProjectTopLevelParentUniqueName14 = BelicsClass.VS2017.sln
+		SccProjectName14 = BelicsClass.ObjectSync
+		SccLocalPath14 = BelicsClass.ObjectSync
+		SccProjectUniqueName15 = BelicsClass.PCI.INTERFACE\\BelicsClass.PCI.INTERFACE.VS2017.csproj
+		SccProjectTopLevelParentUniqueName15 = BelicsClass.VS2017.sln
+		SccProjectName15 = BelicsClass.PCI.INTERFACE
+		SccLocalPath15 = BelicsClass.PCI.INTERFACE
+		SccProjectUniqueName16 = BelicsClass.PLC.Accesser\\BelicsClass.PLC.Accesser.VS2017.csproj
+		SccProjectTopLevelParentUniqueName16 = BelicsClass.VS2017.sln
+		SccProjectName16 = BelicsClass.PLC.Accesser
+		SccLocalPath16 = BelicsClass.PLC.Accesser
+		SccProjectUniqueName17 = BelicsClass.PLC.Base\\BelicsClass.PLC.VS2017.csproj
+		SccProjectTopLevelParentUniqueName17 = BelicsClass.VS2017.sln
+		SccProjectName17 = BelicsClass.PLC.Base
+		SccLocalPath17 = BelicsClass.PLC.Base
+		SccProjectUniqueName18 = BelicsClass.PLC.MELSEC\\BelicsClass.PLC.MELSEC.VS2017.csproj
+		SccProjectTopLevelParentUniqueName18 = BelicsClass.VS2017.sln
+		SccProjectName18 = BelicsClass.PLC.MELSEC
+		SccLocalPath18 = BelicsClass.PLC.MELSEC
+		SccProjectUniqueName19 = BelicsClass.PLC.OMRON\\BelicsClass.PLC.OMRON.VS2017.csproj
+		SccProjectTopLevelParentUniqueName19 = BelicsClass.VS2017.sln
+		SccProjectName19 = BelicsClass.PLC.OMRON
+		SccLocalPath19 = BelicsClass.PLC.OMRON
+		SccProjectUniqueName20 = BelicsClass.ProcessManage\\BelicsClass.ProcessManage.VS2017.csproj
+		SccProjectTopLevelParentUniqueName20 = BelicsClass.VS2017.sln
+		SccProjectName20 = BelicsClass.ProcessManage
+		SccLocalPath20 = BelicsClass.ProcessManage
+		SccProjectUniqueName21 = BelicsClass.RFID.KEYENCE\\BelicsClass.RFID.KEYENCE.VS2017.csproj
+		SccProjectTopLevelParentUniqueName21 = BelicsClass.VS2017.sln
+		SccProjectName21 = BelicsClass.RFID.KEYENCE
+		SccLocalPath21 = BelicsClass.RFID.KEYENCE
+		SccProjectUniqueName22 = BelicsClass.Rs232c\\BelicsClass.Rs232c.VS2017.csproj
+		SccProjectTopLevelParentUniqueName22 = BelicsClass.VS2017.sln
+		SccProjectName22 = BelicsClass.Rs232c
+		SccLocalPath22 = BelicsClass.Rs232c
+		SccProjectUniqueName23 = BelicsClass.UI.Controls\\BelicsClass.UI.Controls.VS2017.csproj
+		SccProjectTopLevelParentUniqueName23 = BelicsClass.VS2017.sln
+		SccProjectName23 = BelicsClass.UI.Controls
+		SccLocalPath23 = BelicsClass.UI.Controls
+		SccProjectUniqueName24 = BelicsClass.UI.Graph\\BelicsClass.UI.Graph.VS2017.csproj
+		SccProjectTopLevelParentUniqueName24 = BelicsClass.VS2017.sln
+		SccProjectName24 = BelicsClass.UI.Graph
+		SccLocalPath24 = BelicsClass.UI.Graph
+		SccProjectUniqueName25 = BelicsClass.UI.Report\\BelicsClass.UI.Report.VS2017.csproj
+		SccProjectTopLevelParentUniqueName25 = BelicsClass.VS2017.sln
+		SccProjectName25 = BelicsClass.UI.Report
+		SccLocalPath25 = BelicsClass.UI.Report
+		SccProjectUniqueName26 = BelicsClass.UI\\BelicsClass.UI.VS2017.csproj
+		SccProjectTopLevelParentUniqueName26 = BelicsClass.VS2017.sln
+		SccProjectName26 = BelicsClass.UI
+		SccLocalPath26 = BelicsClass.UI
+	EndGlobalSection
+EndGlobal

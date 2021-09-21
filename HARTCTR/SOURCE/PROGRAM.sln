@@ -1,0 +1,104 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30104.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "CLASS", "CLASS", "{BA141236-0B72-4175-96F5-2EAE0939125F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PROGRAM", "PROGRAM\PROGRAM.csproj", "{5A0E4E29-C9E2-4E26-9658-D682B014F5F3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BelicsClass.AllInOneCompact.VS2017", "CLASS\_Class\BelicsClass.AllInOneCompact\BelicsClass.AllInOneCompact.VS2017.csproj", "{94DC20C2-2C81-4ACE-9A0E-DD0A12982005}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgvController", "CLASS\AgvController\AgvController.csproj", "{900B2558-B536-47CD-8DF7-DCAFEC95C768}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Labeler", "CLASS\HokushoClass.Use\Labeler\Labeler.csproj", "{332E0C7D-F41A-4394-86D1-2FAE77582F33}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HokushoClass", "CLASS\HokushoClass\HokushoClass.csproj", "{134BF194-EB76-4B1D-9805-2354DF49F618}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5A0E4E29-C9E2-4E26-9658-D682B014F5F3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5A0E4E29-C9E2-4E26-9658-D682B014F5F3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5A0E4E29-C9E2-4E26-9658-D682B014F5F3}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{5A0E4E29-C9E2-4E26-9658-D682B014F5F3}.Debug|x86.Build.0 = Debug|Any CPU
+		{5A0E4E29-C9E2-4E26-9658-D682B014F5F3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5A0E4E29-C9E2-4E26-9658-D682B014F5F3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5A0E4E29-C9E2-4E26-9658-D682B014F5F3}.Release|x86.ActiveCfg = Release|Any CPU
+		{5A0E4E29-C9E2-4E26-9658-D682B014F5F3}.Release|x86.Build.0 = Release|Any CPU
+		{94DC20C2-2C81-4ACE-9A0E-DD0A12982005}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94DC20C2-2C81-4ACE-9A0E-DD0A12982005}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94DC20C2-2C81-4ACE-9A0E-DD0A12982005}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{94DC20C2-2C81-4ACE-9A0E-DD0A12982005}.Debug|x86.Build.0 = Debug|Any CPU
+		{94DC20C2-2C81-4ACE-9A0E-DD0A12982005}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94DC20C2-2C81-4ACE-9A0E-DD0A12982005}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94DC20C2-2C81-4ACE-9A0E-DD0A12982005}.Release|x86.ActiveCfg = Release|Any CPU
+		{94DC20C2-2C81-4ACE-9A0E-DD0A12982005}.Release|x86.Build.0 = Release|Any CPU
+		{900B2558-B536-47CD-8DF7-DCAFEC95C768}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{900B2558-B536-47CD-8DF7-DCAFEC95C768}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{900B2558-B536-47CD-8DF7-DCAFEC95C768}.Debug|x86.ActiveCfg = Debug|x86
+		{900B2558-B536-47CD-8DF7-DCAFEC95C768}.Debug|x86.Build.0 = Debug|x86
+		{900B2558-B536-47CD-8DF7-DCAFEC95C768}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{900B2558-B536-47CD-8DF7-DCAFEC95C768}.Release|Any CPU.Build.0 = Release|Any CPU
+		{900B2558-B536-47CD-8DF7-DCAFEC95C768}.Release|x86.ActiveCfg = Release|x86
+		{900B2558-B536-47CD-8DF7-DCAFEC95C768}.Release|x86.Build.0 = Release|x86
+		{332E0C7D-F41A-4394-86D1-2FAE77582F33}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{332E0C7D-F41A-4394-86D1-2FAE77582F33}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{332E0C7D-F41A-4394-86D1-2FAE77582F33}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{332E0C7D-F41A-4394-86D1-2FAE77582F33}.Debug|x86.Build.0 = Debug|Any CPU
+		{332E0C7D-F41A-4394-86D1-2FAE77582F33}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{332E0C7D-F41A-4394-86D1-2FAE77582F33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{332E0C7D-F41A-4394-86D1-2FAE77582F33}.Release|x86.ActiveCfg = Release|Any CPU
+		{332E0C7D-F41A-4394-86D1-2FAE77582F33}.Release|x86.Build.0 = Release|Any CPU
+		{134BF194-EB76-4B1D-9805-2354DF49F618}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{134BF194-EB76-4B1D-9805-2354DF49F618}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{134BF194-EB76-4B1D-9805-2354DF49F618}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{134BF194-EB76-4B1D-9805-2354DF49F618}.Debug|x86.Build.0 = Debug|Any CPU
+		{134BF194-EB76-4B1D-9805-2354DF49F618}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{134BF194-EB76-4B1D-9805-2354DF49F618}.Release|Any CPU.Build.0 = Release|Any CPU
+		{134BF194-EB76-4B1D-9805-2354DF49F618}.Release|x86.ActiveCfg = Release|Any CPU
+		{134BF194-EB76-4B1D-9805-2354DF49F618}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{94DC20C2-2C81-4ACE-9A0E-DD0A12982005} = {BA141236-0B72-4175-96F5-2EAE0939125F}
+		{900B2558-B536-47CD-8DF7-DCAFEC95C768} = {BA141236-0B72-4175-96F5-2EAE0939125F}
+		{332E0C7D-F41A-4394-86D1-2FAE77582F33} = {BA141236-0B72-4175-96F5-2EAE0939125F}
+		{134BF194-EB76-4B1D-9805-2354DF49F618} = {BA141236-0B72-4175-96F5-2EAE0939125F}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {62D4D680-9855-44BD-A092-AB54BF7CE03E}
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 6
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://bltfs:8080/tfs/fa2
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = PROGRAM\\PROGRAM.csproj
+		SccProjectName1 = PROGRAM
+		SccLocalPath1 = PROGRAM
+		SccProjectUniqueName2 = CLASS\\_Class\\BelicsClass.AllInOneCompact\\BelicsClass.AllInOneCompact.VS2017.csproj
+		SccProjectTopLevelParentUniqueName2 = PROGRAM.sln
+		SccProjectName2 = CLASS/_Class/BelicsClass.AllInOneCompact
+		SccLocalPath2 = CLASS\\_Class\\BelicsClass.AllInOneCompact
+		SccProjectUniqueName3 = CLASS\\AgvController\\AgvController.csproj
+		SccProjectTopLevelParentUniqueName3 = PROGRAM.sln
+		SccProjectName3 = CLASS/AgvController
+		SccLocalPath3 = CLASS\\AgvController
+		SccProjectUniqueName4 = CLASS\\HokushoClass.Use\\Labeler\\Labeler.csproj
+		SccProjectTopLevelParentUniqueName4 = PROGRAM.sln
+		SccProjectName4 = CLASS/HokushoClass.Use/Labeler
+		SccLocalPath4 = CLASS\\HokushoClass.Use\\Labeler
+		SccProjectUniqueName5 = CLASS\\HokushoClass\\HokushoClass.csproj
+		SccProjectTopLevelParentUniqueName5 = PROGRAM.sln
+		SccProjectName5 = CLASS/HokushoClass
+		SccLocalPath5 = CLASS\\HokushoClass
+	EndGlobalSection
+EndGlobal

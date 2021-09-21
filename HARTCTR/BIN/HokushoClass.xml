@@ -1,0 +1,2475 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HokushoClass</name>
+    </assembly>
+    <members>
+        <member name="T:HokushoClass.H_System">
+            <summary>
+            システム関連クラス
+            </summary>
+        </member>
+        <member name="T:HokushoClass.H_System.WaitForExit">
+            <summary>
+            プロセスが終了するまで現在のスレッドの実行をブロックします。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.H_System.WaitForExit.#ctor(System.String)">
+            <summary>
+            プロセスが終了するまで現在のスレッドの実行をブロックします。
+            </summary>
+            <param name="fileName">プロセスを起動するときに使用するファイル名を指定します。</param>
+        </member>
+        <member name="M:HokushoClass.H_System.WaitForExit.#ctor(System.String,System.String)">
+            <summary>
+            プロセスが終了するまで現在のスレッドの実行をブロックします。
+            </summary>
+            <param name="fileName">プロセスを起動するときに使用するファイル名を指定します。</param>
+            <param name="option">プロセスを起動するときに使用するコマンドライン引数を指定します。</param>
+        </member>
+        <member name="M:HokushoClass.H_System.WaitForExit.#ctor(System.Diagnostics.ProcessStartInfo)">
+            <summary>
+            プロセスが終了するまで現在のスレッドの実行をブロックします。
+            </summary>
+            <param name="mode">プロセスを起動するときに使用する値のセットを指定します。</param>
+        </member>
+        <member name="T:HokushoClass.H_System.Only">
+            <summary>
+            プロセスの起動をチェックします。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.H_System.Only.#ctor(System.String)">
+            <summary>
+            プロセスの起動をチェックします。
+            </summary>
+            <param name="mutexName">プロセスを判断するときに使用するユニーク名を指定します。</param>
+        </member>
+        <member name="M:HokushoClass.H_System.Only.Finalize">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="P:HokushoClass.H_System.Only.IsOnly">
+            <summary>
+            プロセスの起動を取得します。起動していない場合は true。それ以外の場合は false。 
+            </summary>
+        </member>
+        <member name="T:HokushoClass.H_System.StopWatch">
+            <summary>
+            ストップウォッチクラス
+            </summary>
+        </member>
+        <member name="M:HokushoClass.H_System.StopWatch.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:HokushoClass.H_System.StopWatch.Reset">
+            <summary>
+            ストップウォッチをリセットします。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.H_System.StopWatch.Start">
+            <summary>
+            ストップウォッチを開始します。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.H_System.StopWatch.Stop">
+            <summary>
+            ストップウォッチを停止します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.H_System.StopWatch.ElapsedMilliseconds">
+            <summary>
+            経過ミリ秒を取得します。
+            </summary>
+        </member>
+        <member name="T:HokushoClass.H_System.StopWatch64">
+            <summary>
+            ストップウォッチ６４クラス
+            </summary>
+        </member>
+        <member name="M:HokushoClass.H_System.StopWatch64.#ctor">
+            <summary>
+            コンストラクタ
+            </summary>
+        </member>
+        <member name="M:HokushoClass.H_System.StopWatch64.Reset">
+            <summary>
+            ストップウォッチをリセットします。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.H_System.StopWatch64.Start">
+            <summary>
+            ストップウォッチを開始します。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.H_System.StopWatch64.Stop">
+            <summary>
+            ストップウォッチを停止します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.H_System.StopWatch64.ElapsedMilliseconds">
+            <summary>
+            経過ミリ秒を取得します。
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Bytes">
+            <summary>
+            拡張バイト配列クラス
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Bytes.Clear(System.Byte,System.Byte[],System.Int32)">
+            <summary>
+            バイト配列を初期化します。
+            </summary>
+            <param name="sourceByte">初期化に使用するバイト値。</param>
+            <param name="destinationBytes">初期化するバイト配列。</param>
+            <param name="length">初期化するバイト数。</param>
+        </member>
+        <member name="M:HokushoClass.Bytes.Clear(System.Byte,System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            バイト配列を初期化します。
+            </summary>
+            <param name="sourceByte">初期化に使用するバイト値。</param>
+            <param name="destinationBytes">初期化するバイト配列。</param>
+            <param name="destinationIndex">destinationBytes内の初期化を開始するインデックス。</param>
+            <param name="length">初期化するバイト数。</param>
+        </member>
+        <member name="M:HokushoClass.Bytes.Copy(System.Byte[],System.Byte[],System.Int32)">
+            <summary>
+            バイト配列をコピーします。
+            </summary>
+            <param name="sourceBytes">コピー元のバイト配列。</param>
+            <param name="destinationBytes">コピー先のバイト配列。</param>
+            <param name="length">コピーするバイト数。</param>
+        </member>
+        <member name="M:HokushoClass.Bytes.Copy(System.Byte[],System.Int32,System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            バイト配列をコピーします。
+            </summary>
+            <param name="sourceBytes">コピー元のバイト配列。</param>
+            <param name="sourceIndex">sourceBytes内のコピーを開始するインデックス。</param>
+            <param name="destinationBytes">コピー先のバイト配列。</param>
+            <param name="destinationIndex">destinationBytes内のコピーを開始するインデックス。</param>
+            <param name="length">コピーするバイト数。</param>
+        </member>
+        <member name="M:HokushoClass.Bytes.Compare(System.Byte[],System.Byte[],System.Int32)">
+            <summary>
+            バイト配列を比較します。
+            </summary>
+            <param name="sourceBytes">比較元のバイト配列。</param>
+            <param name="destinationBytes">比較先のバイト配列。</param>
+            <param name="length">比較するバイト数。</param>
+        </member>
+        <member name="M:HokushoClass.Bytes.Compare(System.Byte[],System.Int32,System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            バイト配列を比較します。
+            </summary>
+            <param name="sourceBytes">比較元のバイト配列。</param>
+            <param name="sourceIndex">sourceBytes内の比較を開始するインデックス。</param>
+            <param name="destinationBytes">比較先のバイト配列。</param>
+            <param name="destinationIndex">destinationBytes内の比較を開始するインデックス。</param>
+            <param name="length">比較するバイト数。</param>
+        </member>
+        <member name="M:HokushoClass.Bytes.Join(System.Byte[],System.Byte[]@,System.Int32)">
+            <summary>
+            バイト配列を結合します。
+            </summary>
+            <param name="sourceBytes">結合元のバイト配列。</param>
+            <param name="destinationBytes">結合先のバイト配列。</param>
+            <param name="length">結合するバイト数。</param>
+        </member>
+        <member name="M:HokushoClass.Bytes.Join(System.Byte[],System.Int32,System.Byte[]@,System.Int32,System.Int32)">
+            <summary>
+            バイト配列を結合します。
+            </summary>
+            <param name="sourceBytes">結合元のバイト配列。</param>
+            <param name="sourceIndex">sourceBytes内の結合を開始するインデックス。</param>
+            <param name="destinationBytes">結合先のバイト配列。</param>
+            <param name="destinationIndex">destinationBytes内の結合を開始するインデックス。</param>
+            <param name="length">結合するバイト数。</param>
+        </member>
+        <member name="M:HokushoClass.Bytes.Trim(System.Byte[],System.Int32)">
+            <summary>
+            バイト配列を調整します。
+            </summary>
+            <param name="sourceBytes">調整元のバイト配列。</param>
+            <param name="length">調整するバイト数。</param>
+        </member>
+        <member name="M:HokushoClass.Bytes.Trim(System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            バイト配列を調整します。
+            </summary>
+            <param name="sourceBytes">調整元のバイト配列。</param>
+            <param name="sourceIndex">sourceBytes内の調整を開始するインデックス。</param>
+            <param name="length">調整するバイト数。</param>
+        </member>
+        <member name="M:HokushoClass.Bytes.PadRight(System.String,System.Int32)">
+            <summary>
+            バイト配列に変換して左寄せします。
+            </summary>
+            <param name="sourceString">調整元の文字列。</param>
+            <param name="length">変換後のバイト数。</param>
+        </member>
+        <member name="M:HokushoClass.Bytes.PadRight(System.String,System.Int32,System.Byte)">
+            <summary>
+            バイト配列に変換して左寄せします。
+            </summary>
+            <param name="sourceString">変換元の文字列。</param>
+            <param name="length">変換後のバイト数。</param>
+            <param name="sourceByte">埋め込みに使用するバイト値。</param>
+        </member>
+        <member name="M:HokushoClass.Bytes.PadLeft(System.String,System.Int32)">
+            <summary>
+            バイト配列に変換して右寄せします。
+            </summary>
+            <param name="sourceString">調整元の文字列。</param>
+            <param name="length">変換後のバイト数。</param>
+        </member>
+        <member name="M:HokushoClass.Bytes.PadLeft(System.String,System.Int32,System.Byte)">
+            <summary>
+            バイト配列に変換して右寄せします。
+            </summary>
+            <param name="sourceString">変換元の文字列。</param>
+            <param name="length">変換後のバイト数。</param>
+            <param name="sourceByte">埋め込みに使用するバイト値。</param>
+        </member>
+        <member name="M:HokushoClass.Bytes.IndexOf(System.Byte[],System.Int32,System.Byte[],System.Int32,System.Int32)">
+            <summary>
+            バイト配列からバイト配列を検索します。
+            </summary>
+            <param name="sourceBytes">検索対象となるバイト配列。</param>
+            <param name="sourceIndex">sourceBytes内の検索を開始するインデックス。</param>
+            <param name="targetBytes">検索するバイト配列。</param>
+            <param name="targetIndex">targetBytes内の検索を開始するインデックス。</param>
+            <param name="length">検索するバイト数。</param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Bytes.BytesToInt32(System.Byte[])">
+            <summary>
+            byte[4]をInt32へ変換
+            </summary>
+            <param name="data">変換するバイト配列。</param>
+        </member>
+        <member name="M:HokushoClass.Bytes.BytesToInt32(System.Byte[],System.Int32)">
+            <summary>
+            byte[4]をInt32へ変換
+            </summary>
+            <param name="data">変換するバイト配列。</param>
+            <param name="Index">data内の変換を開始するインデックス。</param>
+        </member>
+        <member name="M:HokushoClass.Bytes.Int32ToBytes(System.Int32)">
+            <summary>
+            Int32をbyte[4]へ変換
+            </summary>
+            <param name="data">変換する値。</param>
+        </member>
+        <member name="M:HokushoClass.Bytes.BytesToInt16(System.Byte[])">
+            <summary>
+            byte[2]をInt16へ変換
+            </summary>
+            <param name="data"></param>
+        </member>
+        <member name="M:HokushoClass.Bytes.BytesToInt16(System.Byte[],System.Int32)">
+            <summary>
+            byte[2]をInt16へ変換
+            </summary>
+            <param name="data">変換するバイト配列。</param>
+            <param name="Index">data内の変換を開始するインデックス。</param>
+        </member>
+        <member name="M:HokushoClass.Bytes.Int16ToBytes(System.Int16)">
+            <summary>
+            Int16をbyte[2]へ変換
+            </summary>
+            <param name="data">変換する値。</param>
+        </member>
+        <member name="T:HokushoClass.Bytes.Target">
+            <summary>
+            バイト配列の連続変換クラス
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Bytes.Target.#ctor(System.Byte[]@)">
+            <summary>
+            コンストラクタ
+            </summary>
+            <param name="base_data">データを格納する(している)バイト配列。</param>
+        </member>
+        <member name="M:HokushoClass.Bytes.Target.Add(System.String,System.Int32)">
+            <summary>
+            バイト配列へデータを追加します。
+            </summary>
+            <param name="source">追加するデータが格納されている文字列。</param>
+            <param name="size">追加するバイト数。</param>
+        </member>
+        <member name="M:HokushoClass.Bytes.Target.Add(System.Byte[],System.Int32)">
+            <summary>
+            バイト配列へデータを追加します。
+            </summary>
+            <param name="source">追加するデータが格納されているバイト配列。</param>
+            <param name="size">追加するバイト数。</param>
+        </member>
+        <member name="M:HokushoClass.Bytes.Target.Add(System.Int32)">
+            <summary>
+            バイト配列へデータを追加します。
+            </summary>
+            <param name="source">追加するデータが格納されているInt32。</param>
+        </member>
+        <member name="M:HokushoClass.Bytes.Target.Add(System.Int16)">
+            <summary>
+            バイト配列へデータを追加します。
+            </summary>
+            <param name="source">追加するデータが格納されているInt16。</param>
+        </member>
+        <member name="M:HokushoClass.Bytes.Target.Split(System.String@,System.Int32)">
+            <summary>
+            バイト配列からデータを抽出します。
+            </summary>
+            <param name="source">抽出したデータを格納する文字列。</param>
+            <param name="size">抽出するバイト数。</param>
+        </member>
+        <member name="M:HokushoClass.Bytes.Target.Split(System.Byte[]@,System.Int32)">
+            <summary>
+            バイト配列からデータを抽出します。
+            </summary>
+            <param name="source">抽出したデータを格納するバイト配列。</param>
+            <param name="size">抽出するバイト数。</param>
+        </member>
+        <member name="M:HokushoClass.Bytes.Target.Split(System.Int32@)">
+            <summary>
+            バイト配列からデータを抽出します。
+            </summary>
+            <param name="source">抽出したデータを格納するInt32。</param>
+        </member>
+        <member name="M:HokushoClass.Bytes.Target.Split(System.Int16@)">
+            <summary>
+            バイト配列からデータを抽出します。
+            </summary>
+            <param name="source">抽出したデータを格納するInt16。</param>
+        </member>
+        <member name="T:HokushoClass.Win32">
+            <summary>
+            Win32APIクラス
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Win32.PlaySound(System.String)">
+            <summary>
+            サウンドを再生します。
+            </summary>
+            <param name="file_name">ファイル名を格納した文字列。</param>
+        </member>
+        <member name="M:HokushoClass.Win32.PlaySound(System.IO.Stream)">
+            <summary>
+            サウンドを再生します。
+            </summary>
+            <param name="stream">アセンブリ内の指定されたマニフェストリソース。</param>
+        </member>
+        <member name="M:HokushoClass.Win32.PlaySoundEndless(System.String)">
+            <summary>
+            サウンドを連続再生します。
+            </summary>
+            <param name="file_name">ファイル名を格納した文字列。</param>
+        </member>
+        <member name="M:HokushoClass.Win32.PlaySoundEndless(System.IO.Stream)">
+            <summary>
+            サウンドを連続再生します。
+            </summary>
+            <param name="stream">アセンブリ内の指定されたマニフェストリソース。</param>
+        </member>
+        <member name="M:HokushoClass.Win32.PlaySoundStop">
+            <summary>
+            サウンドを停止します。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Win32.Beep">
+            <summary>
+            ビープ音を鳴らします。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Win32.Beep(System.Int32,System.Int32)">
+            <summary>
+            ビープ音を鳴らします。
+            </summary>
+            <param name="frequency">ビープ音の周波数。 (ヘルツ単位)</param>
+            <param name="duration">ビープ音の周期。 (ミリ秒)</param>
+        </member>
+        <member name="M:HokushoClass.Win32.Sleep(System.Int32)">
+            <summary>
+            指定したミリ秒数の間現在のスレッドをブロックします。
+            </summary>
+            <param name="millisecondsTimeout">スレッドがブロックされるミリ秒数を指定します。</param>
+        </member>
+        <member name="P:HokushoClass.Win32.TickCount">
+            <summary>
+            システム起動後のミリ秒単位の経過時間を取得します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Win32.TickCount64">
+            <summary>
+            システム起動後のミリ秒単位の経過時間を取得します。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Win32.NetAdd(System.String,System.String,System.String,System.String)">
+            <summary>
+            ネットワークドライブを割り当てます。
+            </summary>
+            <param name="LocalName">ドライブ名</param>
+            <param name="RemoteName">ネットワーク名</param>
+            <param name="Username">ユーザー名</param>
+            <param name="Password">パスワード</param>
+        </member>
+        <member name="M:HokushoClass.Win32.NetAdd(System.String,System.String)">
+            <summary>
+            ネットワークドライブを割り当てます。
+            </summary>
+            <param name="LocalName">ドライブ名</param>
+            <param name="RemoteName">ネットワーク名</param>
+        </member>
+        <member name="M:HokushoClass.Win32.NetCancel(System.String)">
+            <summary>
+            ネットワークドライブを切断します。
+            </summary>
+            <param name="LocalName">ドライブ名</param>
+        </member>
+        <member name="M:HokushoClass.Win32.SetLocalTime(System.DateTime)">
+            <summary>
+            現在のシステム日時を設定します。
+            </summary>
+            <param name="time">設定する日時</param>
+        </member>
+        <member name="T:HokushoClass.ConsoleTools">
+            <summary>
+            コンソール画面クラス
+            </summary>
+        </member>
+        <member name="T:HokushoClass.ConsoleTools.RGB">
+            <summary>
+            色属性
+            </summary>
+        </member>
+        <member name="F:HokushoClass.ConsoleTools.RGB.ForegroundBlue">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.ConsoleTools.RGB.ForegroundGreen">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.ConsoleTools.RGB.ForegroundRed">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.ConsoleTools.RGB.BackgroundBlue">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.ConsoleTools.RGB.BackgroundGreen">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.ConsoleTools.RGB.BackgroundRed">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:HokushoClass.ConsoleTools.Table">
+            <summary>
+            色テーブル
+            </summary>
+        </member>
+        <member name="F:HokushoClass.ConsoleTools.Table.Black">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.ConsoleTools.Table.Blue">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.ConsoleTools.Table.Green">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.ConsoleTools.Table.Cyan">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.ConsoleTools.Table.Red">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.ConsoleTools.Table.Magenta">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.ConsoleTools.Table.Yellow">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.ConsoleTools.Table.White">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.ConsoleTools.Table.BlueBack">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.ConsoleTools.Table.GreenBack">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.ConsoleTools.Table.CyanBack">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.ConsoleTools.Table.RedBack">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.ConsoleTools.Table.MagentaBack">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.ConsoleTools.Table.YellowBack">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.ConsoleTools.Table.WhiteBack">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HokushoClass.ConsoleTools.ButtonDisable">
+            <summary>
+            閉じるボタンを無効にします。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.ConsoleTools.SetTitle(System.String)">
+            <summary>
+            コンソール画面のタイトルを設定します。
+            </summary>
+            <param name="titleName">タイトルが格納されている文字列。</param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.ConsoleTools.WindowSize(System.Int32,System.Int32)">
+            <summary>
+            コンソール画面のサイズを設定します。
+            </summary>
+            <param name="x">水平方向。</param>
+            <param name="y">垂直方向。</param>
+        </member>
+        <member name="M:HokushoClass.ConsoleTools.ScreenClear">
+            <summary>
+            コンソール画面を初期化します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.ConsoleTools.CursorVisible">
+            <summary>
+            カーソルの表示／非表示を設定します。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.ConsoleTools.Locate(System.Int32,System.Int32)">
+            <summary>
+            カーソルの位置を設定します。
+            </summary>
+            <param name="x">水平座標。</param>
+            <param name="y">垂直座標。</param>
+        </member>
+        <member name="M:HokushoClass.ConsoleTools.LocateWrite(System.Int32,System.Int32,System.String)">
+            <summary>
+            指定した位置に文字列を書き込みます。
+            </summary>
+            <param name="x">水平座標。</param>
+            <param name="y">垂直座標。</param>
+            <param name="data">書き込む文字列。</param>
+        </member>
+        <member name="M:HokushoClass.ConsoleTools.Color(HokushoClass.ConsoleTools.RGB)">
+            <summary>
+            カーソルの色を設定します。
+            </summary>
+            <param name="rgb">色属性。</param>
+        </member>
+        <member name="M:HokushoClass.ConsoleTools.Color(HokushoClass.ConsoleTools.Table)">
+            <summary>
+            カーソルの色を設定します。
+            </summary>
+            <param name="colorTable">色テーブル。</param>
+        </member>
+        <member name="M:HokushoClass.ConsoleTools.Color(System.ConsoleColor,System.ConsoleColor)">
+            <summary>
+            カーソルの色を設定します。
+            </summary>
+            <param name="foregroundColor">前景色</param>
+            <param name="backgroundColor">背景色</param>
+        </member>
+        <member name="M:HokushoClass.ConsoleTools.Color">
+            <summary>
+            カーソルの色を設定します。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.ConsoleTools.KeyDown">
+            <summary>
+            コンソールの入力をチェックします。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:HokushoClass.ConsoleTools.IsCreated">
+            <summary>
+            コンソール画面が作成済みかどうかを取得します。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.ConsoleTools.CreateConsole">
+            <summary>
+            コンソール画面を作成します。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.ConsoleTools.ReleaseConsole">
+            <summary>
+            コンソール画面を解放します。
+            </summary>
+        </member>
+        <member name="T:HokushoClass.ListViewItemComparer">
+            <summary>
+            ListViewの項目の並び替えに使用するクラス
+            </summary>
+        </member>
+        <member name="T:HokushoClass.ListViewItemComparer.ComparerMode">
+            <summary>
+            比較する方法
+            </summary>
+        </member>
+        <member name="F:HokushoClass.ListViewItemComparer.ComparerMode.String">
+            <summary>
+            文字列として比較
+            </summary>
+        </member>
+        <member name="F:HokushoClass.ListViewItemComparer.ComparerMode.Integer">
+            <summary>
+            数値（Int32型）として比較
+            </summary>
+        </member>
+        <member name="F:HokushoClass.ListViewItemComparer.ComparerMode.DateTime">
+            <summary>
+            日時（DataTime型）として比較
+            </summary>
+        </member>
+        <member name="P:HokushoClass.ListViewItemComparer.Column">
+            <summary>
+            並び替えるListView列の番号
+            </summary>
+        </member>
+        <member name="P:HokushoClass.ListViewItemComparer.Order">
+            <summary>
+            昇順か降順か
+            </summary>
+        </member>
+        <member name="P:HokushoClass.ListViewItemComparer.Mode">
+            <summary>
+            並び替えの方法
+            </summary>
+        </member>
+        <member name="P:HokushoClass.ListViewItemComparer.ColumnModes">
+            <summary>
+            列ごとの並び替えの方法
+            </summary>
+        </member>
+        <member name="M:HokushoClass.ListViewItemComparer.#ctor(System.Int32,System.Windows.Forms.SortOrder,HokushoClass.ListViewItemComparer.ComparerMode)">
+            <summary>
+            ListViewItemComparerクラスのコンストラクタ
+            </summary>
+            <param name="columnNo">並び替える列の番号</param>
+            <param name="sortOrder">昇順か降順か</param>
+            <param name="comparerMode">並び替えの方法</param>
+        </member>
+        <member name="M:HokushoClass.ListViewItemComparer.#ctor">
+            <summary>
+            ListViewItemComparerクラスのコンストラクタ
+            </summary>
+        </member>
+        <member name="M:HokushoClass.ListViewItemComparer.Compare(System.Object,System.Object)">
+            <summary>
+            比較
+            </summary>
+            <param name="x"></param>
+            <param name="y"></param>
+            <returns>xがyより小さいときはマイナスの数、大きいときはプラスの数、同じときは0を返す</returns>
+        </member>
+        <member name="T:HokushoClass.Database.Database">
+            <summary>
+            データベースクラス
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Database.Database.ExNumber">
+            <summary>
+            エラー№
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Database.Database.ExNumber.NoError">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Database.Database.ExNumber.UnexpectedException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Database.Database.ExNumber.TableNotExistException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Database.Database.ExNumber.RecordNotExistException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Database.Database.ExNumber.RecordDupException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Database.Database.ExNumber.NotConnectedException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Database.Database.ExNumber.ProcedureParameterException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Database.Database.ExNumber.ArgumentException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Database.Database.ExNumber.InvalidOperationException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Database.Database.ExNumber.SqlException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Database.Database.ExNumber.SystemException">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Database.Database.IsolationLevel">
+            <summary>
+            トランザクション分離レベル
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Database.Database.IsolationLevel.Serializable">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Database.Database.IsolationLevel.Repeatable_Read">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Database.Database.IsolationLevel.Read_Committed">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Database.Database.IsolationLevel.Read_Uncommitted">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Database.Database.#ctor">
+            <summary>
+            データベースクラス
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Database.Database.#ctor(System.Int32)">
+            <summary>
+            データベースクラス
+            </summary>
+            <param name="cmdTimeout">コマンドタイムアウト値の設定。</param>
+        </member>
+        <member name="M:HokushoClass.Database.Database.Finalize">
+            <summary>
+            データベースクラス
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Database.Database.Connect(System.String,System.String,System.String,System.String,System.Int32)">
+            <summary>
+            データベースに接続します。
+            </summary>
+            <param name="initialCatalog">データベース名が格納されている文字列。</param>
+            <param name="dataSource">ＳＱＬサーバーインスタンスが格納されている文字列。</param>
+            <param name="userID">ユーザＩＤが格納されている文字列</param>
+            <param name="password">パスワードが格納されている文字列。</param>
+            <param name="connectTimeout">コネクションタイムアウト値。</param>
+        </member>
+        <member name="M:HokushoClass.Database.Database.Connect(System.String,System.String,System.String,System.String)">
+            <summary>
+            データベースに接続します。
+            </summary>
+            <param name="initialCatalog">データベース名が格納されている文字列。</param>
+            <param name="dataSource">ＳＱＬサーバーインスタンスが格納されている文字列。</param>
+            <param name="userID">ユーザＩＤが格納されている文字列</param>
+            <param name="password">パスワードが格納されている文字列。</param>
+        </member>
+        <member name="M:HokushoClass.Database.Database.Connect(System.String,System.String)">
+            <summary>
+            データベースに接続します。
+            </summary>
+            <param name="initialCatalog">データベース名が格納されている文字列。</param>
+            <param name="dataSource">ＳＱＬサーバーインスタンスが格納されている文字列。</param>
+        </member>
+        <member name="M:HokushoClass.Database.Database.Disconnect">
+            <summary>
+            データベースとの接続を終了します。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Database.Database.DesConnect">
+            <summary>
+            データベースとの接続を終了します。（旧型互換用　通常は使用しない事）
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Database.Database.Execute(System.String)">
+            <summary>
+            SQLを実行します。
+            </summary>
+            <param name="sql">実行するSQL文が格納されている文字列。</param>
+        </member>
+        <member name="M:HokushoClass.Database.Database.Execute(System.String,System.String)">
+            <summary>
+            SQLを実行しデータセット内に新規データテーブルを作成します。
+            </summary>
+            <param name="sql">実行するSQL文が格納されている文字列。</param>
+            <param name="dataTableName">新規に作成するデータテーブル名が格納されている文字列。</param>
+        </member>
+        <member name="M:HokushoClass.Database.Database.ProcExecute(System.String,System.Data.SqlClient.SqlParameter[]@,System.Int32,System.Int32@)">
+            <summary>
+            ストアドプロシージャを実行します。
+            </summary>
+            <param name="procName">実行するストアドプロシージャ名が格納されている文字列。</param>
+            <param name="param">パラメータ値。</param>
+            <param name="paramCount">パラメータ数。</param>
+            <param name="procReturn">ストアドプロシージャの戻り値。</param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Database.Database.ProcExecute(System.String,System.Int32@)">
+            <summary>
+            ストアドプロシージャを実行します。
+            </summary>
+            <param name="procName">実行するストアドプロシージャ名が格納されている文字列。</param>
+            <param name="procReturn">ストアドプロシージャの戻り値。</param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Database.Database.ProcExecute(System.String,System.Data.SqlClient.SqlParameter[]@,System.Int32,System.Int32@,System.String)">
+            <summary>
+            ストアドプロシージャを実行しデータセット内に新規データテーブルを作成します。
+            </summary>
+            <param name="procName">実行するストアドプロシージャ名が格納されている文字列。</param>
+            <param name="param">パラメータ値。</param>
+            <param name="paramCount">パラメータ数。</param>
+            <param name="procReturn">ストアドプロシージャの戻り値。</param>
+            <param name="dataTableName">新規に作成するデータテーブル名が格納されている文字列。</param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Database.Database.ProcExecute(System.String,System.Int32@,System.String)">
+            <summary>
+            ストアドプロシージャを実行しデータセット内に新規データテーブルを作成します。
+            </summary>
+            <param name="procName">実行するストアドプロシージャ名が格納されている文字列。</param>
+            <param name="procReturn">ストアドプロシージャの戻り値。</param>
+            <param name="dataTableName">新規に作成するデータテーブル名が格納されている文字列。</param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Database.Database.SetIsolationLevel(HokushoClass.Database.Database.IsolationLevel)">
+            <summary>
+            トランザクション分離レベルを設定します。
+            </summary>
+            <param name="level">設定する分離レベル。</param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Database.Database.BeginTransaction">
+            <summary>
+            トランザクションを開始します。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Database.Database.CommitTransaction">
+            <summary>
+            トランザクションをコミットします。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Database.Database.RollBackTransaction">
+            <summary>
+            トランザクションをロールバックします。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Database.Database.ClearDataTable(System.String)">
+            <summary>
+            データセット内の指定したデータテーブルを削除します。
+            </summary>
+            <param name="dataTableName">削除するデータテーブル名が格納されている文字列。</param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Database.Database.CheckTable(System.String)">
+            <summary>
+            テーブルまたはビューの存在を確認します。
+            </summary>
+            <param name="tableName">存在を確認するテーブル名が格納されている文字列。</param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Database.Database.CheckProcedure(System.String)">
+            <summary>
+            ストアドプロシージャの存在を確認します。
+            </summary>
+            <param name="procName">存在を確認するストアドプロシージャ名が格納されている文字列。</param>
+            <returns></returns>
+        </member>
+        <member name="P:HokushoClass.Database.Database.Item(System.String)">
+            <summary>
+            データセットから指定したデータテーブルのコピーを返します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Database.Database.ConnectTimeOut">
+            <summary>
+            データベースの接続タイムアウト時間を取得、設定します。単位は秒。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Database.Database.IsConnected">
+            <summary>
+            データベースの接続状態を取得します。接続している場合は true。それ以外の場合は false。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Database.Database.ErrorCode">
+            <summary>
+            異常コードを取得します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Database.Database.ErrorMessage">
+            <summary>
+            異常内容を取得します。
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Files.H_File">
+            <summary>
+            固定長ファイルクラス
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Files.H_File.Open(System.String,System.Int32,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare)">
+            <summary>
+            固定長ファイルをオープンします。
+            </summary>
+            <param name="file_name">オープンするファイルの名前を示す文字列を指定します。</param>
+            <param name="length">オープンするファイルの１レコードのバイト数を指定します。</param>
+            <param name="fileMode">ファイルを開く方法または作成する方法を指定します。</param>
+            <param name="fileAccess">ファイルにアクセスする方法を指定します。</param>
+            <param name="fileShare">ファイルの共有方法を指定します。</param>
+        </member>
+        <member name="M:HokushoClass.Files.H_File.Open(System.String,System.Int32,System.String,System.String)">
+            <summary>
+            固定長ファイルをオープンします。
+            </summary>
+            <param name="file_name">オープンするファイルの名前を示す文字列を指定します。</param>
+            <param name="length">オープンするファイルの１レコードのバイト数を指定します。</param>
+            <param name="access_mode">オープンするファイルのファイル属性を指定します。</param>
+            <param name="share_mode">オープンするファイルの共有属性を指定します。</param>
+        </member>
+        <member name="M:HokushoClass.Files.H_File.Close">
+            <summary>
+            固定長ファイルをクローズします。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Files.H_File.Read(System.Byte[]@,System.Int32,System.Boolean,System.Boolean)">
+            <summary>
+            ファイルからデータを読み込みます。 
+            </summary>
+            <param name="data">読み込んだレコードのデータが格納されるバイト配列を指定します。</param>
+            <param name="record_no">読み込みを行うレコード№を指定します。</param>
+            <param name="lock_flag">ロックする場合は true。それ以外の場合は false。</param>
+            <param name="imperfect_flag">読み込んだデータがレコード長を満たしていなくても有効にする場合は true。それ以外の場合は false。</param>
+        </member>
+        <member name="M:HokushoClass.Files.H_File.Read(System.Byte[]@,System.Int32,System.Boolean)">
+            <summary>
+            ファイルからデータを読み込みます。 
+            </summary>
+            <param name="data">読み込んだレコードのデータが格納されるバイト配列を指定します。</param>
+            <param name="record_no">読み込みを行うレコード№を指定します。</param>
+            <param name="lock_flag">ロックする場合は true。それ以外の場合は false。</param>
+        </member>
+        <member name="M:HokushoClass.Files.H_File.Write(System.Byte[],System.Int32,System.Boolean)">
+            <summary>
+            ファイルにデータを書き込みます。
+            </summary>
+            <param name="data">書き込むレコードのデータが格納されているバイト配列を指定します。</param>
+            <param name="record_no">書き込みを行うレコード№を指定します。</param>
+            <param name="unlock_flag">ロックを解除する場合は true。それ以外の場合は false。</param>
+        </member>
+        <member name="M:HokushoClass.Files.H_File.Seek(System.Int32)">
+            <summary>
+            ファイルポインタの位置を設定します。
+            </summary>
+            <param name="record_no">現在の位置に設定するレコード№を指定します。［EOF］に設定する場合は -1。 </param>
+        </member>
+        <member name="M:HokushoClass.Files.H_File.Lock(System.Int32)">
+            <summary>
+            ファイル内の指定したレコードをロックします。 
+            </summary>
+            <param name="record_no">ロックするレコード№を指定します。</param>
+        </member>
+        <member name="M:HokushoClass.Files.H_File.Unlock">
+            <summary>
+            ファイル内のロックを解除します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Files.H_File.FileLength">
+            <summary>
+            ファイル長 (バイト単位) を取得します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Files.H_File.RecordLength">
+            <summary>
+            レコード長 (バイト単位) を取得します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Files.H_File.ErrorCode">
+            <summary>
+            異常コードを取得します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Files.H_File.ErrorMessage">
+            <summary>
+            異常内容を取得します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Files.H_File.Position">
+            <summary>
+            ストリームの現在位置を取得または設定します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Files.H_File.SetRecordLength">
+            <summary>
+            レコード長 (バイト単位) を設定します。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Files.H_File.errors">
+            <summary>
+            異常情報を初期化します。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Files.H_File.errors(System.Int32,System.String)">
+            <summary>
+            異常情報を設定します。
+            </summary>
+            <param name="code">異常コード。</param>
+            <param name="message">異常内容が格納されている文字列。</param>
+        </member>
+        <member name="T:HokushoClass.Files.H_FreeFile">
+            <summary>
+            可変長ファイルクラス
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Files.H_FreeFile.#ctor">
+            <summary>
+            可変長ファイルクラス
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Files.H_FreeFile.#ctor(System.Boolean)">
+            <summary>
+            可変長ファイルクラス
+            </summary>
+            <param name="eofSeekMode">EOFシークモード（true:有効, false:無効）</param>
+        </member>
+        <member name="M:HokushoClass.Files.H_FreeFile.Open(System.String,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare)">
+            <summary>
+            可変長ファイルをオープンします。
+            </summary>
+            <param name="file_name">オープンするファイルの名前を示す文字列を指定します。</param>
+            <param name="fileMode">ファイルを開く方法または作成する方法を指定します。</param>
+            <param name="fileAccess">ファイルにアクセスする方法を指定します。</param>
+            <param name="fileShare">ファイルの共有方法を指定します。</param>
+        </member>
+        <member name="M:HokushoClass.Files.H_FreeFile.Open(System.String,System.String,System.String)">
+            <summary>
+            可変長ファイルをオープンします。
+            </summary>
+            <param name="file_name">オープンするファイルの名前を示す文字列を指定します。</param>
+            <param name="access_mode">オープンするファイルのファイル属性を指定します。</param>
+            <param name="share_mode">オープンするファイルの共有属性を指定します。</param>
+        </member>
+        <member name="M:HokushoClass.Files.H_FreeFile.Close">
+            <summary>
+            可変長ファイルをクローズします。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Files.H_FreeFile.Read(System.Byte[]@,System.Int32)">
+            <summary>
+            ファイルからデータを読み込みます。
+            </summary>
+            <param name="data">読み込んだレコードのデータが格納されるバイト配列を指定します。</param>
+            <param name="length">読み込みを行う最大バイト数を指定します。</param>
+        </member>
+        <member name="M:HokushoClass.Files.H_FreeFile.Write(System.Byte[])">
+            <summary>
+            ファイルにデータを書き込みます。
+            </summary>
+            <param name="data">書き込むレコードのデータが格納されているバイト配列を指定します。</param>
+        </member>
+        <member name="P:HokushoClass.Files.H_FreeFile.FileLength">
+            <summary>
+            ファイル長 (バイト単位) を取得します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Files.H_FreeFile.ErrorCode">
+            <summary>
+            異常コードを取得します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Files.H_FreeFile.ErrorMessage">
+            <summary>
+            異常内容を取得します。
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Files.H_RingFile">
+            <summary>
+            リングファイルクラス
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Files.H_RingFile.Open(System.String,System.Int32,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,System.Int32)">
+            <summary>
+            リングファイルをオープンします。
+            </summary>
+            <param name="file_name">オープンするファイルの名前を示す文字列を指定します。</param>
+            <param name="length">オープンするファイルの１レコードのバイト数を指定します。</param>
+            <param name="fileMode">ファイルを開く方法または作成する方法を指定します。</param>
+            <param name="fileAccess">ファイルにアクセスする方法を指定します。</param>
+            <param name="fileShare">ファイルの共有方法を指定します。</param>
+            <param name="ring">書き込みのできる最大件数を指定します。</param>
+        </member>
+        <member name="M:HokushoClass.Files.H_RingFile.Open(System.String,System.Int32,System.String,System.String,System.Int32)">
+            <summary>
+            リングファイルをオープンします。
+            </summary>
+            <param name="file_name">オープンするファイルの名前を示す文字列を指定します。 </param>
+            <param name="length">オープンするファイルの１レコードのバイト数を指定します。</param>
+            <param name="fileAccess_mode">オープンするファイルのファイル属性を指定します。</param>
+            <param name="share_mode">オープンするファイルの共有属性を指定します。</param>
+            <param name="ring">書き込みのできる最大件数を指定します。</param>
+        </member>
+        <member name="M:HokushoClass.Files.H_RingFile.Close">
+            <summary>
+            リングファイルをクローズします。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Files.H_RingFile.Write(System.Byte[])">
+            <summary>
+            ファイルにデータを書き込みます。
+            </summary>
+            <param name="data">書き込むレコードのデータが格納されているバイト配列を指定します。</param>
+        </member>
+        <member name="P:HokushoClass.Files.H_RingFile.FileLength">
+            <summary>
+            ファイル長 (バイト単位) を取得します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Files.H_RingFile.RecordLength">
+            <summary>
+            レコード長 (バイト単位) を取得します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Files.H_RingFile.ErrorCode">
+            <summary>
+            異常コードを取得します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Files.H_RingFile.ErrorMessage">
+            <summary>
+            異常内容を取得します。
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Files.H_PrivateProfile">
+            <summary>
+            設定ファイルクラス
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Files.H_PrivateProfile.Get(System.String,System.String,System.String,System.String)">
+            <summary>
+            指定したセクションから文字列を取得します。
+            </summary>
+            <param name="Section">セクションの名前を示す文字列を指定します。</param>
+            <param name="Key">キーの名前を示す文字列を指定します。</param>
+            <param name="Default">キーがファイル内に見つからないときのデフォルト値を示す文字列を指定します。</param>
+            <param name="FileName">ファイルの名前を示す文字列を指定します。</param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Files.H_PrivateProfile.Set(System.String,System.String,System.String,System.String)">
+            <summary>
+            指定したセクションに文字列を設定します。
+            </summary>
+            <param name="Section">セクションの名前を示す文字列を指定します。</param>
+            <param name="Key">キーの名前を示す文字列を指定します。</param>
+            <param name="EntryString">値を示す文字列を指定します。</param>
+            <param name="FileName">ファイルの名前を示す文字列を指定します。</param>
+            <returns></returns>
+        </member>
+        <member name="T:HokushoClass.Log.LogWrite">
+            <summary>
+            ログ記録クラス
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Log.LogWrite.#ctor(System.String)">
+            <summary>
+            ログ記録クラス
+            </summary>
+            <param name="path">>ログを記録にするディレクトリ名。</param>
+        </member>
+        <member name="M:HokushoClass.Log.LogWrite.#ctor">
+            <summary>
+            ログ記録クラス
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Log.LogWrite.#ctor(System.Boolean)">
+            <summary>
+            ログ記録クラス
+            </summary>
+            <param name="logEnable">ログを記録にする場合は true。それ以外の場合は false。</param>
+        </member>
+        <member name="M:HokushoClass.Log.LogWrite.Finalize">
+            <summary>
+            ログ記録クラス
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Log.LogWrite.Dispose">
+            <summary>
+            すべてのリソースを解放します。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Log.LogWrite.Initialize">
+            <summary>
+            リソースを取得します。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Log.LogWrite.Add(System.String)">
+            <summary>
+            ログを記録します。
+            </summary>
+            <param name="text">記録するデータが格納されている文字列。</param>
+        </member>
+        <member name="T:HokushoClass.SharedMemory.H_Memory">
+            <summary>
+            共有メモリクラス
+            </summary>
+        </member>
+        <member name="M:HokushoClass.SharedMemory.H_Memory.CreateMemory(System.String,System.UInt32,System.String)">
+            <summary>
+            共有メモリを作成し､ オープンします。
+            </summary>
+            <param name="objectName">作成する共有メモリ名。</param>
+            <param name="byteSize">作成する共有メモリのバイトサイズ。</param>
+            <param name="groupName">アクセス許可を追加するグループ名。</param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.SharedMemory.H_Memory.CreateMemory(System.String,System.UInt32)">
+            <summary>
+            共有メモリを作成し､ オープンします。
+            </summary>
+            <param name="objectName">作成する共有メモリ名。</param>
+            <param name="byteSize">作成する共有メモリのバイトサイズ。</param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.SharedMemory.H_Memory.ReleaseMemory">
+            <summary>
+            共有メモリを解放します。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.SharedMemory.H_Memory.ReadMemory(System.Int32,System.UInt32,System.Boolean)">
+            <summary>
+            共有メモリからバイト配列でデータを読み込みます。
+            </summary>
+            <param name="index">共有メモリの読み込みを開始するオフセット値。</param>
+            <param name="byteSize">共有メモリから読み込むバイト数。</param>
+            <param name="lockFlag">共有メモリに排他ロックする場合は true。それ以外の場合は false。</param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.SharedMemory.H_Memory.ReadMemory(System.Int32,System.UInt32)">
+            <summary>
+            共有メモリからバイト配列でデータを読み込みます。
+            </summary>
+            <param name="index">共有メモリの読み込みを開始するオフセット値。</param>
+            <param name="byteSize">共有メモリから読み込むバイト数。</param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.SharedMemory.H_Memory.WriteMemory(System.Int32,System.Byte[],System.UInt32,System.Boolean)">
+            <summary>
+            共有メモリにバイト配列のデータを書き込みます。
+            </summary>
+            <param name="index">共有メモリの書き込みを開始するオフセット値。</param>
+            <param name="data">共有メモリに書き込むデータが格納されているバイト配列。</param>
+            <param name="byteSize">共有メモリに書き込むバイト数。</param>
+            <param name="lockFlag">共有メモリに排他ロックする場合は true。それ以外の場合は false。</param>
+        </member>
+        <member name="M:HokushoClass.SharedMemory.H_Memory.WriteMemory(System.Int32,System.Byte[],System.UInt32)">
+            <summary>
+            共有メモリにバイト配列のデータを書き込みます。
+            </summary>
+            <param name="index">共有メモリの書き込みを開始するオフセット値。</param>
+            <param name="data">共有メモリに書き込むデータが格納されているバイト配列。</param>
+            <param name="byteSize">共有メモリに書き込むバイト数。</param>
+        </member>
+        <member name="M:HokushoClass.SharedMemory.H_Memory.Lock">
+            <summary>
+            共有メモリへの排他ロックを行います。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.SharedMemory.H_Memory.Unlock">
+            <summary>
+            共有メモリへの排他ロック解除を行います。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.SharedMemory.H_Memory.ErrorCode">
+            <summary>
+            異常コードを取得します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.SharedMemory.H_Memory.ErrorMessage">
+            <summary>
+            異常内容を取得します。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.SharedMemory.H_Memory.BytesToInt32(System.Byte[])">
+            <summary>
+            ４バイトのバイト配列を Int32 に変換します。
+            </summary>
+            <param name="data">変換するデータが格納されているバイト配列。</param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.SharedMemory.H_Memory.Int32ToBytes(System.Int32)">
+            <summary>
+            Int32 を４バイトのバイト配列に変換します。
+            </summary>
+            <param name="data">変換する値。</param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.SharedMemory.H_Memory.BytesToInt16(System.Byte[])">
+            <summary>
+            ２バイトのバイト配列を Int16 に変換します。
+            </summary>
+            <param name="data">変換するデータが格納されているバイト配列。</param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.SharedMemory.H_Memory.Int16ToBytes(System.Int16)">
+            <summary>
+            Int16 を２バイトのバイト配列に変換します。
+            </summary>
+            <param name="data">変換する値。</param>
+            <returns></returns>
+        </member>
+        <member name="T:HokushoClass.Rs232c.H_Rs232c">
+            <summary>
+            RS-232Cクラス
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Rs232c.H_Rs232c.ReceiveEventHandler">
+            <summary>
+            イベントを処理するメソッドを表します。
+            </summary>
+        </member>
+        <member name="E:HokushoClass.Rs232c.H_Rs232c.ReceiveEvent">
+            <summary>
+            受信すると発生します。
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Rs232c.H_Rs232c.ReceiveEventArgs">
+            <summary>
+            受信すると発生するイベントの引数。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Rs232c.H_Rs232c.ReceiveEventArgs.BytesData">
+            <summary>
+            受信したデータが格納されているバイト配列を取得します。
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Rs232c.H_Rs232c.PortNo">
+            <summary>
+            ポート№
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Rs232c.H_Rs232c.PortNo._01">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Rs232c.H_Rs232c.PortNo._02">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Rs232c.H_Rs232c.PortNo._03">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Rs232c.H_Rs232c.PortNo._04">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Rs232c.H_Rs232c.PortNo._05">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Rs232c.H_Rs232c.PortNo._06">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Rs232c.H_Rs232c.PortNo._07">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Rs232c.H_Rs232c.PortNo._08">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Rs232c.H_Rs232c.PortNo._09">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Rs232c.H_Rs232c.PortNo._10">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Rs232c.H_Rs232c.PortNo._11">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Rs232c.H_Rs232c.PortNo._12">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Rs232c.H_Rs232c.PortNo._13">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Rs232c.H_Rs232c.PortNo._14">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Rs232c.H_Rs232c.PortNo._15">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Rs232c.H_Rs232c.PortNo._16">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Rs232c.H_Rs232c.PortNo._17">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Rs232c.H_Rs232c.PortNo._18">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Rs232c.H_Rs232c.PortNo._19">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Rs232c.H_Rs232c.PortNo._20">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Rs232c.H_Rs232c.BaudRate">
+            <summary>
+            ボーレート
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Rs232c.H_Rs232c.BaudRate._1200">
+            <summary>
+            1200bps
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Rs232c.H_Rs232c.BaudRate._2400">
+            <summary>
+            2400bps
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Rs232c.H_Rs232c.BaudRate._4800">
+            <summary>
+            4800bps
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Rs232c.H_Rs232c.BaudRate._9600">
+            <summary>
+            9600bps
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Rs232c.H_Rs232c.BaudRate._14400">
+            <summary>
+            14400bps
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Rs232c.H_Rs232c.BaudRate._19200">
+            <summary>
+            19200bps
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Rs232c.H_Rs232c.BaudRate._38400">
+            <summary>
+            38400bps
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Rs232c.H_Rs232c.BaudRate._57600">
+            <summary>
+            57600bps
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Rs232c.H_Rs232c.BaudRate._115200">
+            <summary>
+            115200bps
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Rs232c.H_Rs232c.BaudRate._230400">
+            <summary>
+            230400bps
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Rs232c.H_Rs232c.ByteSize">
+            <summary>
+            データ長
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Rs232c.H_Rs232c.ByteSize._7">
+            <summary>
+            7ビット
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Rs232c.H_Rs232c.ByteSize._8">
+            <summary>
+            7ビット
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Rs232c.H_Rs232c.Parity">
+            <summary>
+            パリティ
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Rs232c.H_Rs232c.Parity.None">
+            <summary>
+            なし
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Rs232c.H_Rs232c.Parity.Odd">
+            <summary>
+            奇数
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Rs232c.H_Rs232c.Parity.Even">
+            <summary>
+            偶数
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Rs232c.H_Rs232c.StopBits">
+            <summary>
+            ストップビット
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Rs232c.H_Rs232c.StopBits._1">
+            <summary>
+            1ビット
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Rs232c.H_Rs232c.StopBits._2">
+            <summary>
+            2ビット
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Rs232c.H_Rs232c.FormatType">
+            <summary>
+            フォーマット
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Rs232c.H_Rs232c.FormatType.None">
+            <summary>
+            なし
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Rs232c.H_Rs232c.FormatType.CR">
+            <summary>
+            ～CR
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Rs232c.H_Rs232c.FormatType.CR_LF">
+            <summary>
+            ～CR+LF
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Rs232c.H_Rs232c.FormatType.STX_ETX">
+            <summary>
+            STX～ETX
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Rs232c.H_Rs232c.#ctor">
+            <summary>
+            RS-232Cクラス
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Rs232c.H_Rs232c.#ctor(System.Boolean)">
+            <summary>
+            RS-232Cクラス
+            </summary>
+            <param name="eventEnable">イベント型にする場合は true。それ以外の場合は false。</param>
+        </member>
+        <member name="M:HokushoClass.Rs232c.H_Rs232c.Finalize">
+            <summary>
+             RS-232Cクラス
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Rs232c.H_Rs232c.CtsHolding">
+            <summary>
+            CTS(Clear To Send)シグナルの状態を取得します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Rs232c.H_Rs232c.RtsEnable">
+            <summary>
+            RTS(Request To Send)シグナルが有効にする値を取得または設定します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Rs232c.H_Rs232c.DsrHolding">
+            <summary>
+            DSR(Data Set Ready)シグナルの状態を取得します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Rs232c.H_Rs232c.DtrEnable">
+            <summary>
+            DTR(Data Terminal Ready)シグナルを有効にする値を取得または設定します。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Rs232c.H_Rs232c.Open(HokushoClass.Rs232c.H_Rs232c.PortNo,HokushoClass.Rs232c.H_Rs232c.BaudRate,HokushoClass.Rs232c.H_Rs232c.ByteSize,HokushoClass.Rs232c.H_Rs232c.Parity,HokushoClass.Rs232c.H_Rs232c.StopBits,HokushoClass.Rs232c.H_Rs232c.FormatType)">
+            <summary>
+            デバイスをオープンします。
+            </summary>
+            <param name="portNo">オープンするデバイスのポート№。</param>
+            <param name="baudRate">オープンするデバイスのボーレート。</param>
+            <param name="byteSize">オープンするデバイスのデータビット長。</param>
+            <param name="parity">オープンするデバイスのパリティビット。</param>
+            <param name="stopBits">オープンするデバイスのストップビット。</param>
+            <param name="formatType">オープンするデバイスのフォーマット。FormatType.NONE 以外は、書き込むデータに付加されます。また、読み込みはそのフォーマットの単位で行い、読み込みデータからその部分は排除されます。</param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Rs232c.H_Rs232c.Close">
+            <summary>
+            デバイスをクローズします。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Rs232c.H_Rs232c.Send(System.String)">
+            <summary>
+            デバイスにデータを書き込みます。
+            </summary>
+            <param name="data">書き込むデータが格納されている文字列。</param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Rs232c.H_Rs232c.Receive">
+            <summary>
+            デバイスからデータを読み込みます。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Rs232c.H_Rs232c.SendBytes(System.Byte[])">
+            <summary>
+            デバイスにバイト配列のデータを書き込みます。
+            </summary>
+            <param name="data">書き込むデータが格納されているバイト配列。</param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Rs232c.H_Rs232c.ReceiveBytes(System.Int32@)">
+            <summary>
+            デバイスからバイト配列でデータを読み込みます。
+            </summary>
+            <param name="bytes_size">受信したバイト数。未受信のときは、-1。</param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Rs232c.H_Rs232c.ReceiveBytes">
+            <summary>
+            デバイスからバイト配列でデータを読み込みます。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Rs232c.H_Rs232c.SendBytesDirect(System.Byte[])">
+            <summary>
+            デバイスに FormatType列挙型 の設定を付加せずにデータを書き込みます。
+            </summary>
+            <param name="data">書き込むデータが格納されているバイト配列。</param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Rs232c.H_Rs232c.ReceiveBytesDirect">
+            <summary>
+            デバイスから FormatType列挙型 の設定を無視してバイト配列でデータを読み込みます。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:HokushoClass.Rs232c.H_Rs232c.ErrorCode">
+            <summary>
+            異常コードを取得します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Rs232c.H_Rs232c.ErrorMessage">
+            <summary>
+            異常内容を取得します。
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Sockets.H_SocketBase">
+            <summary>
+            ソケットインターフェース
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Sockets.H_SocketBase.PREFIX">
+            <summary>
+            プリフィックス（特殊フォーマット）
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Sockets.H_SocketBase.SUFFIX">
+            <summary>
+            サフィックス（特殊フォーマット）
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Sockets.H_Socket">
+            <summary>
+            ソケットクラス
+            </summary>
+        </member>
+        <member name="E:HokushoClass.Sockets.H_Socket.ConnectEvent">
+            <summary>
+            接続すると発生します。
+            </summary>
+        </member>
+        <member name="E:HokushoClass.Sockets.H_Socket.DisconnectEvent">
+            <summary>
+            切断すると発生します。
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Sockets.H_Socket.ReceiveEventHandler">
+            <summary>
+            イベントを処理するメソッドを表します。
+            </summary>
+        </member>
+        <member name="E:HokushoClass.Sockets.H_Socket.ReceiveEvent">
+            <summary>
+            受信すると発生します。
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Sockets.H_Socket.ReceiveEventArgs">
+            <summary>
+            受信すると発生するイベントの引数。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Sockets.H_Socket.ReceiveEventArgs.BytesData">
+            <summary>
+            受信したデータが格納されているバイト配列を取得します。
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Sockets.H_Socket.OpenMode">
+            <summary>
+            オープンモード
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Sockets.H_Socket.OpenMode.Host">
+            <summary>
+            ホスト側
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Sockets.H_Socket.OpenMode.Client">
+            <summary>
+            クライアント側
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Sockets.H_Socket.FormatType">
+            <summary>
+            フォーマット
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Sockets.H_Socket.FormatType.None">
+            <summary>
+            なし
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Sockets.H_Socket.FormatType.CR">
+            <summary>
+            ～CR
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Sockets.H_Socket.FormatType.CR_LF">
+            <summary>
+            ～CR+LF
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Sockets.H_Socket.FormatType.STX_ETX">
+            <summary>
+            STX～ETX
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Sockets.H_Socket.FormatType.HKS_FORMAT">
+            <summary>
+            特殊フォーマット
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_Socket.#ctor(System.String,System.Int32)">
+            <summary>
+            ソケットクラス
+            </summary>
+            <param name="ip_address">使用するソケットのIPアドレス。</param>
+            <param name="port">使用するソケットのポート№。</param>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_Socket.#ctor(System.Int32)">
+            <summary>
+            ソケットクラス
+            </summary>
+            <param name="port">使用するソケットのポート№。</param>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_Socket.Open(HokushoClass.Sockets.H_Socket.OpenMode,HokushoClass.Sockets.H_Socket.FormatType)">
+            <summary>
+            ソケットのオープンをします。
+            </summary>
+            <param name="openMode">オープンするソケットのタイプ。</param>
+            <param name="formatType">オープンするソケットのフォーマット。</param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_Socket.Close">
+            <summary>
+            ソケットのクローズをします。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_Socket.Send(System.String)">
+            <summary>
+            ソケットにデータを書き込みます。
+            </summary>
+            <param name="data">書き込むデータが格納されている文字列。</param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_Socket.Receive">
+            <summary>
+            ソケットからデータを読み込みます。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_Socket.Receive(System.Int32)">
+            <summary>
+            ソケットからデータを読み込みます。
+            </summary>
+            <param name="timeOut">タイムアウト値。</param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_Socket.SendBytes(System.Byte[])">
+            <summary>
+            ソケットにバイト配列のデータを書き込みます。
+            </summary>
+            <param name="data">書き込むデータが格納されているバイト配列。</param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_Socket.ReceiveBytes(System.Int32@)">
+            <summary>
+            ソケットからバイト配列でデータを読み込みます。
+            </summary>
+            <param name="bytes_size">受信したバイト数。未受信のときは、-1。</param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_Socket.ReceiveBytes">
+            <summary>
+            ソケットからバイト配列でデータを読み込みます。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_Socket.ReceiveBytes(System.Int32)">
+            <summary>
+            ソケットからバイト配列でデータを読み込みます。
+            </summary>
+            <param name="timeOut">タイムアウト値。</param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_Socket.ReceiveBytes(System.Int32@,System.Int32)">
+            <summary>
+            ソケットからバイト配列でデータを読み込みます。
+            </summary>
+            <param name="bytes_size">受信したバイト数。未受信のときは、-1。</param>
+            <param name="timeOut">タイムアウト値。</param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_Socket.SendBytesDirect(System.Byte[])">
+            <summary>
+            ソケットに FormatType列挙型 の設定を付加せずにデータを書き込みます。
+            </summary>
+            <param name="data">書き込むデータが格納されているバイト配列。</param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_Socket.ReceiveBytesDirect">
+            <summary>
+            ソケットから FormatType列挙型 の設定を無視してバイト配列でデータを読み込みます。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:HokushoClass.Sockets.H_Socket.KeepAliveTimer">
+            <summary>
+            ソケットの生存確認時間を設定します。単位はミリ秒。※接続する前に設定して下さい。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Sockets.H_Socket.ConnectTimeOut">
+            <summary>
+            ソケットの接続タイムアウト時間を取得、設定します。単位はミリ秒。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Sockets.H_Socket.IsConnected">
+            <summary>
+            接続状態を取得します。接続している場合は true。それ以外の場合は false。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Sockets.H_Socket.IsDisconnected">
+            <summary>
+            切断状態を取得します。接続していて切断した場合は true。それ以外の場合は false。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Sockets.H_Socket.RemoteIpAddress">
+            <summary>
+            接続先のIPアドレスを取得します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Sockets.H_Socket.RemotePort">
+            <summary>
+            接続先のポート№を取得します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Sockets.H_Socket.ErrorCode">
+            <summary>
+            異常コードを取得します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Sockets.H_Socket.ErrorMessage">
+            <summary>
+            異常内容を取得します。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_Socket.OnAccept(System.IAsyncResult)">
+            <summary>
+            
+            </summary>
+            <param name="ar"></param>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_Socket.OnConnect(System.IAsyncResult)">
+            <summary>
+            
+            </summary>
+            <param name="ar"></param>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_Socket.OnSend(System.IAsyncResult)">
+            <summary>
+            
+            </summary>
+            <param name="ar"></param>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_Socket.OnReceive(System.IAsyncResult)">
+            <summary>
+            
+            </summary>
+            <param name="ar"></param>
+        </member>
+        <member name="T:HokushoClass.Sockets.H_SocketServer">
+            <summary>
+            ソケットクラス(複数接続可)
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Sockets.H_SocketServer.ConnectEventHandler">
+            <summary>
+            イベントを処理するメソッドを表します。
+            </summary>
+        </member>
+        <member name="E:HokushoClass.Sockets.H_SocketServer.ConnectEvent">
+            <summary>
+            接続すると発生します。
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Sockets.H_SocketServer.ConnectEventArgs">
+            <summary>
+            接続すると発生するイベントの引数。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Sockets.H_SocketServer.ConnectEventArgs.ConnectNo">
+            <summary>
+            接続したソケットの接続№を取得します。
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Sockets.H_SocketServer.FormatType">
+            <summary>
+            フォーマット
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Sockets.H_SocketServer.FormatType.None">
+            <summary>
+            なし
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Sockets.H_SocketServer.FormatType.CR">
+            <summary>
+            ～CR
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Sockets.H_SocketServer.FormatType.CR_LF">
+            <summary>
+            ～CR+LF
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Sockets.H_SocketServer.FormatType.STX_ETX">
+            <summary>
+            STX～ETX
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Sockets.H_SocketServer.FormatType.HKS_FORMAT">
+            <summary>
+            特殊フォーマット
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Sockets.H_SocketServer.Item(System.Int32)">
+            <summary>
+            接続したソケットの情報
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_SocketServer.#ctor(System.String,System.Int32,System.Int32)">
+            <summary>
+            ソケットクラス
+            </summary>
+            <param name="ip_address">使用するソケットのIPアドレス。</param>
+            <param name="port">使用するソケットのポート№。</param>
+            <param name="connect_max">最大接続数</param>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_SocketServer.#ctor(System.Int32,System.Int32)">
+            <summary>
+            ソケットクラス
+            </summary>
+            <param name="port">使用するソケットのポート№。</param>
+            <param name="connect_max">最大接続数</param>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_SocketServer.#ctor(System.Int32)">
+            <summary>
+            ソケットクラス
+            </summary>
+            <param name="port">使用するソケットのポート№。</param>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_SocketServer.Open(HokushoClass.Sockets.H_SocketServer.FormatType)">
+            <summary>
+            ソケットのオープンをします。
+            </summary>
+            <param name="formatType">オープンするソケットのフォーマット。</param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_SocketServer.Close">
+            <summary>
+            ソケットのクローズをします。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Sockets.H_SocketServer.KeepAliveTimer">
+            <summary>
+            ソケットの生存確認時間を設定します。単位はミリ秒。※接続する前に設定して下さい。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Sockets.H_SocketServer.ErrorCode">
+            <summary>
+            異常コードを取得します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Sockets.H_SocketServer.ErrorMessage">
+            <summary>
+            異常内容を取得します。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_SocketServer.OnAccept(System.IAsyncResult)">
+            <summary>
+            
+            </summary>
+            <param name="ar"></param>
+        </member>
+        <member name="T:HokushoClass.Sockets.H_SocketServer.Connected">
+            <summary>
+            ソケット接続クラス
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Sockets.H_SocketServer.Connected.ReceiveEventHandler">
+            <summary>
+            イベントを処理するメソッドを表します。
+            </summary>
+        </member>
+        <member name="E:HokushoClass.Sockets.H_SocketServer.Connected.ReceiveEvent">
+            <summary>
+            受信すると発生します。
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Sockets.H_SocketServer.Connected.ReceiveEventArgs">
+            <summary>
+            受信すると発生するイベントの引数。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Sockets.H_SocketServer.Connected.ReceiveEventArgs.ConnectNo">
+            <summary>
+            接続したソケットの接続№を取得します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Sockets.H_SocketServer.Connected.ReceiveEventArgs.BytesData">
+            <summary>
+            受信したデータが格納されているバイト配列を取得します。
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Sockets.H_SocketServer.Connected.DisconnectEventHandler">
+            <summary>
+            イベントを処理するメソッドを表します。
+            </summary>
+        </member>
+        <member name="E:HokushoClass.Sockets.H_SocketServer.Connected.DisconnectEvent">
+            <summary>
+            切断すると発生します。
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Sockets.H_SocketServer.Connected.DisconnectEventArgs">
+            <summary>
+            切断すると発生するイベントの引数。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Sockets.H_SocketServer.Connected.DisconnectEventArgs.ConnectNo">
+            <summary>
+            切断したソケットの接続№を取得します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Sockets.H_SocketServer.Connected.DisconnectEventArgs.ErrorCode">
+            <summary>
+            異常コード
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Sockets.H_SocketServer.Connected.DisconnectEventArgs.ErrorMessage">
+            <summary>
+            異常内容
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_SocketServer.Connected.Dispose">
+            <summary>
+            リソースを解放します。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_SocketServer.Connected.Release">
+            <summary>
+            予約を解放します。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_SocketServer.Connected.Send(System.String)">
+            <summary>
+            ソケットにデータを書き込みます。
+            </summary>
+            <param name="data">書き込むデータが格納されている文字列。</param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_SocketServer.Connected.Receive">
+            <summary>
+            ソケットからデータを読み込みます。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_SocketServer.Connected.SendBytes(System.Byte[])">
+            <summary>
+            ソケットにバイト配列のデータを書き込みます。
+            </summary>
+            <param name="data">書き込むデータが格納されているバイト配列。</param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_SocketServer.Connected.ReceiveBytes(System.Int32@)">
+            <summary>
+            ソケットからバイト配列でデータを読み込みます。
+            </summary>
+            <param name="bytes_size">受信したバイト数。未受信のときは、-1。</param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_SocketServer.Connected.ReceiveBytes">
+            <summary>
+            ソケットからバイト配列でデータを読み込みます。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_SocketServer.Connected.ReceiveBytes(System.Int32)">
+            <summary>
+            ソケットからバイト配列でデータを読み込みます。
+            </summary>
+            <param name="timeOut">タイムアウト値。</param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_SocketServer.Connected.ReceiveBytes(System.Int32@,System.Int32)">
+            <summary>
+            ソケットからバイト配列でデータを読み込みます。
+            </summary>
+            <param name="bytes_size">受信したバイト数。未受信のときは、-1。</param>
+            <param name="timeOut">タイムアウト値。</param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_SocketServer.Connected.SendBytesDirect(System.Byte[])">
+            <summary>
+            ソケットに FormatType列挙型 の設定を付加せずにデータを書き込みます。
+            </summary>
+            <param name="data">書き込むデータが格納されているバイト配列。</param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_SocketServer.Connected.ReceiveBytesDirect">
+            <summary>
+            ソケットから FormatType列挙型 の設定を無視してバイト配列でデータを読み込みます。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_SocketServer.Connected.OnReceive(System.IAsyncResult)">
+            <summary>
+            
+            </summary>
+            <param name="ar"></param>
+        </member>
+        <member name="P:HokushoClass.Sockets.H_SocketServer.Connected.IsConnected">
+            <summary>
+            ソケットの接続状態を取得します。接続している場合は true。それ以外の場合は false。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Sockets.H_SocketServer.Connected.IsReserved">
+            <summary>
+            ソケットの予約状態を取得します。予約されている場合は true。それ以外の場合は false。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Sockets.H_SocketServer.Connected.IsDisconnected">
+            <summary>
+            切断状態を取得します。接続していて切断した場合は true。それ以外の場合は false。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Sockets.H_SocketServer.Connected.RemoteIpAddress">
+            <summary>
+            接続先のIPアドレスを取得します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Sockets.H_SocketServer.Connected.RemotePort">
+            <summary>
+            接続先のポート№を取得します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Sockets.H_SocketServer.Connected.ErrorCode">
+            <summary>
+            異常コードを取得します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Sockets.H_SocketServer.Connected.ErrorMessage">
+            <summary>
+            異常内容を取得します。
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Sockets.H_SocketUDP">
+            <summary>
+            ソケットクラス(UDP)
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Sockets.H_SocketUDP.ReceiveEventHandler">
+            <summary>
+            イベントを処理するメソッドを表します。
+            </summary>
+        </member>
+        <member name="E:HokushoClass.Sockets.H_SocketUDP.ReceiveEvent">
+            <summary>
+            受信すると発生します。
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Sockets.H_SocketUDP.ReceiveEventArgs">
+            <summary>
+            受信すると発生するイベントの引数。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Sockets.H_SocketUDP.ReceiveEventArgs.BytesData">
+            <summary>
+            受信したデータが格納されているバイト配列を取得します。
+            </summary>
+        </member>
+        <member name="T:HokushoClass.Sockets.H_SocketUDP.FormatType">
+            <summary>
+            フォーマット
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Sockets.H_SocketUDP.FormatType.None">
+            <summary>
+            なし
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Sockets.H_SocketUDP.FormatType.CR">
+            <summary>
+            ～CR
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Sockets.H_SocketUDP.FormatType.CR_LF">
+            <summary>
+            ～CR+LF
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Sockets.H_SocketUDP.FormatType.STX_ETX">
+            <summary>
+            STX～ETX
+            </summary>
+        </member>
+        <member name="F:HokushoClass.Sockets.H_SocketUDP.FormatType.HKS_FORMAT">
+            <summary>
+            特殊フォーマット
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_SocketUDP.#ctor(System.Int32)">
+            <summary>
+            ソケットクラス
+            </summary>
+            <param name="port">使用するソケットのポート№。</param>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_SocketUDP.Open(HokushoClass.Sockets.H_SocketUDP.FormatType)">
+            <summary>
+            ソケットのオープンをします。
+            </summary>
+            <param name="formatType">オープンするソケットのフォーマット。</param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_SocketUDP.Close">
+            <summary>
+            ソケットのクローズをします。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_SocketUDP.Send(System.String,System.Net.IPEndPoint)">
+            <summary>
+            ソケットにデータを書き込みます。
+            </summary>
+            <param name="data">書き込むデータが格納されている文字列。</param>
+            <param name="remoteEP"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_SocketUDP.Receive">
+            <summary>
+            ソケットからデータを読み込みます。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_SocketUDP.Receive(System.Int32)">
+            <summary>
+            ソケットからデータを読み込みます。
+            </summary>
+            <param name="timeOut">タイムアウト値。</param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_SocketUDP.SendBytes(System.Byte[],System.Net.IPEndPoint)">
+            <summary>
+            ソケットにバイト配列のデータを書き込みます。
+            </summary>
+            <param name="data">書き込むデータが格納されているバイト配列。</param>
+            <param name="remoteEP"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_SocketUDP.ReceiveBytes(System.Int32@)">
+            <summary>
+            ソケットからバイト配列でデータを読み込みます。
+            </summary>
+            <param name="bytes_size">受信したバイト数。未受信のときは、-1。</param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_SocketUDP.ReceiveBytes">
+            <summary>
+            ソケットからバイト配列でデータを読み込みます。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_SocketUDP.ReceiveBytes(System.Int32)">
+            <summary>
+            ソケットからバイト配列でデータを読み込みます。
+            </summary>
+            <param name="timeOut">タイムアウト値。</param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_SocketUDP.ReceiveBytes(System.Int32@,System.Int32)">
+            <summary>
+            ソケットからバイト配列でデータを読み込みます。
+            </summary>
+            <param name="bytes_size">受信したバイト数。未受信のときは、-1。</param>
+            <param name="timeOut">タイムアウト値。</param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_SocketUDP.SendBytesDirect(System.Byte[],System.Net.IPEndPoint)">
+            <summary>
+            ソケットに FormatType列挙型 の設定を付加せずにデータを書き込みます。
+            </summary>
+            <param name="data">書き込むデータが格納されているバイト配列。</param>
+            <param name="remoteEP"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_SocketUDP.ReceiveBytesDirect">
+            <summary>
+            ソケットから FormatType列挙型 の設定を無視してバイト配列でデータを読み込みます。
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="P:HokushoClass.Sockets.H_SocketUDP.RemoteIpAddress">
+            <summary>
+            接続先のIPアドレスを取得します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Sockets.H_SocketUDP.RemotePort">
+            <summary>
+            接続先のポート№を取得します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Sockets.H_SocketUDP.ErrorCode">
+            <summary>
+            異常コードを取得します。
+            </summary>
+        </member>
+        <member name="P:HokushoClass.Sockets.H_SocketUDP.ErrorMessage">
+            <summary>
+            異常内容を取得します。
+            </summary>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_SocketUDP.OnSend(System.IAsyncResult)">
+            <summary>
+            
+            </summary>
+            <param name="ar"></param>
+        </member>
+        <member name="M:HokushoClass.Sockets.H_SocketUDP.OnReceive(System.IAsyncResult)">
+            <summary>
+            
+            </summary>
+            <param name="ar"></param>
+        </member>
+    </members>
+</doc>

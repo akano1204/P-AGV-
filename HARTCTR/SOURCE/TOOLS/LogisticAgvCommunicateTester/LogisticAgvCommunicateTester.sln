@@ -1,0 +1,68 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.26430.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogisticAgvCommunicateTester", "LogisticAgvCommunicateTester.csproj", "{542B2672-43BE-4869-988C-9055C8E2D202}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BelicsClass.AllInOneCompact.VS2017", "..\..\CLASS\_Class\BelicsClass.AllInOneCompact\BelicsClass.AllInOneCompact.VS2017.csproj", "{94DC20C2-2C81-4ACE-9A0E-DD0A12982005}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AgvController", "..\..\CLASS\AgvController\AgvController.csproj", "{900B2558-B536-47CD-8DF7-DCAFEC95C768}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{542B2672-43BE-4869-988C-9055C8E2D202}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{542B2672-43BE-4869-988C-9055C8E2D202}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{542B2672-43BE-4869-988C-9055C8E2D202}.Debug|x86.ActiveCfg = Debug|x86
+		{542B2672-43BE-4869-988C-9055C8E2D202}.Debug|x86.Build.0 = Debug|x86
+		{542B2672-43BE-4869-988C-9055C8E2D202}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{542B2672-43BE-4869-988C-9055C8E2D202}.Release|Any CPU.Build.0 = Release|Any CPU
+		{542B2672-43BE-4869-988C-9055C8E2D202}.Release|x86.ActiveCfg = Release|x86
+		{542B2672-43BE-4869-988C-9055C8E2D202}.Release|x86.Build.0 = Release|x86
+		{94DC20C2-2C81-4ACE-9A0E-DD0A12982005}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{94DC20C2-2C81-4ACE-9A0E-DD0A12982005}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{94DC20C2-2C81-4ACE-9A0E-DD0A12982005}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{94DC20C2-2C81-4ACE-9A0E-DD0A12982005}.Debug|x86.Build.0 = Debug|Any CPU
+		{94DC20C2-2C81-4ACE-9A0E-DD0A12982005}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{94DC20C2-2C81-4ACE-9A0E-DD0A12982005}.Release|Any CPU.Build.0 = Release|Any CPU
+		{94DC20C2-2C81-4ACE-9A0E-DD0A12982005}.Release|x86.ActiveCfg = Release|Any CPU
+		{94DC20C2-2C81-4ACE-9A0E-DD0A12982005}.Release|x86.Build.0 = Release|Any CPU
+		{900B2558-B536-47CD-8DF7-DCAFEC95C768}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{900B2558-B536-47CD-8DF7-DCAFEC95C768}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{900B2558-B536-47CD-8DF7-DCAFEC95C768}.Debug|x86.ActiveCfg = Debug|x86
+		{900B2558-B536-47CD-8DF7-DCAFEC95C768}.Debug|x86.Build.0 = Debug|x86
+		{900B2558-B536-47CD-8DF7-DCAFEC95C768}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{900B2558-B536-47CD-8DF7-DCAFEC95C768}.Release|Any CPU.Build.0 = Release|Any CPU
+		{900B2558-B536-47CD-8DF7-DCAFEC95C768}.Release|x86.ActiveCfg = Release|x86
+		{900B2558-B536-47CD-8DF7-DCAFEC95C768}.Release|x86.Build.0 = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = http://bltfs:8080/tfs/fa2
+		SccProjectUniqueName0 = LogisticAgvCommunicateTester.csproj
+		SccProjectName0 = .
+		SccAuxPath0 = http://bltfs:8080/tfs/fa2
+		SccLocalPath0 = .
+		SccProvider0 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName1 = ..\\..\\CLASS\\_Class\\BelicsClass.AllInOneCompact\\BelicsClass.AllInOneCompact.VS2017.csproj
+		SccProjectName1 = ../../CLASS/_Class/BelicsClass.AllInOneCompact
+		SccAuxPath1 = http://bltfs:8080/tfs/fa2
+		SccLocalPath1 = ..\\..\\CLASS\\_Class\\BelicsClass.AllInOneCompact
+		SccProvider1 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccProjectUniqueName2 = ..\\..\\CLASS\\AgvController\\AgvController.csproj
+		SccProjectName2 = ../../CLASS/AgvController
+		SccAuxPath2 = http://bltfs:8080/tfs/fa2
+		SccLocalPath2 = ..\\..\\CLASS\\AgvController
+		SccProvider2 = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+	EndGlobalSection
+EndGlobal

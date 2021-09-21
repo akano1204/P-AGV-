@@ -1,0 +1,185 @@
+﻿<Project DefaultTargets="Build" ToolsVersion="3.5" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A48808BF-39BA-4D57-BBF2-A063F4A7F1D1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BelicsClass.UI</RootNamespace>
+    <AssemblyName>BelicsClass.UI</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>
+    </SccProjectName>
+    <SccLocalPath>
+    </SccLocalPath>
+    <SccAuxPath>
+    </SccAuxPath>
+    <SccProvider>
+    </SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <DocumentationFile>..\Assemblies\BelicsClass.UI.XML</DocumentationFile>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks, Version=12.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Assemblies.NET3.5\Microsoft.VisualBasic.PowerPacks.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="_MainForm_Base_LargeFunctions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_MainForm_Base_LargeFunctions.Designer.cs">
+      <DependentUpon>_MainForm_Base_LargeFunctions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="_SeparatedFunctions.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_SeparatedFunctions.Designer.cs">
+      <DependentUpon>_SeparatedFunctions.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_Touchable_Form_Base.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_SubForm_MonitorLog.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_SubForm_MonitorLog.designer.cs">
+      <DependentUpon>_SubForm_MonitorLog.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_InputBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_InputBox.designer.cs">
+      <DependentUpon>_InputBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_KeyHook.cs" />
+    <Compile Include="_MainForm_Base.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_MainForm_Base.designer.cs">
+      <DependentUpon>_MainForm_Base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_MessageBox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_MessageBox.designer.cs">
+      <DependentUpon>_MessageBox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_MessageBox_Base.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_MessageBox_Base.designer.cs">
+      <DependentUpon>_MessageBox_Base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_ScreenFilter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_ScreenFilter.designer.cs">
+      <DependentUpon>_ScreenFilter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_SubForm_Base.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_SubForm_Base.designer.cs">
+      <DependentUpon>_SubForm_Base.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_SubForm_MonitorMemory.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="_SubForm_MonitorMemory.designer.cs">
+      <DependentUpon>_SubForm_MonitorMemory.cs</DependentUpon>
+    </Compile>
+    <Compile Include="_TouchControl.cs" />
+    <Compile Include="_WndProcHooker.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="_MainForm_Base_LargeFunctions.resx">
+      <DependentUpon>_MainForm_Base_LargeFunctions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_SeparatedFunctions.resx">
+      <DependentUpon>_SeparatedFunctions.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_SubForm_MonitorLog.resx">
+      <DependentUpon>_SubForm_MonitorLog.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_InputBox.resx">
+      <DependentUpon>_InputBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_MainForm_Base.resx">
+      <DependentUpon>_MainForm_Base.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_MessageBox.resx">
+      <DependentUpon>_MessageBox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_MessageBox_Base.resx">
+      <DependentUpon>_MessageBox_Base.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_SubForm_Base.resx">
+      <DependentUpon>_SubForm_Base.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="_SubForm_MonitorMemory.resx">
+      <DependentUpon>_SubForm_MonitorMemory.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BelicsClass.Common\BelicsClass.Common.VS2008.csproj">
+      <Project>{04BA2E75-DD6B-4F2A-8AEB-6821A4FE6D27}</Project>
+      <Name>BelicsClass.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BelicsClass.ObjectSync\BelicsClass.ObjectSync.VS2008.csproj">
+      <Project>{E0264257-D31F-4A9E-823F-14250643097D}</Project>
+      <Name>BelicsClass.ObjectSync</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BelicsClass.ProcessManage\BelicsClass.ProcessManage.VS2008.csproj">
+      <Project>{D7F32B7D-9BE5-49FB-B3FB-AB1AD2B2E2E4}</Project>
+      <Name>BelicsClass.ProcessManage</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BelicsClass.UI.Controls\BelicsClass.UI.Controls.VS2008.csproj">
+      <Project>{91A39B53-89CC-442E-B250-FF4F9A5D0E23}</Project>
+      <Name>BelicsClass.UI.Controls.VS2008</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BelicsClass.UI.Graph\BelicsClass.UI.Graph.VS2008.csproj">
+      <Project>{E1B23111-238D-4C66-9508-C385EACF00F1}</Project>
+      <Name>BelicsClass.UI.Graph.VS2008</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2E237C4D-7AFD-417C-8F85-4E8879985FB6}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>BelicsClass.Common.VS2017</RootNamespace>
+    <AssemblyName>BelicsClass.Common.VS2017</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="_Attributes.cs" />
+    <Compile Include="_BinarySerializableDictionary.cs" />
+    <Compile Include="_BinarySerializableList.cs" />
+    <Compile Include="_BinarySerializer.cs" />
+    <Compile Include="_BitConverter.cs" />
+    <Compile Include="_BitOperator.cs" />
+    <Compile Include="_Bytes.cs" />
+    <Compile Include="_Certification.cs" />
+    <Compile Include="_CommaText.cs" />
+    <Compile Include="_EnumLabel.cs" />
+    <Compile Include="_EventQueue.cs" />
+    <Compile Include="_HRTimer.cs" />
+    <Compile Include="_Impersonate.cs" />
+    <Compile Include="_LocalTime.cs" />
+    <Compile Include="_SerializableDateTime.cs" />
+    <Compile Include="_Shutdown.cs" />
+    <Compile Include="_Sound.cs" />
+    <Compile Include="_Stopwatch.cs" />
+    <Compile Include="_Stopwatch64.cs" />
+    <Compile Include="_User32API.cs" />
+    <Compile Include="_Win32API.cs" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

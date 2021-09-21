@@ -1,0 +1,563 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{4CC0A7F6-0742-4556-B052-1B5D0317B984}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BelicsClass.AllInOne</RootNamespace>
+    <AssemblyName>BelicsClass.AllInOne</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\Assemblies\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <DocumentationFile>
+    </DocumentationFile>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <Prefer32Bit>false</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject />
+  </PropertyGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="..\BelicsClass.Common\_Attributes.cs">
+      <Link>Common\_Attributes.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.Common\_BinarySerializableDictionary.cs">
+      <Link>Common\_BinarySerializableDictionary.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.Common\_BinarySerializableList.cs">
+      <Link>Common\_BinarySerializableList.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.Common\_BinarySerializer.cs">
+      <Link>Common\_BinarySerializer.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.Common\_BitConverter.cs">
+      <Link>Common\_BitConverter.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.Common\_BitOperator.cs">
+      <Link>Common\_BitOperator.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.Common\_Bytes.cs">
+      <Link>Common\_Bytes.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.Common\_Certification.cs">
+      <Link>Common\_Certification.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.Common\_CommaText.cs">
+      <Link>Common\_CommaText.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.Common\_EnumLabel.cs">
+      <Link>Common\_EnumLabel.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.Common\_EventQueue.cs">
+      <Link>Common\_EventQueue.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.Common\_HRTimer.cs">
+      <Link>Common\_HRTimer.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.Common\_Impersonate.cs">
+      <Link>Common\_Impersonate.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.Common\_LocalTime.cs">
+      <Link>Common\_LocalTime.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.Common\_SerializableDateTime.cs">
+      <Link>Common\_SerializableDateTime.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.Common\_Shutdown.cs">
+      <Link>Common\_Shutdown.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.Common\_Sound.cs">
+      <Link>Common\_Sound.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.Common\_Stopwatch.cs">
+      <Link>Common\_Stopwatch.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.Common\_Stopwatch64.cs">
+      <Link>Common\_Stopwatch64.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.Common\_User32API.cs">
+      <Link>Common\_User32API.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.Common\_Win32API.cs">
+      <Link>Common\_Win32API.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.ConsoleTools\_ConsoleTools.cs">
+      <Link>ConsoleTools\_ConsoleTools.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.Database.Base\_Database.cs">
+      <Link>Database\_Database.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.Database.ExcelOle\_ExcelDb.cs">
+      <Link>Database\_ExcelDb.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.Database.ExcelOle\_ExcelOle.cs">
+      <Link>Database\_ExcelOle.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.Database.MSAccess\_MSAccess.cs">
+      <Link>Database\_MSAccess.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.Database.OleDB\_OleDB.cs">
+      <Link>Database\_OleDB.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.Database.Oracle\_Oracle.cs">
+      <Link>Database\_Oracle.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.Database.SQLServer\_SQLServer.cs">
+      <Link>Database\_SQLServer.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.File\_CsvFile.cs">
+      <Link>File\_CsvFile.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.File\_FixedFile.cs">
+      <Link>File\_FixedFile.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.File\_FreeFile.cs">
+      <Link>File\_FreeFile.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.File\_IniFile.cs">
+      <Link>File\_IniFile.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.File\_Log.cs">
+      <Link>File\_Log.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.File\_PrivateProfile.cs">
+      <Link>File\_PrivateProfile.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.File\_RingFile.cs">
+      <Link>File\_RingFile.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.GPIB.CONTEC\CgpibCs.cs">
+      <Link>GPIB.CONTEC\CgpibCs.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.GPIB.CONTEC\SubFunc.cs">
+      <Link>GPIB.CONTEC\SubFunc.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.GPIB.CONTEC\_GpibF.cs">
+      <Link>GPIB.CONTEC\_GpibF.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.Network\_EventSocketQueue.cs">
+      <Link>Network\_EventSocketQueue.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.Network\_FtpClient.cs">
+      <Link>Network\_FtpClient.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.Network\_IPeerToPeer.cs">
+      <Link>Network\_IPeerToPeer.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.Network\_NetworkDrive.cs">
+      <Link>Network\_NetworkDrive.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.Network\_RawSocket.cs">
+      <Link>Network\_RawSocket.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.Network\_RawSocketServer.cs">
+      <Link>Network\_RawSocketServer.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.Network\_RawSocketUDP.cs">
+      <Link>Network\_RawSocketUDP.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.Network\_TcpP2P.cs">
+      <Link>Network\_TcpP2P.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.Network\_TcpP2PClient.cs">
+      <Link>Network\_TcpP2PClient.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.Network\_TcpP2PListener.cs">
+      <Link>Network\_TcpP2PListener.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.Network\_TcpP2PMultiListener.cs">
+      <Link>Network\_TcpP2PMultiListener.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.Network\_WCFClient.cs">
+      <Link>Network\_WCFClient.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.Network\_WCFContract.cs">
+      <Link>Network\_WCFContract.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.Network\_WCFServer.cs">
+      <Link>Network\_WCFServer.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.ObjectSync\_FaceMemorySync.cs">
+      <Link>ObjectSync\_FaceMemorySync.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.ObjectSync\_FaceMemorySyncNotify.cs">
+      <Link>ObjectSync\_FaceMemorySyncNotify.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.ObjectSync\_FileSync.cs">
+      <Link>ObjectSync\_FileSync.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.ObjectSync\_FileSyncNotify.cs">
+      <Link>ObjectSync\_FileSyncNotify.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.ObjectSync\_ObjectSync.cs">
+      <Link>ObjectSync\_ObjectSync.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.ObjectSync\_TcpSocketSync.cs">
+      <Link>ObjectSync\_TcpSocketSync.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.ObjectSync\_TypedFaceMemorySync.cs">
+      <Link>ObjectSync\_TypedFaceMemorySync.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.ObjectSync\_TypedQueueMemorySync.cs">
+      <Link>ObjectSync\_TypedQueueMemorySync.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.ObjectSync\_XmlSync.cs">
+      <Link>ObjectSync\_XmlSync.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.PCI.INTERFACE\IFCAD.cs">
+      <Link>PCI.INTERFACE\IFCAD.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.PCI.INTERFACE\IFCDA.cs">
+      <Link>PCI.INTERFACE\IFCDA.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.PCI.INTERFACE\IFCDIO.cs">
+      <Link>PCI.INTERFACE\IFCDIO.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.PLC.Accesser\_PLCDataAccesser.cs">
+      <Link>PLC\_PLCDataAccesser.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.PLC.Base\_MCProtocol.cs">
+      <Link>PLC\_MCProtocol.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.PLC.Base\_PLC.cs">
+      <Link>PLC\_PLC.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.PLC.Base\_PLCDataSync.cs">
+      <Link>PLC\_PLCDataSync.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.PLC.MELSEC\_Melsec.cs">
+      <Link>PLC\_Melsec.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.PLC.OMRON\_Omron.cs">
+      <Link>PLC\_Omron.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.ProcessManage\_Memory.cs">
+      <Link>ProcessManage\_Memory.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.ProcessManage\_Monitor.cs">
+      <Link>ProcessManage\_Monitor.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.ProcessManage\_Mutex.cs">
+      <Link>ProcessManage\_Mutex.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.ProcessManage\_Only.cs">
+      <Link>ProcessManage\_Only.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.ProcessManage\_Process.cs">
+      <Link>ProcessManage\_Process.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.ProcessManage\_ProcessWait.cs">
+      <Link>ProcessManage\_ProcessWait.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.ProcessManage\_Semaphore.cs">
+      <Link>ProcessManage\_Semaphore.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.ProcessManage\_ThreadController_Base.cs">
+      <Link>ProcessManage\_ThreadController_Base.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.RFID.KEYENCE\_RF550.cs">
+      <Link>RFID.KEYENCE\_RF550.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.Rs232c\_Rs232c.cs">
+      <Link>Rs232c\_Rs232c.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI.Controls\_CornerLabel.cs">
+      <Link>UI\_CornerLabel.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI.Controls\_CornerLabel.Designer.cs">
+      <Link>UI\_CornerLabel.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI.Controls\_DataGridViewProgressBarColumn.cs">
+      <Link>UI\_DataGridViewProgressBarColumn.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI.Controls\_DoubleBufferDataGridView.cs">
+      <Link>UI\_DoubleBufferDataGridView.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI.Controls\_DoubleBufferListView.cs">
+      <Link>UI\_DoubleBufferListView.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI.Controls\_DoubleBufferPanel.cs">
+      <Link>UI\_DoubleBufferPanel.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI.Controls\_FlatButton.cs">
+      <Link>UI\_FlatButton.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI.Controls\_JAN13Code.cs">
+      <Link>UI\_JAN13Code.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI.Controls\_QRCode.cs">
+      <Link>UI\_QRCode.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI.Controls\_RoundButton.cs">
+      <Link>UI\_RoundButton.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI.Controls\_RoundButton.Designer.cs">
+      <Link>UI\_RoundButton.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI.Controls\_StripeListView.cs">
+      <Link>UI\_StripeListView.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI.Controls\_VirtualListView.cs">
+      <Link>UI\_VirtualListView.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI.Graph\_Chart.cs">
+      <Link>UI\_Chart.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI.Graph\_Chart.Designer.cs">
+      <Link>UI\_Chart.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI.Graph\_Graph.cs">
+      <Link>UI\_Graph.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI.Graph\_Graph.designer.cs">
+      <Link>UI\_Graph.designer.cs</Link>
+      <DependentUpon>_Graph.cs</DependentUpon>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI.Report\_PrinterPreviewControl.cs">
+      <Link>UI\_PrinterPreviewControl.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI.Report\_ReportControl_Base.cs">
+      <Link>UI\_ReportControl_Base.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI.Report\_ReportControl_Base.Designer.cs">
+      <Link>UI\_ReportControl_Base.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI.Report\_ReportData_Base.cs">
+      <Link>UI\_ReportData_Base.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI.Report\_ReportLabel.cs">
+      <Link>UI\_ReportLabel.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI.Report\_ReportTextBox.cs">
+      <Link>UI\_ReportTextBox.cs</Link>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI.Report\_ReportView_Base.cs">
+      <Link>UI\_ReportView_Base.cs</Link>
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI\_InputBox.cs">
+      <Link>UI\_InputBox.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI\_InputBox.designer.cs">
+      <Link>UI\_InputBox.designer.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI\_KeyHook.cs">
+      <Link>UI\_KeyHook.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI\_MainForm_Base.cs">
+      <Link>UI\_MainForm_Base.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI\_MainForm_Base.designer.cs">
+      <Link>UI\_MainForm_Base.designer.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI\_MainForm_Base_LargeFunctions.cs">
+      <Link>UI\_MainForm_Base_LargeFunctions.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI\_MainForm_Base_LargeFunctions.Designer.cs">
+      <Link>UI\_MainForm_Base_LargeFunctions.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI\_MessageBox.cs">
+      <Link>UI\_MessageBox.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI\_MessageBox.designer.cs">
+      <Link>UI\_MessageBox.designer.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI\_MessageBox_Base.cs">
+      <Link>UI\_MessageBox_Base.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI\_MessageBox_Base.designer.cs">
+      <Link>UI\_MessageBox_Base.designer.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI\_ScreenFilter.cs">
+      <Link>UI\_ScreenFilter.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI\_ScreenFilter.designer.cs">
+      <Link>UI\_ScreenFilter.designer.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI\_SeparatedFunctions.cs">
+      <Link>UI\_SeparatedFunctions.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI\_SeparatedFunctions.Designer.cs">
+      <Link>UI\_SeparatedFunctions.Designer.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI\_SubForm_Base.cs">
+      <Link>UI\_SubForm_Base.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI\_SubForm_Base.designer.cs">
+      <Link>UI\_SubForm_Base.designer.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI\_SubForm_MonitorLog.cs">
+      <Link>UI\_SubForm_MonitorLog.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI\_SubForm_MonitorLog.designer.cs">
+      <Link>UI\_SubForm_MonitorLog.designer.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI\_SubForm_MonitorMemory.cs">
+      <Link>UI\_SubForm_MonitorMemory.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI\_SubForm_MonitorMemory.designer.cs">
+      <Link>UI\_SubForm_MonitorMemory.designer.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI\_Touchable_Form_Base.cs">
+      <Link>UI\_Touchable_Form_Base.cs</Link>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI\_TouchControl.cs">
+      <Link>UI\_TouchControl.cs</Link>
+    </Compile>
+    <Compile Include="..\BelicsClass.UI\_WndProcHooker.cs">
+      <Link>UI\_WndProcHooker.cs</Link>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="AxInterop.AcroPDFLib">
+      <HintPath>..\Assemblies.NET3.5\AxInterop.AcroPDFLib.dll</HintPath>
+    </Reference>
+    <Reference Include="Interop.AcroPDFLib">
+      <HintPath>..\Assemblies.NET3.5\Interop.AcroPDFLib.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="itextsharp">
+      <HintPath>..\Assemblies.NET3.5\itextsharp.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.VisualBasic.PowerPacks.Vs, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\Assemblies.NET3.5\Microsoft.VisualBasic.PowerPacks.Vs.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.OracleClient" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Windows.Forms">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization">
+      <HintPath>..\Assemblies.NET3.5\System.Windows.Forms.DataVisualization.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization.Design">
+      <HintPath>..\Assemblies.NET3.5\System.Windows.Forms.DataVisualization.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.XML" />
+    <Reference Include="ZedGraph, Version=5.1.7.430, Culture=neutral, PublicKeyToken=02a83cbd123fcd60, processorArchitecture=MSIL">
+      <HintPath>..\..\SampleProjects\packages\ZedGraph.5.1.7\lib\net35-Client\ZedGraph.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="..\BelicsClass.UI.Controls\_RoundButton.resx">
+      <Link>UI\_RoundButton.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\BelicsClass.UI.Graph\_Chart.resx">
+      <Link>UI\_Chart.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\BelicsClass.UI.Graph\_Graph.resx">
+      <Link>UI\_Graph.resx</Link>
+      <DependentUpon>_Graph.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\BelicsClass.UI.Report\_PrinterPreviewControl.resx">
+      <Link>UI\_PrinterPreviewControl.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\BelicsClass.UI.Report\_ReportControl_Base.resx">
+      <Link>UI\_ReportControl_Base.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\BelicsClass.UI\_InputBox.resx">
+      <Link>UI\_InputBox.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\BelicsClass.UI\_MainForm_Base.resx">
+      <Link>UI\_MainForm_Base.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\BelicsClass.UI\_MainForm_Base_LargeFunctions.resx">
+      <Link>UI\_MainForm_Base_LargeFunctions.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\BelicsClass.UI\_MessageBox.resx">
+      <Link>UI\_MessageBox.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\BelicsClass.UI\_MessageBox_Base.resx">
+      <Link>UI\_MessageBox_Base.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\BelicsClass.UI\_SeparatedFunctions.resx">
+      <Link>UI\_SeparatedFunctions.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\BelicsClass.UI\_SubForm_Base.resx">
+      <Link>UI\_SubForm_Base.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\BelicsClass.UI\_SubForm_MonitorLog.resx">
+      <Link>UI\_SubForm_MonitorLog.resx</Link>
+    </EmbeddedResource>
+    <EmbeddedResource Include="..\BelicsClass.UI\_SubForm_MonitorMemory.resx">
+      <Link>UI\_SubForm_MonitorMemory.resx</Link>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="License-LGPL.txt" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
