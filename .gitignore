@@ -9,3 +9,7 @@
 /HARTCTR/SOURCE/TOOLS/LogisticAgvCommunicateTester/obj
 /HARTCTR/SOURCE/PROGRAM/obj
 /HARTCTR/BIN/LOG
+/HARTCTR/SOURCE/CLASS/AgvController/obj/Debug/.NETFramework,Version=v4.6.1.AssemblyAttributes.cs
+/HARTCTR/SOURCE/CLASS/HokushoClass/obj/Debug/.NETFramework,Version=v4.6.AssemblyAttributes.cs
+/HARTCTR/SOURCE/CLASS/HokushoClass.Use/Labeler/obj/Debug/.NETFramework,Version=v4.6.AssemblyAttributes.cs
+/HARTCTR/SOURCE/CLASS/_Class/BelicsClass.AllInOneCompact/obj/Debug/.NETFramework,Version=v4.6.1.AssemblyAttributes.cs
