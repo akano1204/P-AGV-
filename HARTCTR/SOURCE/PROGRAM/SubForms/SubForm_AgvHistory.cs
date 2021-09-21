@@ -213,7 +213,7 @@ namespace PROGRAM
                                     r.ERR_NAME,
                                     r.FLOOR_QR,
                                     r.START_TIME.ToString(),
-                                    end_time is null ? "" : end_time.ToString(),
+                                    end_time == null ? "" : end_time.ToString(),
                                 }
                                 );
 
@@ -245,7 +245,7 @@ namespace PROGRAM
                                     BL_EnumLabel.GetLabel(r.ORDER_MARK),
                                     r.AGV_ID,
                                     r.START_TIME.ToString(),
-                                    end_time is null ? "" : end_time.ToString(),
+                                    end_time == null ? "" : end_time.ToString(),
                                     r.FROM_QR,
                                     r.TO_QR,
                                     r.ST_TO,

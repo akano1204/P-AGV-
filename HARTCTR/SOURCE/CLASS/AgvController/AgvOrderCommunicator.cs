@@ -177,6 +177,39 @@ namespace AgvController
             /// <summary>動作指示子番</summary>
             public int order_sub_no = 0;
 
+            /// <summary>目的地QR</summary>
+            public string qr = "";
+
+            /// <summary>動作OP1</summary>
+            public int order_op1 = 0;
+
+            /// <summary>動作OP2</summary>
+            public int order_op2 = 0;
+
+            /// <summary>動作OP3</summary>
+            public int order_op3 = 0;
+
+            /// <summary>動作OP4</summary>
+            public int order_op4 = 0;
+
+            /// <summary>動作OP5/summary>
+            public int order_op5 = 0;
+
+            /// <summary>動作情報01</summary>
+            public string o_info1 = "";
+
+            /// <summary>動作情報02</summary>
+            public string o_info2 = "";
+
+            /// <summary>動作情報03</summary>
+            public string o_info3 = "";
+
+            /// <summary>動作情報04</summary>
+            public string o_info4 = "";
+
+            /// <summary>動作情報05</summary>
+            public string o_info5 = "";
+
             /// <summary>内部的に発生した要求</summary>
             public bool inner_request = false;
 
