@@ -168,6 +168,7 @@ namespace PROGRAM
                 order_com.ReceiveEvent += Order_com_ReceiveEvent;
 
                 //オートレーター通信初期化
+                if (false)
                 {
                     dict_autorator.Clear();
                     var autorators = controller.AllAutoratorQR;

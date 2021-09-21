@@ -1251,7 +1251,7 @@ namespace PROGRAM
 
             public void Draw(Graphics g)
             {
-                if (!(image is null))
+                if (image != null)
                 {
                     var originalTransform = g.Transform;
 

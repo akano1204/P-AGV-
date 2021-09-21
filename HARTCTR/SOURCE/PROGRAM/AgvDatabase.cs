@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 using BelicsClass.Common;
 using BelicsClass.Database;
+using BelicsClass.File;
 using BelicsClass.ProcessManage;
 
 namespace PROGRAM
@@ -34,6 +35,8 @@ namespace PROGRAM
 		#region 初期処理等
 
 		public static BL_SQLServer DB = new BL_SQLServer();
+		private static BL_Log _log = new BL_Log("", "AgvDatabase");
+		private static bool output_log = false;
 
 		private static string InitialCatalog = "";
 		private static string DataSource = "";
@@ -67,7 +70,12 @@ namespace PROGRAM
 
 				error = CreateProcedures(); if (error != "") return error;
 
-				error = AGV_ERR_NAME.Import();
+				var import_error = AGV_ERR_NAME.Import();
+
+				if (import_error != "")
+				{
+					Log(import_error);
+				}
 			}
 
 			return error;
@@ -276,10 +284,24 @@ namespace PROGRAM
 			return stream;
 		}
 
+		private static void Log(string msg)
+		{
+			if (output_log) _log.Add(msg);
+		}
+
+		#endregion
+
+		#region プロパティ
+
+		internal static AgvControlManager controller => Program.controller;
+
 		#endregion
 
 		#region メソッド
 
+		/// <summary>
+		/// 動作指示テーブルの完了フラグを1に更新します
+		/// </summary>
 		public static string OrderComplete(AGV agv, OrderCompleteReason reason)
 		{
 			var req = agv.req;
@@ -289,11 +311,42 @@ namespace PROGRAM
 			return AGV_ORDER.Update(req.order_no, req.order_sub_no, reason);
 		}
 
+		/// <summary>
+		/// 搬送履歴テーブルにレコードを追加します
+		/// </summary>
+		public static string BeginWork(AGV agv)
+		{
+			var req = agv.req;
+
+			var qr = controller.GetStationQR(req.station);
+
+			return AGV_WORK_HISTORY.Insert(out int id, req.order_no, req.order_sub_no,
+					agv.on_qr.QrString, qr == null ? req.qr : qr.QrString, req.rack_no);
+		}
+
+		/// <summary>
+		/// 搬送履歴テーブルの終了時刻に現在時刻をセットします
+		/// </summary>
+		public static string EndWork(AGV agv)
+		{
+			var req = agv.req;
+
+			var qr = controller.GetStationQR(req.station);
+
+			return AGV_WORK_HISTORY.Update(req.order_no, req.order_sub_no);
+		}
+
+		/// <summary>
+		/// 異常履歴テーブルにレコードを追加します
+		/// </summary>
 		public static string RaiseError(AGV agv, State state)
 		{
 			return AGV_ERR_HISTORY.Insert(agv.id, state.error_code, agv.on_qr.QrString);
 		}
 
+		/// <summary>
+		/// 異常履歴テーブルの完了フラグを1に更新します
+		/// </summary>
 		public static string ResetError(AGV agv, State state)
 		{
 			return AGV_ERR_HISTORY.Update(agv.id);
@@ -3196,9 +3249,9 @@ namespace PROGRAM
 
 		private AGV agv = null;
 		private State state_pre = new State();
-		private int order_no { get { return agv.req is null ? 0 : agv.req.order_no; } }
+		private int order_no { get { return agv.req == null ? 0 : agv.req.order_no; } }
 		private int order_no_pre = 0;
-		private int order_sub_no { get { return agv.req is null ? 0 : agv.req.order_sub_no; } }
+		private int order_sub_no { get { return agv.req == null ? 0 : agv.req.order_sub_no; } }
 		private int order_sub_no_pre = 0;
 		private Queue<State> que = new Queue<State>();
 
@@ -3327,8 +3380,8 @@ namespace PROGRAM
                         AGV_ID = agv.id,
                         COMMAND_TIME = state_last.last_time,
                         ACTION = GetAction(state_last),
-                        ORDER_NO = agv.req is null ? 0 : agv.req.order_no,
-                        ORDER_SUB_NO = agv.req is null ? 0 : agv.req.order_sub_no,
+                        ORDER_NO = agv.req == null ? 0 : agv.req.order_no,
+                        ORDER_SUB_NO = agv.req == null ? 0 : agv.req.order_sub_no,
                         BATTERY = state_last.bat,
                         BATTERY_STATE =
                             state_last.bat == 255 ? BatteryStateType.ERROR : BatteryStateType.NORMAL,
@@ -3524,6 +3577,7 @@ namespace PROGRAM
 							{
 								agv = order.AGV_ID,
 								station = order.ST_TO,
+								qr = order.TO_QR,
 								rack_action = action,
 								rack_no = "",
 								rack_face = ((int)order.RACK_ANGLE).ToString(),
@@ -3532,6 +3586,17 @@ namespace PROGRAM
 								working = ((int)order.ORDER_MARK).ToString(),
 								order_no = order.ORDER_NO,
 								order_sub_no = order.ORDER_SUB_NO,
+								order_op1 = order.ORDER_OP1,
+								order_op2 = order.ORDER_OP2,
+								order_op3 = order.ORDER_OP3,
+								order_op4 = order.ORDER_OP4,
+								order_op5 = order.ORDER_OP5,
+								o_info1 = order.O_INFO1,
+								o_info2 = order.O_INFO2,
+								o_info3 = order.O_INFO3,
+								o_info4 = order.O_INFO4,
+								o_info5 = order.O_INFO5,
+
 								result = "RQ",
 							};
 
