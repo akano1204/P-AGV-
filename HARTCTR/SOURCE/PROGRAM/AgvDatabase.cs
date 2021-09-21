@@ -10,6 +10,7 @@ using System.Threading.Tasks;
 
 using BelicsClass.Common;
 using BelicsClass.Database;
+using BelicsClass.File;
 using BelicsClass.ProcessManage;
 
 namespace PROGRAM
@@ -34,6 +35,8 @@ namespace PROGRAM
 		#region 初期処理等
 
 		public static BL_SQLServer DB = new BL_SQLServer();
+		private static BL_Log _log = new BL_Log("", "AgvDatabase");
+		private static bool output_log = false;
 
 		private static string InitialCatalog = "";
 		private static string DataSource = "";
@@ -67,7 +70,12 @@ namespace PROGRAM
 
 				error = CreateProcedures(); if (error != "") return error;
 
-				error = AGV_ERR_NAME.Import();
+				var import_error = AGV_ERR_NAME.Import();
+
+				if (import_error != "")
+				{
+					Log(import_error);
+				}
 			}
 
 			return error;
@@ -274,6 +282,11 @@ namespace PROGRAM
 			}
 
 			return stream;
+		}
+
+		private static void Log(string msg)
+		{
+			if (output_log) _log.Add(msg);
 		}
 
 		#endregion

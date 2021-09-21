@@ -11,3 +11,10 @@ C:\HARTCTR\SOURCE\CLASS\HokushoClass\obj\Debug\HokushoClass.csprojAssemblyRefere
 C:\HARTCTR\SOURCE\CLASS\HokushoClass\obj\Debug\HokushoClass.csproj.CoreCompileInputs.cache
 C:\HARTCTR\SOURCE\CLASS\HokushoClass\obj\Debug\HokushoClass.dll
 C:\HARTCTR\SOURCE\CLASS\HokushoClass\obj\Debug\HokushoClass.pdb
+D:\Workspace\GitHub\P-AGV-\HARTCTR\BIN\HokushoClass.dll
+D:\Workspace\GitHub\P-AGV-\HARTCTR\BIN\HokushoClass.pdb
+D:\Workspace\GitHub\P-AGV-\HARTCTR\BIN\HokushoClass.xml
+D:\Workspace\GitHub\P-AGV-\HARTCTR\SOURCE\CLASS\HokushoClass\obj\Debug\HokushoClass.csproj.AssemblyReference.cache
+D:\Workspace\GitHub\P-AGV-\HARTCTR\SOURCE\CLASS\HokushoClass\obj\Debug\HokushoClass.csproj.CoreCompileInputs.cache
+D:\Workspace\GitHub\P-AGV-\HARTCTR\SOURCE\CLASS\HokushoClass\obj\Debug\HokushoClass.dll
+D:\Workspace\GitHub\P-AGV-\HARTCTR\SOURCE\CLASS\HokushoClass\obj\Debug\HokushoClass.pdb

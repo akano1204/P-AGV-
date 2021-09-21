@@ -24,3 +24,16 @@ C:\HARTCTR\SOURCE\CLASS\AgvController\obj\Debug\AgvController.csproj.CoreCompile
 C:\HARTCTR\SOURCE\CLASS\AgvController\obj\Debug\AgvController.csproj.CopyComplete
 C:\HARTCTR\SOURCE\CLASS\AgvController\obj\Debug\AgvController.dll
 C:\HARTCTR\SOURCE\CLASS\AgvController\obj\Debug\AgvController.pdb
+D:\Workspace\GitHub\P-AGV-\HARTCTR\SOURCE\CLASS\AgvController\bin\Debug\AgvController.dll
+D:\Workspace\GitHub\P-AGV-\HARTCTR\SOURCE\CLASS\AgvController\bin\Debug\AgvController.pdb
+D:\Workspace\GitHub\P-AGV-\HARTCTR\SOURCE\CLASS\AgvController\bin\Debug\BelicsClass.AllInOneCompact.VS2017.dll
+D:\Workspace\GitHub\P-AGV-\HARTCTR\SOURCE\CLASS\AgvController\bin\Debug\Microsoft.VisualBasic.PowerPacks.Vs.dll
+D:\Workspace\GitHub\P-AGV-\HARTCTR\SOURCE\CLASS\AgvController\bin\Debug\itextsharp.dll
+D:\Workspace\GitHub\P-AGV-\HARTCTR\SOURCE\CLASS\AgvController\bin\Debug\BelicsClass.AllInOneCompact.VS2017.pdb
+D:\Workspace\GitHub\P-AGV-\HARTCTR\SOURCE\CLASS\AgvController\bin\Debug\BelicsClass.AllInOneCompact.VS2017.dll.config
+D:\Workspace\GitHub\P-AGV-\HARTCTR\SOURCE\CLASS\AgvController\bin\Debug\itextsharp.xml
+D:\Workspace\GitHub\P-AGV-\HARTCTR\SOURCE\CLASS\AgvController\obj\Debug\AgvController.csproj.AssemblyReference.cache
+D:\Workspace\GitHub\P-AGV-\HARTCTR\SOURCE\CLASS\AgvController\obj\Debug\AgvController.csproj.CoreCompileInputs.cache
+D:\Workspace\GitHub\P-AGV-\HARTCTR\SOURCE\CLASS\AgvController\obj\Debug\AgvController.csproj.CopyComplete
+D:\Workspace\GitHub\P-AGV-\HARTCTR\SOURCE\CLASS\AgvController\obj\Debug\AgvController.dll
+D:\Workspace\GitHub\P-AGV-\HARTCTR\SOURCE\CLASS\AgvController\obj\Debug\AgvController.pdb

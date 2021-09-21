@@ -14,3 +14,11 @@ C:\HARTCTR\SOURCE\CLASS\HokushoClass.Use\Labeler\obj\Debug\Labeler.csproj.CoreCo
 C:\HARTCTR\SOURCE\CLASS\HokushoClass.Use\Labeler\obj\Debug\Labeler.csproj.CopyComplete
 C:\HARTCTR\SOURCE\CLASS\HokushoClass.Use\Labeler\obj\Debug\Labeler.dll
 C:\HARTCTR\SOURCE\CLASS\HokushoClass.Use\Labeler\obj\Debug\Labeler.pdb
+D:\Workspace\GitHub\P-AGV-\HARTCTR\BIN\Labeler.dll
+D:\Workspace\GitHub\P-AGV-\HARTCTR\BIN\Labeler.pdb
+D:\Workspace\GitHub\P-AGV-\HARTCTR\BIN\Labeler.xml
+D:\Workspace\GitHub\P-AGV-\HARTCTR\SOURCE\CLASS\HokushoClass.Use\Labeler\obj\Debug\Labeler.csproj.AssemblyReference.cache
+D:\Workspace\GitHub\P-AGV-\HARTCTR\SOURCE\CLASS\HokushoClass.Use\Labeler\obj\Debug\Labeler.csproj.CoreCompileInputs.cache
+D:\Workspace\GitHub\P-AGV-\HARTCTR\SOURCE\CLASS\HokushoClass.Use\Labeler\obj\Debug\Labeler.csproj.CopyComplete
+D:\Workspace\GitHub\P-AGV-\HARTCTR\SOURCE\CLASS\HokushoClass.Use\Labeler\obj\Debug\Labeler.dll
+D:\Workspace\GitHub\P-AGV-\HARTCTR\SOURCE\CLASS\HokushoClass.Use\Labeler\obj\Debug\Labeler.pdb
